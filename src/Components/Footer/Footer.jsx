@@ -1,5 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
+
 import {
     FaFacebook,
     FaGithub,
@@ -8,6 +9,7 @@ import {
     FaPhone,
     FaTwitter,
     FaGofore,
+    FaWhatsappSquare,
 } from "react-icons/fa";
 import style from "./Footer.module.css";
 import AOS from "aos";
@@ -59,7 +61,6 @@ export default function Footer({ colorMode }) {
                         target="_blank"
                         rel="noreferrer">
                         <FaInstagram />
-                        
                     </a>
                     <a
                         href="https://www.facebook.com/"
@@ -78,6 +79,12 @@ export default function Footer({ colorMode }) {
                         target="_blank"
                         rel="noreferrer">
                         <FaGithub />
+                    </a>
+                    <a
+                        href="https://wa.me/919598125005"
+                        target="_blank"
+                        rel="noreferrer">
+                        <FaWhatsappSquare />
                     </a>
                 </Box>
             </Box>

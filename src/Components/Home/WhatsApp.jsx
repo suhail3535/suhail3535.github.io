@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 // import { ArrowUpIcon } from "@chakra-ui/icons";
 // import { HiArrowSmDown } from "@chakra-ui/icons/hi";
-import { AiOutlineArrowUp } from 'react-icons/ai';
-import { AiOutlineArrowDown } from 'react-icons/ai';
+import { AiOutlineArrowUp } from "react-icons/ai";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import { FaWhatsappSquare } from "react-icons/fa";
 import { Box, Button, Text } from "@chakra-ui/react";
 import styles from "./Home.module.css";
 
-export default function BackToTop () {
+export default function WhatsApp() {
     const [isVisible, setIsVisible] = useState(false);
 
     const scrollToTop = () => {
@@ -25,7 +26,7 @@ export default function BackToTop () {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.pageYOffset > 500) {
+            if (window.pageYOffset > 700) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -41,24 +42,25 @@ export default function BackToTop () {
         <Box
             onClick={isVisible ? scrollToTop : scrollToBottom}
             position="fixed"
-            bottom="20px"
+            bottom="80px"
             right={["16px", "84px"]}
             zIndex={3}>
-            <Button id={styles.icon}
+            <Button
                 size={"sm"}
-                bg={"#167a92"}
+                // bg={"white"}
                 variant="solid"
                 w={"50px"}
                 h={"50px"}
-                style={{ borderRadius: "50%" }}
-
-            >
-
-                <Text fontSize={"30px"} color={"#167a92"}>
-                    {isVisible ? <AiOutlineArrowUp style={{ fontSize: "30px", color: "white" }} /> : <AiOutlineArrowDown style={{ fontSize: "30px", color: "white" }} />}
+                style={{ borderRadius: "50%" }}>
+                <Text fontSize={"50px"} color={"#25D366"} >
+                    <a
+                        href="https://wa.me/919598125005"
+                        target="_blank"
+                        rel="noreferrer">
+                        <FaWhatsappSquare />
+                    </a>
                 </Text>
             </Button>
-            
         </Box>
     );
 }

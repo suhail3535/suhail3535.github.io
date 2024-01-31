@@ -44,36 +44,7 @@
   align-items: center;
   justify-content: space-between;
 }
-/* #myName {
-  margin-bottom: 7px;
-  font-size: 50px;
-  animation: type 3s steps(25);
-  overflow: hidden;
-  border: 0px solid blue;
-  font-family: "Bree Serif", serif;
-  white-space: nowrap;
-}
 
-#title {
-  margin-bottom: 30px;
-  font-size: 42px;
-  animation: type 3s steps(22);
-  overflow: hidden;
-
-  font-family: "Bree Serif", serif;
-  white-space: nowrap;
-  border: 0px solid teal;
-}
-
-@keyframes type {
-  0% {
-    width: 0ch;
-  }
-
-  100% {
-    width: 22ch;
-  }
-} */
 
 #icon:hover{
   background-color:rgb(132,116,160);
