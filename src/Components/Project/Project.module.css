@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+* {
+    font-family: "Bree Serif", serif;
+}
+
+#projects {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    font-family: "Bree Serif", serif;
+    border: 0px solid greenyellow;
+}
+
+#majorMain {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: left;
+    padding-bottom: 20px;
+    border: 0px solid greenyellow;
+    font-family: "Bree Serif", serif;
+}
+#btn_Prj {
+    /* border: 2px solid red; */
+    color: white;
+    background-color: #4c3575;
+}
+#btn_Prj:hover {
+    background-color: rgba(121, 114, 232, 1) 10px 10px 0px 0px;
+}
+
+#major_projectDiv {
+
+
+    color: #4c3575;
+    width: 95%;
+    cursor: pointer;
+    font-family: "Bree Serif", serif;
+    margin: auto;
+    margin-top: 30px;
+    height: auto;
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+#major_projectDiv:hover {
+    transform: scale(1.1);
+    border: 1px dotted blue;
+}
+
+#links {
+    border: 0px solid yellow;
+}
+
+.major_project_imgDiv {
+    border-radius: 15px;
+    width: 45%;
+    font-family: "Bree Serif", serif;
+    margin: 20px;
+    padding: 10px;
+    border: 0px solid yellow;
+    height: 300px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.major_project_imgDiv:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.major_project_imgDiv > img {
+    width: 100%;
+    height: 100%;
+    font-family: "Bree Serif", serif;
+    border-radius: 15px;
+    border: 0px solid #753536;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: #bfbdc27e 10px 10px 0px 0px;
+}
+
+.major_project_detailsDiv {
+    margin: 20px;
+
+    border: 0px solid black;
+    width: 48%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    font-family: "Bree Serif", serif;
+    border-radius: 15px;
+    padding-left: 2.5%;
+    padding-top: 50px;
+
+    background: linear-gradient(rgba(122, 144, 232, 0.756), #4c3575af);
+    backdrop-filter: blur(12px) grayscale(1);
+}
+
+.major_project_detailsDiv:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+#major_project_detailsDiv_Heading {
+    margin-bottom: 10px;
+    font-family: "Bree Serif", serif;
+
+    font-size: 25px;
+    border: 0px solid greenyellow;
+}
+#major_project_detailsDiv_Heading:hover {
+    transform: none;
+    box-shadow: none;
+}
+#major_project_detailsDiv_detail {
+    margin-bottom: 10px;
+
+    color: black;
+    font-family: "Bree Serif", serif;
+    padding: 10px;
+    text-align: left;
+}
+
+#major_project_detailsDiv_detail:hover {
+    transform: none;
+    box-shadow: none;
+}
+#major_project_detailsDiv_tehcs {
+    margin-bottom: 0px;
+
+    font-family: "Bree Serif", serif;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#major_project_detailsDiv_tehcs:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+#major_project_detailsDiv_tehcs div {
+
+     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+color: white;
+font-weight: 500;
+    padding: 5px 5px;
+    font-size: 13px;
+    background-color: rgba(122, 144, 232, 0.756);
+
+}
+#major_project_detailsDiv_tehcs div:hover {
+color: white;
+
+      background: linear-gradient(
+    90deg,
+    rgba(121, 114, 232, 1) 0%,
+    rgba(91, 91, 236, 1) 44%,
+    rgba(26, 150, 236, 1) 99%
+  );
+
+}
+
+/* no need button duv */
+#major_project_detailsDi_btnDiv {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid green;
+    font-family: "Bree Serif", serif;
+}
+#source_btn {
+    width: 45%;
+    display: flex;
+    margin-right: 300px;
+    justify-content: space-between;
+
+    font-family: "Bree Serif", serif;
+
+}
+
+#major_project_detailsDi_btnDiv:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* no need changes */
+#major_project_detailsDi_btnDiv > button {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Bree Serif", serif;
+    position: unset;
+    background-color: white;
+    border: 0px solid rgb(17, 0, 128);
+}
+
+#major_project_detailsDi_btnDiv button:hover {
+    transform: none;
+    box-shadow: none;
+      background: linear-gradient(
+    90deg,
+    rgba(121, 114, 232, 1) 0%,
+    rgba(91, 91, 236, 1) 44%,
+    rgba(26, 150, 236, 1) 99%
+  );
+  color: white;
+}
+@media all and (min-width: 768px) and (max-width: 1500px) {
+    #majorMain {
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #major_projectDiv {
+        height: auto;
+        padding: 5px;
+        /* border: 0px solid red; */
+    }
+
+    .major_project_detailsDiv {
+        padding-left: 2%;
+        padding-top: 10px;
+    }
+
+    #major_project_detailsDiv_Heading {
+        margin-bottom: 20px;
+    }
+
+    #major_project_detailsDiv_detail {
+        margin-bottom: 20px;
+    }
+
+    #major_project_detailsDiv_tehcs {
+        margin-bottom: 0px;
+        font-size: 12px;
+        display: grid;
+        padding: 5px;
+        gap: 5px;
+
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+    }
+    #major_project_detailsDi_btnDiv {
+        width: 70%;
+        padding-bottom: 20px;
+    }
+
+    #major_project_detailsDi_btnDiv > button:nth-child(2) {
+        margin-left: 10px;
+
+    }
+
+    .links {
+        font-size: 16px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #seceond_section {
+        display: none;
+    }
+    #card1 {
+        display: none;
+    }
+    #card2 {
+        display: none;
+    }
+    #major_project_detailsDiv_tehcs {
+        margin-bottom: 0px;
+        font-size: 12px;
+        display: grid;
+        padding: 5px;
+        gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+    }
+}
+
+@media all and (min-width: 300px) and (max-width: 767px) {
+    #majorMain {
+        width: 95%;
+        /* border: 0px solid green; */
+    }
+    #seceond_section {
+        display: none;
+    }
+    #card1 {
+        display: none;
+    }
+    #card2 {
+        display: none;
+    }
+    #major_projectDiv {
+        width: 90%;
+        height: auto;
+        /* border: 0px solid green; */
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .major_project_imgDiv {
+        width: 100%;
+    }
+
+    .major_project_imgDiv > img {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .major_project_detailsDiv {
+        padding: 10px 10px 20px 10px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #major_projectDivId {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #major_project_detailsDiv_Heading {
+        margin-bottom: 10px;
+    }
+
+    #major_project_detailsDiv_detail {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #major_project_detailsDiv_tehcs {
+        margin-bottom: 0px;
+        font-size: 12px;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+    }
+
+    #major_project_detailsDi_btnDiv {
+        width: 100%;
+        border: 0px solid rgb(11, 0, 128);
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    #major_project_detailsDi_btnDiv > button {
+        margin-top: 10px;
+        padding: 10px 10px;
+        /* border: 0px solid green; */
+
+        margin: 5px;
+    }
+
+    .links {
+        font-size: 14px;
+    }
+}
+
+/* ********************* */
+
+#seceond_section {
+    /* border: 0px solid rgb(251, 0, 255); */
+    color: #4c3575;
+    width: 95%;
+    cursor: pointer;
+    font-family: "Bree Serif", serif;
+    margin: auto;
+    margin-top: 30px;
+    transition: all 1s ease-in-out;
+    padding: 10px;
+    height: auto;
+    display: flex;
+
+    justify-content: space-between;
+
+    border-radius: 15px;
+}
+#seceond_section:hover {
+    transform: scale(1.1);
+    border: 1px dotted blue;
+}
+#card1 {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 45%;
+    margin-right: 100px;
+    border: 0px solid red;
+    margin: auto;
+    height: 350px;
+    position: relative;
+}
+
+#card2 {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 47%;
+
+    border: 0px solid rgb(0, 0, 255);
+    margin: auto;
+    margin-left: 20px;
+    height: 350px;
+
+    position: relative;
+}
+#card1 img {
+    width: 100%;
+
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+#dropdown {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, #4c3575af);
+    backdrop-filter: blur(12px) grayscale(1);
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 40px;
+    transition: top 0.5s;
+    font-family: "Bree Serif", serif;
+}
+
+#title {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #4c3575;
+    font-weight: bold;
+    font-family: "Bree Serif", serif;
+}
+#discription {
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    color: black;
+    font-weight: bold;
+    font-family: "Bree Serif", serif;
+}
+#tech_stack {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "Bree Serif", serif;
+    color: #4c3575;
+
+    /* color: white; */
+    font-size: 15px;
+    word-spacing: 5px;
+
+    font-weight: bold;
+}
+
+#major_project_detailsDi_btnDiv1 > button {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Bree Serif", serif;
+    position: unset;
+    background-color: white;
+    border: 2px solid rgb(17, 0, 128);
+}
+
+#major_project_detailsDi_btnDiv1 button:hover {
+    transform: none;
+    box-shadow: none;
+      background: linear-gradient(
+    90deg,
+    rgba(121, 114, 232, 1) 0%,
+    rgba(91, 91, 236, 1) 44%,
+    rgba(26, 150, 236, 1) 99%
+  );
+  color: white;
+}
+
+
+
+#card1:hover img {
+    transform: scale(1);
+}
+
+#card1:hover #dropdown {
+    top: 0;
+}
+#card2:hover img {
+    transform: scale(1);
+}
+
+#card2:hover #dropdown {
+    top: 0;
+}
+
+#major_project_detailsDiv_tehcs_part2 {
+
+border: 0px solid red;
+    font-family: "Bree Serif", serif;
+    text-align: left;
+    display: flex;
+    width: 90%;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+#major_project_detailsDiv_tehcs_part2:hover {
+    transform: none;
+    box-shadow: none;
+
+
+}
+
+#major_project_detailsDiv_tehcs_part2 div {
+    border: 0px dotted blue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+    background-color: rgba(122, 144, 232, 0.756);
+}
+#major_project_detailsDiv_tehcs_part2 div:hover {
+      background: linear-gradient(
+    90deg,
+    rgba(121, 114, 232, 1) 0%,
+    rgba(91, 91, 236, 1) 44%,
+    rgba(26, 150, 236, 1) 99%
+  );
+}
+
+
+#source_btn button{
+    border: 0px solid yellow;
+}
+#source_btn button:hover{
+      background: linear-gradient(
+    90deg,
+    rgba(121, 114, 232, 1) 0%,
+    rgba(91, 91, 236, 1) 44%,
+    rgba(26, 150, 236, 1) 99%
+  );
+
+}
