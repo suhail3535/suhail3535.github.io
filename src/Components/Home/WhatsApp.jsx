@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import { ArrowUpIcon } from "@chakra-ui/icons";
-// import { HiArrowSmDown } from "@chakra-ui/icons/hi";
+
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { Box, Button, Text } from "@chakra-ui/react";
-import styles from "./Home.module.css";
+
 
 export default function WhatsApp() {
     const [isVisible, setIsVisible] = useState(false);
@@ -44,15 +43,17 @@ export default function WhatsApp() {
             position="fixed"
             bottom="80px"
             right={["16px", "84px"]}
-            zIndex={3}>
+            zIndex={3}
+            >
             <Button
                 size={"sm"}
-                // bg={"white"}
+                bg={"transparent"}
                 variant="solid"
                 w={"50px"}
                 h={"50px"}
-                style={{ borderRadius: "50%" }}>
-                <Text fontSize={"50px"} color={"#25D366"} >
+            _hover={{ backgroundColor: "transparent" }}
+                style={{ borderRadius: "50%",}}>
+                <Text fontSize={"50px"} color={"#25D366"}>
                     <a
                         href="https://wa.me/919598125005"
                         target="_blank"

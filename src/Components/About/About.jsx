@@ -1,11 +1,11 @@
 import { Box, Heading, Image, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import style from "./About.module.css";
+import profilephoto from "../images/mycropimg.png";
 
-import { FaDownload } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import { HiDownload } from "react-icons/hi";
+
 // ..
 
 AOS.init();
@@ -45,7 +45,7 @@ export default function About({ colorMode }) {
                     <div id={style.first}>
                         <Image
                             className="home-img"
-                            src="mycropimg.png"
+                            src={profilephoto}
                             // src="profile-modified.png"
                             alt="Suhail Khan"
                         />
