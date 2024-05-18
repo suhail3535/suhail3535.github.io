@@ -1,24 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb97c6d1.css",
-    "main.js": "/static/js/main.20618fea.js",
+    "main.css": "/static/css/main.ca599224.css",
+    "main.js": "/static/js/main.ce739fb5.js",
     "static/js/787.f4d050dd.chunk.js": "/static/js/787.f4d050dd.chunk.js",
     "static/media/rctproject.png": "/static/media/rctproject.4520acb831dc9d883fa0.png",
     "static/media/mycropimg.png": "/static/media/mycropimg.386bbdc77917283dd158.png",
     "static/media/3.png": "/static/media/3.3075b56260ab0a428089.png",
     "static/media/2.png": "/static/media/2.d4b8456ca907491fcfb7.png",
     "static/media/fashion.png": "/static/media/fashion.e30016d7cf9c3e01bfad.png",
+    "static/media/zakat.png": "/static/media/zakat.305f3039663372406568.png",
+    "static/media/dn.png": "/static/media/dn.349bd99cecdd8f9fe7ea.png",
     "static/media/shopper.png": "/static/media/shopper.d52839fb03c6f9b4eb24.png",
+    "static/media/zeros.png": "/static/media/zeros.a0c400a2eead937ffb7f.png",
+    "static/media/zim.png": "/static/media/zim.b617b02a0558e056dcc2.png",
+    "static/media/caradd.png": "/static/media/caradd.aed162632f01b2939a3d.png",
     "static/media/new111.jpg": "/static/media/new111.3d74c4b836ec7110dfbe.jpg",
     "static/media/todonew.png": "/static/media/todonew.0046e05f00d297b76a35.png",
+    "static/media/dictonary.png": "/static/media/dictonary.62b7c53bfa5c361f5997.png",
+    "static/media/cctns.png": "/static/media/cctns.57fe93fc33c3a75bcdb3.png",
     "static/media/final.png": "/static/media/final.a9876280b92e21b6da4d.png",
     "index.html": "/index.html",
-    "main.bb97c6d1.css.map": "/static/css/main.bb97c6d1.css.map",
-    "main.20618fea.js.map": "/static/js/main.20618fea.js.map",
+    "main.ca599224.css.map": "/static/css/main.ca599224.css.map",
+    "main.ce739fb5.js.map": "/static/js/main.ce739fb5.js.map",
     "787.f4d050dd.chunk.js.map": "/static/js/787.f4d050dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb97c6d1.css",
-    "static/js/main.20618fea.js"
+    "static/css/main.ca599224.css",
+    "static/js/main.ce739fb5.js"
   ]
 }
