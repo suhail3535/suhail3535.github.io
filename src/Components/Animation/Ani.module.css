@@ -13,7 +13,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 100px;
 
 }
 .waveWrapperInner {
@@ -23,7 +23,7 @@
   height: 100%;
   bottom: 0;
 
-  background-image: linear-gradient(to top, #e261ced7 20%, #9a7dcd 80%);
+  background-image: linear-gradient(to top, black 20%, black 80%);
 }
 .bgTop {
     z-index: 15;
@@ -49,10 +49,10 @@
     background-size: 50% 100px;
 }
 .waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .waveMiddle {
     background-size: 50% 120px;
@@ -64,5 +64,6 @@
     background-size: 50% 100px;
 }
 .waveAnimation .waveBottom {
+    /* background-color: red; */
     animation: move_wave 15s linear infinite;
 }

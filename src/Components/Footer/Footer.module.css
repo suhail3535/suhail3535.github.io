@@ -13,7 +13,7 @@
     text-align: center;
     width: 100%;
     height: 200px;
-    
+
 }
 
 #footer_mainDiv2 {
@@ -37,13 +37,9 @@
     color: #FEF5ED;
 }
 #footer_aDiv>a:hover{
-       background: rgb(121, 114, 232);
-  background: linear-gradient(
-    90deg,
-    rgba(121, 114, 232, 1) 0%,
-    rgba(91, 91, 236, 1) 44%,
-    rgba(26, 150, 236, 1) 99%
-  );
+color: cyan;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 #footer_aDiv {
     display: flex;

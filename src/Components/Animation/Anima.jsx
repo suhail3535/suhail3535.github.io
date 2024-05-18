@@ -28,7 +28,10 @@ const Anima = ({dir}) => {
                         style={{
                             backgroundImage:
                                 "url('http://front-end-noobs.com/jecko/img/wave-mid.png')",
-                        }}></div>
+                        }}
+                    >
+
+                        </div>
                 </div>
                 <div
                     className={`${style.waveWrapperInner} ${style.bgBottom}`}
@@ -41,7 +44,10 @@ const Anima = ({dir}) => {
                         style={{
                             backgroundImage:
                                 "url('http://front-end-noobs.com/jecko/img/wave-mid.png')",
-                        }}></div>
+                        }}
+                    >
+
+                        </div>
                 </div>
             </div>
         </div>

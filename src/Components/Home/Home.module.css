@@ -47,7 +47,8 @@
 
 
 #icon:hover{
-  background-color:rgb(132,116,160);
+  background-color:lightseagreen;
+  transition: all 0.3s ease-in-out;
 
 }
 @keyframes type {

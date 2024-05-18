@@ -48,7 +48,7 @@
   font-size: 25px;
   font-family: "Bree Serif", serif;
   font-weight: bold;
-  color:#4c3575;
+  color:black;
 }
 
 .namep {
@@ -99,51 +99,6 @@
   font-size: 22px;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  #about_head {
-    font-size: 3xl;
-    text-align: center;
-  }
-  #aboutDiv {
-
-    width: 90%;
-
-    margin-top: 30px;
-    border-radius: 30px;
-    align-items: center;
-  }
-  #first {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 80px;
-  }
-  #myImg {
-    width: 48%;
-    height: 100%;
-  }
-  .aboutDetails {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-
-  .name {
-    font-size: 20px;
-  }
-
-  .namep {
-    /* margin-top: 20px; */
-
-    font-size: 20px;
-  }
-
-  #resumeButton {
-    font-size: 18px;
-  }
-
-  .resumeDownloadLogo {
-    font-size: 18px;
-  }
-}
 
 @media all and (min-width: 300px) and (max-width: 767px) {
   #about_head {
@@ -161,14 +116,14 @@
   #myImg {
     width: 100%;
     height: 50%;
-    border: 0px solid green;
     border-radius: 50%;
   }
 
   .aboutDetails {
+    /* border: 2px solid green; */
     margin-top: 20px;
     margin-left: 5px;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
 
@@ -244,4 +199,53 @@
   border: 0px solid red;
 
 
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #about_head {
+    font-size: 3xl;
+    text-align: center;
+  }
+
+  #aboutDiv {
+
+    width: 90%;
+
+    margin-top: 30px;
+    border-radius: 30px;
+    align-items: center;
+  }
+
+  #first {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 80px;
+  }
+
+  #myImg {
+    width: 48%;
+    height: 100%;
+  }
+
+  .aboutDetails {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .namep {
+    /* margin-top: 20px; */
+
+    font-size: 20px;
+  }
+
+  #resumeButton {
+    font-size: 18px;
+  }
+
+  .resumeDownloadLogo {
+    font-size: 18px;
+  }
 }

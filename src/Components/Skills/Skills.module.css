@@ -2,59 +2,70 @@
   width: 90%;
   margin: auto;
   font-family: serif;
-  border: 0px solid red;
-      cursor: pointer;
+  /* border: 2px solid red; */
+  cursor: pointer;
 }
 
 #skillDiv {
   width: 90%;
   margin: 20px auto;
   display: grid;
-  margin-top: 50px;
+  margin-top: 30px;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   font-family: serif;
-margin-bottom: 50px;
+  margin-bottom: 50px;
   border: 0px solid green;
-   place-items: center
-
+  place-items: center
 }
 
 .skill_in_div {
-  border: 0px solid #1d1dd6;
+  /* border: 1px dotted black; */
 
   align-items: center;
 
   width: 80%;
   padding: 10px;
-/* height: auto; */
+  /* height: auto; */
   margin-bottom: 40px;
   text-align: center;
   border-radius: 10px;
 
-  transition: all 0.2s ease-in-out;
-  box-shadow: #d3c7e8af 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgb(48, 48, 48) 5px 5px 0px 0px;
 }
 
-.skill_in_div:nth-child(9){
+.skill_in_div:nth-child(8),
+.skill_in_div:nth-child(9) {
   border: 0px solid green;
   height: 81%;
 }
-.skill_in_div:nth-child(10){
+
+.skill_in_div:nth-child(10) {
   border: 0px solid green;
   height: 81%;
 }
-.skill_in_div:nth-child(13){
+
+.skill_in_div:nth-child(13) {
+  border: 4px solid green;
+  height: 81%;
+}
+
+.skill_in_div:nth-child(12) {
   border: 0px solid green;
   height: 81%;
 }
-.skill_in_div:nth-child(12){
+
+.skill_in_div:last-child {
   border: 0px solid green;
   height: 81%;
+  display: grid;
+  place-items: center;
 }
+
 .skill_in_div:hover {
 
-  box-shadow: rgba(121, 114, 232, 1) 10px 10px 0px 0px;
+  box-shadow: rgba(8, 8, 8, 0.89) 10px 10px 0px 0px;
   transform: scale(0.98);
 }
 
@@ -65,8 +76,8 @@ margin-bottom: 50px;
 
   padding: 5px;
   margin: auto;
-
-  border: 0px solid rgb(255, 0, 0);
+  border-radius: 20%;
+  border: 1px dotted black;
 }
 
 #skillH3 {
@@ -90,12 +101,14 @@ margin-bottom: 50px;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
   }
-#SkillH3{
-  width: 100%;
-  margin: auto;
-}
+
+  #SkillH3 {
+    width: 100%;
+    margin: auto;
+  }
 
 }
+
 @media all and (min-width: 300px) and (max-width: 767px) {
   #skillDiv {
     grid-template-columns: repeat(2, 1fr);

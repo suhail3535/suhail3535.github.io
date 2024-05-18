@@ -113,7 +113,7 @@ export default function Skills({ colorMode }) {
                   size={["xl", "xl", "xl", "xl"]}
                   fontFamily="Bree Serif, serif"
                   style={{
-                      color: colorMode === "light" ? "#4C3575" : "#BFACE0",
+                      color: colorMode === "light" ? "black" : "#BFACE0",
                   }}
                   textAlign="center"
                   color="#243D25">
@@ -140,7 +140,7 @@ export default function Skills({ colorMode }) {
                               style={{
                                   color:
                                       colorMode === "light"
-                                          ? "#4C3575"
+                                          ? "black"
                                           : "#BFACE0",
                               }}>
                               {skill.name}
@@ -155,7 +155,7 @@ export default function Skills({ colorMode }) {
                   size={["xl", "xl", "xl", "xl"]}
                   fontFamily="Bree Serif, serif"
                   style={{
-                      color: colorMode === "light" ? "#4C3575" : "#BFACE0",
+                      color: colorMode === "light" ? "black" : "#BFACE0",
                   }}
                   textAlign="center"
                   color="#243D25">
@@ -182,7 +182,7 @@ export default function Skills({ colorMode }) {
                               style={{
                                   color:
                                       colorMode === "light"
-                                          ? "#4C3575"
+                                          ? "black"
                                           : "#BFACE0",
                               }}>
                               {skill.name}

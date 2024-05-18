@@ -18,7 +18,7 @@ const GitHub = ({ colorMode }) => {
             <Heading
                 textAlign="center"
                 size={["2xl", "xl", "xl", "xl"]}
-                color={colorMode === "light" ? "#4C3575" : "#BFACE0"}
+                color={colorMode === "light" ? "black" : "#BFACE0"}
                 mb="50px"
                 fontFamily="Bree Serif, serif">
                 Github Calender
@@ -30,8 +30,9 @@ const GitHub = ({ colorMode }) => {
                     fontFamily="Bree Serif, serif"
                     style={{
                         margin: "auto",
-                        color: "#4C3575",
+                        color: "black",
                         cursor: "pointer",
+                        fontWeight:"bold"
                     }}
                     username="suhail3535"
                     blockSize={20}
@@ -49,7 +50,7 @@ const GitHub = ({ colorMode }) => {
                     data-aos-duration="3000">
                     <Image
                         id="github-streak-stats"
-                        src="https://github-readme-streak-stats.herokuapp.com?user=suhail3535&theme=sea&hide_border=true&border_radius=10&date_format=j%20M%5B%20Y%5D&background=#a084ca"
+                        src="https://github-readme-streak-stats.herokuapp.com?user=suhail3535&theme=sea&hide_border=true&border_radius=10&date_format=j%20M%5B%20Y%5D&background=black"
                         alt="suhail-stats"
                     />
                 </div>

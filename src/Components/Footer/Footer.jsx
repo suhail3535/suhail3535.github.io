@@ -26,7 +26,7 @@ export default function Footer({ colorMode }) {
             data-aos-duration="3000">
             <Box
                 id={style.footer_mainDiv1}
-                color={colorMode === "light" ? "#4C3575" : "#BFACE0"}>
+                color={colorMode === "light" ? "black" : "#BFACE0"}>
                 <Heading fontFamily="Bree Serif, serif" id={style.footer_head}>
                     Get In Touch
                 </Heading>
@@ -54,7 +54,8 @@ export default function Footer({ colorMode }) {
 
             <Box
                 id={style.footer_mainDiv2}
-                backgroundColor={colorMode === "light" ? "#4C3575" : "#BFACE0"}>
+                backgroundColor={colorMode === "light" ? "black" : "black"}
+            >
                 <Box id={style.footer_aDiv}>
                     <a
                         href="https://www.instagram.com/"
@@ -88,10 +89,11 @@ export default function Footer({ colorMode }) {
                     </a>
                 </Box>
             </Box>
+            <hr />
             <Box
                 id={style.footer_mainDiv3}
-                backgroundColor={colorMode === "light" ? "#4C3575" : "#BFACE0"}>
-                <p>Created By Suhail Khan | © 2023. All Rights Reserved</p>
+                backgroundColor={colorMode === "light" ? "black" : "black"}>
+                <p>Created By Suhail Khan <span style={{color:"red"}}>❤</span> | © 2023. All Rights Reserved</p>
             </Box>
         </Box>
     );

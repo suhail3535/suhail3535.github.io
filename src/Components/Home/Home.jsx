@@ -7,7 +7,7 @@ return (
       <div id="home">
         <div
           id={style.home}
-          style={{ color: colorMode === "light" ? "#4C3575" : "#EBC7E8" }}
+          style={{ color: colorMode === "light" ? "black" : "#EBC7E8" }}
         >
           <div className={style.img_txt_wrapper}
 

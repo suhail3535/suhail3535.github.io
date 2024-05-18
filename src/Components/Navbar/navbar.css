@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
 
-  background-color: #4c3575af;
+  background-color: black;
   backdrop-filter: blur(12px) saturate(180%);
   position: fixed;
   z-index: 100;
@@ -91,7 +91,7 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
-  color: black;
+  color:gray;
   font-weight: bold;
 }
 

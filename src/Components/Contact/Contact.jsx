@@ -46,23 +46,24 @@ export default function Contact({ colorMode }) {
     };
 
     return (
-        <Box
+        <Box style={{marginTop:"10px"}}
             id="contact"
             data-aos-mirror="true"
             data-aos="fade-up"
             data-aos-duration="3000">
             <div style={{ height: "100px" }}></div>
-            <Heading 
+            <Heading
                 size={["2xl", "2xl", "2xl", "3xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
-                color={colorMode === "light" ? "#4C3575" : "#BFACE0"}
+                color={colorMode === "light" ? "black" : "#BFACE0"}
                 mb="30px">
                 Contact Me
             </Heading>
             <Box
                 id={style.contact_mainDiv}
-                backgroundColor={colorMode === "light" ? "#A084CA" : "#BFACE0"}>
+                backgroundColor={colorMode === "light" ? "black" : ""}
+            >
                 <Box id={style.contact_leftDiv}>
                     <Box>
                         <form action="" onSubmit={SendMail}>

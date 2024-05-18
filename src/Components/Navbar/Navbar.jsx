@@ -82,6 +82,18 @@ function Navbar() {
           </div>
           <div>
             <Link
+              to="experience"
+              smooth={true}
+              offset={-79}
+              duration={500}
+              className="nav-link experience"
+            >
+              Experience
+            </Link>
+          </div>
+
+          <div>
+            <Link
               to="contact"
               smooth={true}
               offset={-79}
@@ -152,6 +164,15 @@ function Navbar() {
                       Skills
                     </Link>
                   </div>
+                  <Link
+                    to="experience"
+                    smooth={true}
+                    offset={-79}
+                    duration={500}
+                    className="nav-link experience"
+                  >
+                    Experience
+                  </Link>
                   <div>
                     <Link
                       to="projects"

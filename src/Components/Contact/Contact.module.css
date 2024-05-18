@@ -45,13 +45,15 @@
 
 #contact_head {
     font-size: 16px;
-    color: black;
+    color: white;
+    /* color: black; */
     margin-bottom: 5px;
 }
 
 #contact_head1 {
     font-size: 18px;
-    color: black;
+    color: white;
+    /* color: black; */
     /* color: #4C3575; */
     margin-bottom: 5px;
 }
@@ -60,7 +62,7 @@
     width: 80%;
     border-radius: 0px;
     /* background-color: #FEF5ED; */
-
+color: white;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
@@ -72,7 +74,8 @@
     padding-bottom: 150px;
     border-radius: 0px;
     /* background-color: #FEF5ED; */
-    color: black;
+    /* color: black; */
+    color: white;
     border-radius: 20px;
     padding-left: 10px;
 }
@@ -97,16 +100,18 @@
     font-family: "Bree Serif", serif;
     color: #283225;
     font-weight: bold;
+    /* transition: all 0.5s ease-in-out; */
     cursor: pointer;
 }
 
 #btn:hover {
     background: rgb(121, 114, 232);
+    transition: all 5s ease-in-out;
     background: linear-gradient(
         90deg,
-        rgba(121, 114, 232, 1) 0%,
-        rgba(91, 91, 236, 1) 44%,
-        rgba(26, 150, 236, 1) 99%
+        rgb(84, 84, 85) 0%,
+        rgb(17, 17, 19) 44%,
+        rgb(119, 120, 121) 99%
     );
 }
 

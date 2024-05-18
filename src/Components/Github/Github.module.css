@@ -24,21 +24,21 @@
 .one {
     width: 30%;
     margin: auto;
-    border: 0px solid blue;
+    /* border: 2px solid blue; */
 
     border-radius: 5px;
 }
 .two {
     width: 30%;
     margin: auto;
-    border: 0px solid blue;
-
+    /* border: 2px solid blue; */
+/* height: 180px; */
     border-radius: 5px;
 }
 .three {
     width: 30%;
     margin: auto;
-    border: 0px solid blue;
+    /* border: 2px solid blue; */
     background-color: #fffefe;
 
     border-radius: 5px;

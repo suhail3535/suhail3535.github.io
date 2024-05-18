@@ -46,7 +46,7 @@ export default function BackToTop () {
             zIndex={3}>
             <Button id={styles.icon}
                 size={"sm"}
-                bg={"#167a92"}
+                bg={"black"}
                 variant="solid"
                 w={"50px"}
                 h={"50px"}
@@ -58,7 +58,7 @@ export default function BackToTop () {
                     {isVisible ? <AiOutlineArrowUp style={{ fontSize: "30px", color: "white" }} /> : <AiOutlineArrowDown style={{ fontSize: "30px", color: "white" }} />}
                 </Text>
             </Button>
-            
+
         </Box>
     );
 }
