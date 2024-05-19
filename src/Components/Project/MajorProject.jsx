@@ -709,11 +709,11 @@ export default function MajorProject ({ colorMode }) {
                         <div>HTML</div>
                         <div>CSS</div>
                         <div>JavaScript</div>
-                        <div>React</div>
+
 
                         <div>BootStrap</div>
-                        <div>Ant-Design</div>
-                        {/* <div>Chakra-UI</div> */}
+                        <div>Sass</div>
+                
                     </div>
                     <div
                         className="project-card-btn"
