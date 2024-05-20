@@ -37,7 +37,7 @@ export default function Contact({ colorMode }) {
                 });
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err,"error");
             });
         setName("");
         setEmail("");
@@ -123,7 +123,8 @@ export default function Contact({ colorMode }) {
                                 onChange={(e) => setMessage(e.target.value)}
                             />
                             <br />
-                            <input id={style.btn} type="submit" value="Send" />
+                            <button id={style.btn}>Send</button>
+                            {/* <button id={style.btn}> */}
                         </form>
                     </Box>
                 </Box>

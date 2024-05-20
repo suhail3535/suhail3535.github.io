@@ -62,7 +62,7 @@
     width: 80%;
     border-radius: 0px;
     /* background-color: #FEF5ED; */
-color: white;
+color: black;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
@@ -75,7 +75,7 @@ color: white;
     border-radius: 0px;
     /* background-color: #FEF5ED; */
     /* color: black; */
-    color: white;
+    color: black;
     border-radius: 20px;
     padding-left: 10px;
 }
@@ -94,11 +94,11 @@ color: white;
     margin-top: 20px;
     width: 50%;
     margin: 50px auto;
-    border: 0px solid green;
+    border: 2px solid rgb(101, 118, 138);
     margin-left: 70px;
     border-radius: 10px;
     font-family: "Bree Serif", serif;
-    color: #283225;
+    color: white;
     font-weight: bold;
     /* transition: all 0.5s ease-in-out; */
     cursor: pointer;
@@ -106,7 +106,7 @@ color: white;
 
 #btn:hover {
     background: rgb(121, 114, 232);
-    transition: all 5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: linear-gradient(
         90deg,
         rgb(84, 84, 85) 0%,
