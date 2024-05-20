@@ -352,7 +352,7 @@ export default function MajorProject ({ colorMode }) {
                             <a
                                 id={style.links}
                                 rel="noreferrer"
-                                href="https://thinkable-slope-suhail3535.vercel.app/"
+                                href="https://aerowear-suhail3535s-projects.vercel.app/"
                                 target="_blank">
                                 Live
                             </a>
@@ -713,7 +713,7 @@ export default function MajorProject ({ colorMode }) {
 
                         <div>BootStrap</div>
                         <div>Sass</div>
-                
+
                     </div>
                     <div
                         className="project-card-btn"
