@@ -14,6 +14,7 @@ import {
 import style from "./Footer.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { ImageCom } from "../Image";
 // ..
 AOS.init();
 export default function Footer({ colorMode }) {
@@ -89,7 +90,9 @@ export default function Footer({ colorMode }) {
                     </a>
                 </Box>
             </Box>
-            <hr />
+            {/* <hr /> */}
+            <ImageCom />
+
             <Box
                 id={style.footer_mainDiv3}
                 backgroundColor={colorMode === "light" ? "black" : "black"}>

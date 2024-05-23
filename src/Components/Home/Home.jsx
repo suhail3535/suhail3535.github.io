@@ -34,7 +34,7 @@ return (
           </div>
           <div className={style.quote}>
             <img
-              src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light"
+              src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"
               alt=""
             />
           </div>
