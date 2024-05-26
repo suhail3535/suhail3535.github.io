@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { Button, useColorMode } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
@@ -13,55 +14,63 @@ import GitHub from "./Components/Github/Github";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import BackToTop from "./Components/Home/BacktoTop";
-import Animation from "./Components/Animation/Animation";
 import Anima from "./Components/Animation/Anima";
 import WhatsApp from "./Components/Home/WhatsApp";
 import Experience from "./Components/Experience/Experience";
 import { ImageCom } from "./Components/Image";
+import Loader from "./Components/Home/Loader";
 
 function App () {
   const { colorMode, toggleColorMode } = useColorMode();
+  const [showGif, setShowGif] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGif(false);
+    }, 2500);
+
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div
-      className="App"
-    >
-      {<Button size="lg" id="themeButton" onClick={toggleColorMode}>
-        {colorMode === "light" ? (
-          <FaMoon fontSize="20px" />
+    <>
+      <div className="App">
+        {showGif ? (
+      <Loader />
+
         ) : (
-          <FaSun fontSize="20px" />
+          <>
+            <Button size="lg" id="themeButton" onClick={toggleColorMode}>
+              {colorMode === "light" ? (
+                <FaMoon fontSize="20px" />
+              ) : (
+                <FaSun fontSize="20px" />
+              )}
+            </Button>
+            <Navbar colorMode={colorMode} />
+            <Home colorMode={colorMode} />
+            <Anima dir="up" />
+            <About colorMode={colorMode} />
+            <ImageCom />
+            <Skills colorMode={colorMode} />
+            <ImageCom />
+            <Experience colorMode={colorMode} />
+            <ImageCom />
+            <Project colorMode={colorMode} />
+            <ImageCom />
+            <Static colorMode={colorMode} />
+            <Anima dir="up" />
+            <GitHub colorMode={colorMode} />
+            <Anima dir="down" />
+            <Contact colorMode={colorMode} />
+            <BackToTop />
+            <WhatsApp />
+            <Footer colorMode={colorMode} />
+          </>
         )}
-      </Button>}
-      <Navbar colorMode={colorMode} />
-      <Home colorMode={colorMode} />
-      <Anima dir="up" />
-      <About colorMode={colorMode} />
-      <ImageCom />
-
-      <Skills colorMode={colorMode} />
-      <ImageCom />
-
-      <Experience colorMode={colorMode} />
-
-      {/* <Anima dir="up" />
-       */}
-      <ImageCom />
-
-      <Project colorMode={colorMode} />
-      <ImageCom />
-
-      {/* <Anima dir="down" /> */}
-      <Static colorMode={colorMode} />
-      <Anima dir="up" />
-      <GitHub colorMode={colorMode} />
-      <Anima dir="down" />
-      <Contact colorMode={colorMode} />
-
-      <BackToTop />
-      <WhatsApp />
-      <Footer colorMode={colorMode} />
-    </div>
+      </div>
+    </>
   );
 }
 

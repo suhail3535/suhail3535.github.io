@@ -32,6 +32,25 @@ padding: 10px;
   /* height: 450px; */
 }
 
+/* <-----------loader--------------- */
+.loader{
+  width: 100%;
+  margin:  auto;
+height: 100vh;
+  text-align: center;
+  display: flex;
+  background-color: rgb(87, 86, 86);
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+#hash{
+display: flex;
+margin: auto;
+color: (5, 5, 5, 1);
+
+}
+
 #myDetailsDiv {
   width: 100%;
   margin-left: 60px;
