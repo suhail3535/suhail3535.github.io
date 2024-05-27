@@ -59,10 +59,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  width: 125px;
+  background-color: rgb(78, 78, 78);
+  width: 110px;
   text-align: center;
-  color: #1a1a1a;
+  color:white;
   padding: 10px;
   border-radius: 10px;
   font-style: normal;
@@ -70,14 +70,14 @@
 }
 
 .navbar-resume:hover {
-  color: white;
-  background: rgb(121, 114, 232);
-  background: linear-gradient(
+  /* color: white; */
+  background: rgb(87, 86, 86);
+  /* background: linear-gradient(
     90deg,
     rgba(121, 114, 232, 1) 0%,
     rgba(91, 91, 236, 1) 44%,
     rgba(26, 150, 236, 1) 99%
-  );
+  ); */
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
@@ -130,13 +130,13 @@
   }
 
   .navbar-resume:hover {
-    background: rgb(121, 114, 232);
+    /* background: rgb(121, 114, 232);
   background: linear-gradient(
     90deg,
     rgba(121, 114, 232, 1) 0%,
     rgba(91, 91, 236, 1) 44%,
     rgba(26, 150, 236, 1) 99%
-  );
+  ); */
   }
 }
  @media all and (min-width: 280px) and (max-width: 767px) {
@@ -174,11 +174,11 @@
     color: white;
   }
   .navbar-resume:hover {
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
       rgba(181, 68, 63, 1) 0%,
       rgba(176, 66, 70, 1) 60%,
       rgb(116, 43, 111) 100%
-    );
+    ); */
   }
 }
 

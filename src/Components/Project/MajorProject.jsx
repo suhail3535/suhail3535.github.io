@@ -253,7 +253,7 @@ export default function MajorProject ({ colorMode }) {
                                 className="project-github-link"
                                 id={style.links}
                                 rel="noreferrer"
-                                href="https://6603caeba4541d678c0ca82a--marvelous-churros-cf40d8.netlify.app/"
+                                href="https://github.com/suhail3535/zakat-foundation-frontend-freelance-project"
 
                                 // href="https://github.com/suhail3535/alive-run-138"
                                 target="_blank">
@@ -519,7 +519,7 @@ export default function MajorProject ({ colorMode }) {
                     </Box>
                 </Box>
             </div>
-            <div data-aos-mirror="true"
+            {/* <div data-aos-mirror="true"
                 data-aos="fade-right"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -593,7 +593,7 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </Box>
                 </Box>
-            </div>
+            </div> */}
             <div data-aos-mirror="true"
                 data-aos="fade-left"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
@@ -751,7 +751,7 @@ export default function MajorProject ({ colorMode }) {
                     </div>
                 </Box>
             </div>
-            <div data-aos="fade-left"
+            {/* <div data-aos="fade-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -830,7 +830,7 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </div>
                 </Box>
-            </div>
+            </div> */}
 
             <div data-aos-mirror="true"
                 data-aos="fade-right"

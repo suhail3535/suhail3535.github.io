@@ -103,7 +103,7 @@ function Navbar() {
               Contact
             </Link>
           </div>
-          {/* <div>
+          <div>
             <a
               // href="https://drive.google.com/uc?id=1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH&export=download"
               className="nav-link resume"
@@ -112,6 +112,9 @@ function Navbar() {
               <div
                 onClick={() =>
                   openLink(
+                    "https://drive.google.com/file/d/1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd/view?usp=share_link"
+
+
                     // "https://drive.google.com/file/d/1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH/view?usp=share_link"
                   )
                 }
@@ -121,7 +124,7 @@ function Navbar() {
                 Resume <HiDownload />
               </div>
             </a>
-          </div> */}
+          </div>
         </div>
         <div className="responce">
           <MenuRoundedIcon onClick={onOpen} />
@@ -196,13 +199,13 @@ function Navbar() {
                     </Link>
                   </div>
                   <div>
-                    <a href="https://drive.google.com/uc?id=1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH&export=download">
+                    <a href="https://drive.google.com/uc?id=1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd&export=download">
                       <div
                         className="navbar-resume"
                         onClick={() => {
                           onClose();
                           openLink(
-                            "https://drive.google.com/file/d/1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH/view?usp=share_link"
+                            "https://drive.google.com/file/d/1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd/view?usp=share_link"
                           );
                         }}
                       >

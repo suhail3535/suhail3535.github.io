@@ -5,6 +5,7 @@ import profilephoto from "../images/mycropimg.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { HiDownload } from "react-icons/hi";
 
 // ..
 
@@ -55,7 +56,9 @@ export default function About({ colorMode }) {
                         <p
                             id="user-detail-name"
                             fontFamily="Bree Serif, serif"
-                            className={style.name}>
+                            className={style.name}
+                            color={colorMode === "light" ? "black" : "#BFACE0"}
+                        >
                             I am Suhail Khan
                         </p>
                         <p className={style.name}>Full Stack Web Developer</p>
@@ -76,16 +79,16 @@ export default function About({ colorMode }) {
                             </p>
                         </div>
 
-                        {/* <div
+                        <div
                             id={style.resumeDiv}
                             backgroundColor={
-                                colorMode === "light" ? "#4C3575" : "#BFACE0"
+                                colorMode === "light" ? "black" : ""
                             }>
                             <a
                                 id="resume-link-2"
                                 className={style.resumeButton}
-                                // href="https://drive.google.com/uc?id=1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH&export=download"
-                                // download="Suahil_Khan_Resume"
+                                href="https://drive.google.com/uc?id=1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd&export=download"
+                                download="Suahil_Khan_Resume"
                             >
                                 <div
                                     style={{
@@ -96,15 +99,16 @@ export default function About({ colorMode }) {
                                     onClick={() =>
                                         openLink(
                                             // "https://drive.google.com/file/d/1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH/view?usp=share_link"
+                                            "https://drive.google.com/file/d/1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd/view?usp=share_link"
                                         )
                                     }
-                                    // className="home-resume"
+                                    className="home-resume"
                                     id="resume-button-2">
                                     Resume
                                 </div>
                                 <HiDownload />
                             </a>
-                        </div> */}
+                        </div>
                     </Box>
                 </div>
             </div>

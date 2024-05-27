@@ -48,7 +48,7 @@
   font-size: 25px;
   font-family: "Bree Serif", serif;
   font-weight: bold;
-  color:black;
+  /* color:black; */
 }
 
 .namep {
@@ -71,15 +71,15 @@
   cursor: pointer;
   font-family: serif;
   margin-right: 100px;
-  background-color: #4c3575;
+  background-color: black;
 }
 #resumeDiv:hover {
-  background: rgb(121, 114, 232);
+  /* background: rgb(121, 114, 232); */
   background: linear-gradient(
     90deg,
-    rgba(121, 114, 232, 1) 0%,
-    rgba(91, 91, 236, 1) 44%,
-    rgba(26, 150, 236, 1) 99%
+    rgb(44, 44, 44) 0%,
+    rgb(34, 34, 34) 44%,
+    rgb(13, 13, 14) 99%
   );
 }
 
@@ -169,9 +169,9 @@
   cursor: pointer;
   font-family: serif;
 
-  background-color: #4c3575;
+  /* background-color: #4c3575; */
 }
-#resumeDiv:hover {
+/* #resumeDiv:hover {
   background: rgb(121, 114, 232);
   background: linear-gradient(
     90deg,
@@ -179,7 +179,7 @@
     rgba(91, 91, 236, 1) 44%,
     rgba(26, 150, 236, 1) 99%
   );
-}
+} */
 
 .resumeButton {
   font-size: 22px;
