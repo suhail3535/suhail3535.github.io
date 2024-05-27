@@ -1062,7 +1062,7 @@ export default function MajorProject ({ colorMode }) {
                 </Box>
             </div>
             {/* ***************minor project********* */}
-            <div data-aos-mirror="true"
+            {/* <div data-aos-mirror="true"
                 data-aos="fade-left"
                 data-aos-duration="3000" id={style.seceond_section}>
                 <div id={style.card1}>
@@ -1180,7 +1180,7 @@ export default function MajorProject ({ colorMode }) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
