@@ -17,18 +17,13 @@ export default function About({ colorMode }) {
 
     return (
         <div
+            
             id="about"
-            className="about section"
+            className={style.background}
             data-aos-mirror="true"
             data-aos="fade-up"
             data-aos-duration="3000">
-            {/* <div
-                id="About"
-                style={{
-                    height: "100px",
-                    border: "0px solid blue",
-                    padding: "10px",
-                }}></div> */}
+
             <Heading
                 size={["xl", "xl", "xl", "xl"]}
                 textAlign="center"

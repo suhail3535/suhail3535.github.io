@@ -5,16 +5,18 @@
 }
 
 .services_experience {
-    width: 90%;
+    width: 100%;
     margin: auto;
      font-family: 'Bree Serif', serif;
     background-color: transparent;
-    margin-top: 80px;
-    margin-bottom: 50px;
+    /* margin-top: 80px; */
+    /* margin-bottom: 50px; */
     border: 0px solid blue;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       padding: 20px;
+    overflow: hidden;
+        background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
 .services_experience::before {
@@ -50,9 +52,10 @@
 .experiences {
     margin-top: 50px;
     margin-bottom: 50px;
+    color: white;
     background-color: transparent;
      font-family: 'Bree Serif', serif;
-    
+
 
 }
 
@@ -65,6 +68,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .experience h3 {

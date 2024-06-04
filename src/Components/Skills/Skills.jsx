@@ -1,7 +1,7 @@
 import { Heading } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import style from "./Skills.module.css";
-
+import "../Home/animation.css"
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -106,14 +106,22 @@ export default function Skills({ colorMode }) {
       },
   ];
   return (
-      <div id="skills">
+      <div id="skills"
+          className={"background"}
+
+      >
+
+          <div id={"stars"} />
+          <div id={"stars2"} />
+          <div id={"stars3"} />
+
           <div id="Skills" style={{ height: "20px" }}></div>
           <div className="skills-card-name" id={style.skill}>
               <Heading
                   size={["xl", "xl", "xl", "xl"]}
                   fontFamily="Bree Serif, serif"
                   style={{
-                      color: colorMode === "light" ? "black" : "#BFACE0",
+                      color: colorMode === "light" ? "white" : "#BFACE0",
                   }}
                   textAlign="center"
                   color="#243D25">
@@ -140,7 +148,7 @@ export default function Skills({ colorMode }) {
                               style={{
                                   color:
                                       colorMode === "light"
-                                          ? "black"
+                                          ? "white"
                                           : "#BFACE0",
                               }}>
                               {skill.name}
@@ -155,7 +163,7 @@ export default function Skills({ colorMode }) {
                   size={["xl", "xl", "xl", "xl"]}
                   fontFamily="Bree Serif, serif"
                   style={{
-                      color: colorMode === "light" ? "black" : "#BFACE0",
+                      color: colorMode === "light" ? "white" : "#BFACE0",
                   }}
                   textAlign="center"
                   color="#243D25">
@@ -182,7 +190,7 @@ export default function Skills({ colorMode }) {
                               style={{
                                   color:
                                       colorMode === "light"
-                                          ? "black"
+                                          ? "white"
                                           : "#BFACE0",
                               }}>
                               {skill.name}

@@ -594,7 +594,7 @@ export default function MajorProject ({ colorMode }) {
                     </Box>
                 </Box>
             </div> */}
-            <div data-aos-mirror="true"
+            {/* <div data-aos-mirror="true"
                 data-aos="fade-left"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -669,7 +669,7 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </Box>
                 </Box>
-            </div>
+            </div> */}
 
             <div data-aos="fade-right"
                 data-aos-easing="ease-out-cubic"
@@ -911,7 +911,7 @@ export default function MajorProject ({ colorMode }) {
                 </Box>
             </div>
 
-            <div data-aos-mirror="true"
+            {/* <div data-aos-mirror="true"
                 data-aos="fade-left"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -1060,7 +1060,7 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </Box>
                 </Box>
-            </div>
+            </div> */}
             {/* ***************minor project********* */}
             {/* <div data-aos-mirror="true"
                 data-aos="fade-left"

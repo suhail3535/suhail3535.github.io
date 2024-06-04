@@ -1,13 +1,20 @@
 import { Flex, VStack, Image, Box, Heading, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import style from "./Home.module.css"
+import "./animation.css"
+// import style from "./About.module.css"
 
 export default function Home({ colorMode }) {
 return (
-      <div id="home">
+  <div id="home"
+
+    className={"background"}   >
+    <div id={"stars"} />
+    <div id={"stars2"} />
+    <div id={"stars3"} />
         <div
           id={style.home}
-          style={{ color: colorMode === "light" ? "black" : "#EBC7E8" }}
+          style={{ color: colorMode === "light" ? "white" : "#EBC7E8" }}
         >
           <div className={style.img_txt_wrapper}
 

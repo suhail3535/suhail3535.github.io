@@ -1,6 +1,6 @@
 import React from "react";
 import style from './Static.module.css'
-
+import "../Home/animation.css"
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -14,6 +14,10 @@ function Static({ colorMode }) {
       data-aos="fade-up"
       data-aos-duration="3000"
     >
+      {/* className=background" */}
+      <div id={"stars"} />
+      <div id={"stars2"} />
+      <div id={"stars3"} />
       <div className="container" id="coding">
         <div className={style.experiences} id={style.experiences}>
           <div className={style.experience}>

@@ -50,7 +50,9 @@ function App () {
             </Button>
             <Navbar colorMode={colorMode} />
             <Home colorMode={colorMode} />
-            <Anima dir="up" />
+
+              <ImageCom />
+
             <About colorMode={colorMode} />
             <ImageCom />
             <Skills colorMode={colorMode} />
@@ -60,10 +62,16 @@ function App () {
             <Project colorMode={colorMode} />
             <ImageCom />
             <Static colorMode={colorMode} />
-            <Anima dir="up" />
+
+              <ImageCom />
+
             <GitHub colorMode={colorMode} />
-            <Anima dir="down" />
-            <Contact colorMode={colorMode} />
+            
+              <ImageCom />
+
+              <Contact colorMode={colorMode} />
+              <ImageCom />
+
             <BackToTop />
             <WhatsApp />
             <Footer colorMode={colorMode} />

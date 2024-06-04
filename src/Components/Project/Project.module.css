@@ -5,9 +5,10 @@
 
 #projects {
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-bottom: 50px;
+    /* background-color: rgb(37, 37, 37); */
     font-family: "Bree Serif", serif;
     /* border: 4px solid greenyellow; */
 }
