@@ -27,7 +27,7 @@ function App () {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGif(false);
-    }, 2500);
+    }, 2000);
 
 
     return () => clearTimeout(timer);
@@ -66,7 +66,7 @@ function App () {
               <ImageCom />
 
             <GitHub colorMode={colorMode} />
-            
+
               <ImageCom />
 
               <Contact colorMode={colorMode} />

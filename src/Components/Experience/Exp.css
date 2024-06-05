@@ -4,6 +4,10 @@
     font-family: "Bree Serif", serif;
 }
 
+/* <--------Accordian--------> */
+.Accordian{
+    border: 1px solid gainsboro;
+}
 .exp_container {
     width: 100%;
     /* border: 2px solid green; */
@@ -68,6 +72,7 @@ h4 {
     top: 0;
     left: 0;
     height: 100%;
+    /* border: 1px solid gainsboro; */
     width: 10px;
 
     border-left: 4px solid transparent;
