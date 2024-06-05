@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
 * {
   font-family: "Bree Serif", serif;
 }
@@ -14,7 +15,7 @@
 #about_head {
   font-size: xl;
   text-align: center;
-  border: 2px solid green;
+  border: 0px solid green;
 }
 
 #aboutDiv {
@@ -30,29 +31,31 @@
 }
 
 .aboutDetails {
-  margin-left: 40px;
-  width: 65%;
+
+  width: 70%;
   padding: 20px;
   border: 0px solid red;
-  margin-top: 40px;
+
   margin-bottom: 80px;
-  /* padding: 30px; */
+
 }
 
 #first {
   margin-top: 40px;
 
   width: 30%;
-  /* height: 70%; */
+
   border: 0px solid green;
   border-radius: 25% 25% 25% 25%;
   padding: 20px;
 }
+
 #first > img {
-  width: 70%;
+  width: 90%;
   margin: auto;
   border-radius: 60%;
 }
+
 .name {
   font-size: 25px;
   font-family: "Bree Serif", serif;
@@ -63,6 +66,7 @@
 .namep {
   font-size: 20px;
   padding-top: 20px;
+  text-align: justify;
 }
 
 #resumeDiv {
@@ -84,12 +88,10 @@
 }
 #resumeDiv:hover {
   /* background: rgb(121, 114, 232); */
-  background: linear-gradient(
-    90deg,
-    rgb(44, 44, 44) 0%,
-    rgb(34, 34, 34) 44%,
-    rgb(13, 13, 14) 99%
-  );
+  background: linear-gradient(90deg,
+      rgb(44, 44, 44) 0%,
+      rgb(34, 34, 34) 44%,
+      rgb(13, 13, 14) 99%);
 }
 
 .resumeButton {
@@ -141,16 +143,18 @@
     text-align: center;
     font-weight: bold;
   }
+
   #first {
     width: 90%;
     margin: auto;
   }
 
   #first img {
-    width: 50%;
-      border: 0px solid green;
+    width: 80%;
+    border: 0px solid green;
     margin: auto;
   }
+
   .name:nth-child(1) {
     font-size: 20px;
   }
@@ -162,65 +166,75 @@
   }
 
 
-#resumeDiv {
-  display: flex;
-  width: 95%;
-  margin: auto;
+  #resumeDiv {
+    display: flex;
+    width: 95%;
+    margin: auto;
     margin-bottom: 20px;
-  align-items: center;
-  font-size: 15px;
-  color: #fef5ed;
+    align-items: center;
+    font-size: 15px;
+    color: #fef5ed;
 
-  padding: 3px 10px 3px 10px;
-  border-radius: 7px;
-  margin-top: 20px;
-  border: 0px solid rgb(255, 0, 230);
-  cursor: pointer;
-  font-family: serif;
+    padding: 3px 10px 3px 10px;
+    border-radius: 7px;
+    margin-top: 20px;
+    border: 0px solid rgb(255, 0, 230);
+    cursor: pointer;
+    font-family: serif;
 
-  /* background-color: #4c3575; */
-}
+    /* background-color: #4c3575; */
+  }
 
 
-.resumeButton {
-  font-size: 22px;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-family: serif;
-  cursor: pointer;
-  border: 0px solid rgb(153, 255, 0);
-}
+  .resumeButton {
+    font-size: 22px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    cursor: pointer;
+    border: 0px solid rgb(153, 255, 0);
+  }
+
   .resumeDownloadLogo {
     font-size: 16px;
   }
 }
-#about section{
+
+#about section {
   border: 0px solid red;
 
 
 }
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
   #about_head {
     font-size: 3xl;
     text-align: center;
   }
 
+  #first {
+    width: 100%;
+    margin: auto;
+  }
+
+  #first img {
+    width: 60%;
+    border: 0px solid green;
+    margin: auto;
+  }
+
   #aboutDiv {
 
     width: 90%;
-
-    margin-top: 30px;
+    display: block;
+    /* margin-top: 30px; */
     border-radius: 30px;
     align-items: center;
   }
 
-  #first {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 80px;
-  }
+
 
   #myImg {
     width: 48%;
@@ -228,19 +242,18 @@
   }
 
   .aboutDetails {
-    margin-top: 10px;
-    margin-left: 20px;
+    width: 100%;
+  border: 0px solid red;
   }
 
   .name {
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
   }
+.namep{
+  font-size: 25px;
+}
 
-  .namep {
-    /* margin-top: 20px; */
-
-    font-size: 20px;
-  }
 
   #resumeButton {
     font-size: 18px;
@@ -249,4 +262,39 @@
   .resumeDownloadLogo {
     font-size: 18px;
   }
+    #resumeDiv {
+      display: flex;
+      width: 60%;
+      margin: 40px auto;
+      margin-bottom: 20px;
+      align-items: center;
+      font-size: 15px;
+      color: #fef5ed;
+
+      padding: 3px 10px 3px 10px;
+      border-radius: 7px;
+      /* margin-top: 20px; */
+      border: 0px solid rgb(255, 0, 230);
+      cursor: pointer;
+      font-family: serif;
+
+      /* background-color: #4c3575; */
+    }
+
+
+    .resumeButton {
+      font-size: 22px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      font-family: serif;
+      cursor: pointer;
+      border: 0px solid rgb(153, 255, 0);
+    }
+
+    .resumeDownloadLogo {
+      font-size: 16px;
+    }
+
 }

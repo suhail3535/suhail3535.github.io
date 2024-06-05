@@ -18,7 +18,7 @@ const GitHub = ({ colorMode }) => {
             <Heading
                 textAlign="center"
                 size={["2xl", "xl", "xl", "xl"]}
-                color={colorMode === "light" ? "black" : "#BFACE0"}
+                color={colorMode === "light" ? "black" : "white"}
                 mb="50px"
                 fontFamily="Bree Serif, serif">
                 Github Calender
@@ -28,9 +28,10 @@ const GitHub = ({ colorMode }) => {
                 <GitHubCalendar
                     class="react-activity-calendar"
                     fontFamily="Bree Serif, serif"
+                    color={colorMode === "light" ? "black" : "white"}
                     style={{
                         margin: "auto",
-                        color: "black",
+
                         cursor: "pointer",
                         fontWeight:"bold"
                     }}
@@ -78,7 +79,6 @@ const GitHub = ({ colorMode }) => {
                         id="github-top-langs"
                         src="https://github-readme-stats.vercel.app/api/top-langs/?username=suhail3535&layout=compact&title_color=4C3575&icon_color=#4c3575&text_color=#4c3575&bg_color=#a084ca&show_icons=true"
 
-                        // https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact
                     />
                 </div>
             </div>

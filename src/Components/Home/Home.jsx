@@ -14,7 +14,7 @@ return (
     <div id={"stars3"} />
         <div
           id={style.home}
-          style={{ color: colorMode === "light" ? "white" : "#EBC7E8" }}
+          style={{ color: colorMode === "light" ? "white" : "gray" }}
         >
           <div className={style.img_txt_wrapper}
 

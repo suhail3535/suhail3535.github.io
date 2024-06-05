@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import logo from "./logo.png"
 import { Link } from "react-scroll";
 import { HiDownload } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -30,7 +31,7 @@ function Navbar() {
 
           >
             <img id="logo"
-              src="https://cdn.dribbble.com/users/72227/screenshots/2595118/media/f082e58bc3e3e99f76f044f9ac4cab43.gif"
+              src={logo}
               alt="icon"
             />
           </Link>
