@@ -46,7 +46,7 @@ export default function Contact({ colorMode }) {
     };
 
     return (
-        <Box 
+        <Box
             id="contact"
             data-aos-mirror="true"
             data-aos="fade-up"
@@ -62,7 +62,7 @@ export default function Contact({ colorMode }) {
                 size={["2xl", "2xl", "2xl", "3xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
-                color={colorMode === "light" ? "white" : "#BFACE0"}
+                color={colorMode === "light" ? "white" : "white"}
                 mb="30px">
                 Contact Me
             </Heading>

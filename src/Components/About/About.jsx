@@ -28,7 +28,7 @@ export default function About ({ colorMode }) {
                 size={["xl", "xl", "xl", "xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
-                color={colorMode === "light" ? "black" : "#BFACE0"}>
+                color={colorMode === "light" ? "black" : "white"}>
                 About Me
             </Heading>
             <div
@@ -47,7 +47,7 @@ export default function About ({ colorMode }) {
                         />
                     </div>
 
-                    <Box className={style.aboutDetails} color={colorMode === "light" ? "black" : "#BFACE0"}>
+                    <Box className={style.aboutDetails} color={colorMode === "light" ? "black" : "white"}>
                         <p
                             id="user-detail-name"
                             fontFamily="Bree Serif, serif"

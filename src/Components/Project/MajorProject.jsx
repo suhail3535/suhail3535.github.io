@@ -362,7 +362,7 @@ export default function MajorProject ({ colorMode }) {
                     </div>
                 </Box>
             </div>
-            <div data-aos="fade-right"
+            {/* <div data-aos="fade-right"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -442,11 +442,11 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </div>
                 </Box>
-            </div>
+            </div> */}
 
             <div className="project-card"
                 data-aos-mirror="true"
-                data-aos="fade-left"
+                data-aos="fade-right"
                 data-aos-duration="3000" id={style.major_projectDiv}>
                 <Box
                     className={style.major_project_imgDiv}
@@ -671,7 +671,7 @@ export default function MajorProject ({ colorMode }) {
                 </Box>
             </div> */}
 
-            <div data-aos="fade-right"
+            {/* <div data-aos="fade-right"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
@@ -750,7 +750,7 @@ export default function MajorProject ({ colorMode }) {
                         </Button>
                     </div>
                 </Box>
-            </div>
+            </div> */}
             {/* <div data-aos="fade-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
@@ -833,7 +833,7 @@ export default function MajorProject ({ colorMode }) {
             </div> */}
 
             <div data-aos-mirror="true"
-                data-aos="fade-right"
+                data-aos="fade-left"
                 data-aos-duration="3000" className="project-card" id={style.major_projectDiv}>
                 <Box
                     className={style.major_project_imgDiv}

@@ -24,7 +24,7 @@ const Experience = ({ colorMode }) => {
                 size={["xl", "xl", "xl", "xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
-                color={colorMode === "light" ? "black" : "#BFACE0"}
+                color={colorMode === "light" ? "black" : "white"}
             >
                 Professional Experience
             </Heading>

@@ -65,7 +65,7 @@
     margin: 20px;
     padding: 10px;
     /* border: 2px solid yellow; */
-    /* height: 300px; */
+    height: 350px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
         rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -97,7 +97,7 @@
     border-radius: 15px;
     padding-left: 2.5%;
     padding-top: 50px;
-
+height: 350px;
     /* background: linear-gradient(rgba(122, 144, 232, 0.756), #4c3575af); */
     backdrop-filter: blur(12px) grayscale(1);
 }
