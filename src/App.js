@@ -27,7 +27,7 @@ function App () {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGif(false);
-    }, 2000);
+    }, 2500);
 
 
     return () => clearTimeout(timer);

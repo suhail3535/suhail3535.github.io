@@ -20,13 +20,13 @@
 }
 
 .skill_in_div {
-  /* border: 1px dotted black; */
+  border: 1px dotted rgb(212, 152, 152);
 
   align-items: center;
-
+justify-content: center;
   width: 80%;
   padding: 10px;
-  /* height: auto; */
+  height: 170px;
   margin-bottom: 40px;
   text-align: center;
   border-radius: 10px;
@@ -34,34 +34,23 @@
   transition: all 0.3s ease-in-out;
   box-shadow: rgb(48, 48, 48) 5px 5px 0px 0px;
 }
-
-.skill_in_div:nth-child(8),
-.skill_in_div:nth-child(9) {
-  border: 0px solid green;
-  height: 81%;
+.skill_in_div:nth-child(5) img,
+.skill_in_div:nth-child(6) img,
+.skill_in_div:nth-child(8) img,
+.skill_in_div:nth-child(7) img,
+.skill_in_div:nth-child(11) img,
+.skill_in_div:nth-child(14) img{
+  /* border: 2px solid red; */
+  height: 100px;
 }
 
-.skill_in_div:nth-child(10) {
-  border: 0px solid green;
-  height: 81%;
-}
 
-.skill_in_div:nth-child(13) {
-  border: 4px solid green;
-  height: 81%;
-}
 
-.skill_in_div:nth-child(12) {
-  border: 0px solid green;
-  height: 81%;
-}
 
-.skill_in_div:last-child {
-  border: 0px solid green;
-  height: 81%;
-  display: grid;
-  place-items: center;
-}
+
+
+
+
 
 .skill_in_div:hover {
 
@@ -76,10 +65,12 @@
 
   padding: 5px;
   margin: auto;
-  border-radius: 20%;
-  border: 1px dotted black;
+  border-radius: 15%;
+  border: 2px dotted black;
 }
-
+.logo:nth-child(5){
+  border: 3px solid green;
+}
 #skillH3 {
   font-size: 15px;
   text-align: center;
@@ -98,10 +89,15 @@
 
 @media all and (min-width: 768px) and (max-width: 1280px) {
   #skillDiv {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
+.skill_in_div {
 
+
+  /* height: 150px; */
+/*  */
+}
   #SkillH3 {
     width: 100%;
     margin: auto;
@@ -115,6 +111,11 @@
     gap: 20px;
     padding-right: 10px;
   }
+.skill_in_div {
 
+
+  /* height: 140px; */
+
+}
 
 }
