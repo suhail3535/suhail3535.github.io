@@ -72,17 +72,6 @@ function Navbar() {
           </div>
           <div>
             <Link
-              to="projects"
-              smooth={true}
-              offset={-79}
-              duration={500}
-              className="nav-link projects"
-            >
-              Projects
-            </Link>
-          </div>
-          <div>
-            <Link
               to="experience"
               smooth={true}
               offset={-79}
@@ -92,6 +81,18 @@ function Navbar() {
               Experience
             </Link>
           </div>
+          <div>
+            <Link
+              to="projects"
+              smooth={true}
+              offset={-79}
+              duration={500}
+              className="nav-link projects"
+            >
+              Projects
+            </Link>
+          </div>
+
 
           <div>
             <Link
@@ -106,14 +107,16 @@ function Navbar() {
           </div>
           <div>
             <a
-              // href="https://drive.google.com/uc?id=1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH&export=download"
+//
+              href="https://drive.google.com/uc?id=1VKRDeBEd3fPzapen5JUZ-ie-OGWaZBGY&export=download"
               className="nav-link resume"
               id="resume-link-1"
             >
               <div
                 onClick={() =>
                   openLink(
-                    "https://drive.google.com/file/d/1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd/view?usp=share_link"
+                    "https://drive.google.com/file/d/1VKRDeBEd3fPzapen5JUZ-ie-OGWaZBGY/view?usp=sharing_link"
+
 
 
                     // "https://drive.google.com/file/d/1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH/view?usp=share_link"
@@ -201,18 +204,7 @@ function Navbar() {
                   </div>
                   <div>
                     <a href="https://drive.google.com/uc?id=1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd&export=download">
-                      <div
-                        className="navbar-resume"
-                        onClick={() => {
-                          onClose();
-                          openLink(
-                            "https://drive.google.com/file/d/1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd/view?usp=share_link"
-                          );
-                        }}
-                      >
-                        {/* https://drive.google.com/file/d/1kgIaKRXSAAvH_9y1JGGGAC6IyOOwqWAH/view?usp=share_link */}
-                        Resume <HiDownload />
-                      </div>
+
                     </a>
                   </div>
                 </div>
