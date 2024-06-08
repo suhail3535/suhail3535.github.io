@@ -171,7 +171,8 @@ function Navbar() {
                       Skills
                     </Link>
                   </div>
-                  <Link
+                  <div>
+                     <Link
                     to="experience"
                     smooth={true}
                     offset={-79}
@@ -179,7 +180,8 @@ function Navbar() {
                     className="nav-link experience"
                   >
                     Experience
-                  </Link>
+                    </Link>
+                  </div>
                   <div>
                     <Link
                       to="projects"
@@ -202,11 +204,7 @@ function Navbar() {
                       Contact
                     </Link>
                   </div>
-                  <div>
-                    <a href="https://drive.google.com/uc?id=1E2mSDcxCeoGCOiBQGj7J65qYYZFcJPsd&export=download">
-
-                    </a>
-                  </div>
+                  
                 </div>
               </DrawerBody>
             </DrawerContent>
