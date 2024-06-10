@@ -174,7 +174,7 @@ export default function Contact({ colorMode }) {
                                     LinkedIn
                                 </Link>
                             </Box>
-                            |
+                            <span style={{color:"white",margin:"0px 10px"}}>||</span>
                             <Box id="contact-github">
                                 <Link
                                     style={{

@@ -95,6 +95,7 @@ h4 {
     .exp_container {
         width: 100%;
         margin: auto;
+    margin-bottom: 50px;
     }
 
     .main_container_div {
@@ -162,6 +163,7 @@ h4 {
     .exp_container {
         width: 90%;
         margin: auto;
+    margin-bottom: 50px;
     }
 
     .main_container_div {

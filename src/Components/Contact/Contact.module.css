@@ -142,15 +142,7 @@ color: black;
         cursor: pointer;
     }
 
-    #btn:hover {
-        background: rgb(121, 114, 232);
-        background: linear-gradient(
-            90deg,
-            rgba(121, 114, 232, 1) 0%,
-            rgba(91, 91, 236, 1) 44%,
-            rgba(26, 150, 236, 1) 99%
-        );
-    }
+
     .linkedin {
         text-align: left;
         width: 80%;
@@ -172,11 +164,11 @@ color: black;
     }
     #contact_leftDiv {
         width: 100%;
+        padding: 20px;
+        border: 1px solid white;
     }
 
-    #contact_rightDiv {
-        width: 100%;
-    }
+
     .input {
         width: 100%;
         margin: auto;
@@ -202,8 +194,9 @@ color: black;
         width: 100%;
         margin-left: 0px;
         margin-top: 20px;
-        border: 0px solid yellow;
-        padding: 10px;
+padding: 20px;
+    border: 1px solid white;
+        /* padding: 10px; */
     }
     .line {
         height: 2px;
