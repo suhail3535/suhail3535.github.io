@@ -105,7 +105,7 @@ color: black;
 }
 
 #btn:hover {
-    background: rgb(121, 114, 232);
+    /* background: rgb(121, 114, 232); */
     transition: all 0.5s ease-in-out;
     background: linear-gradient(
         90deg,
@@ -132,8 +132,9 @@ color: black;
         border: 0px solid red;
         width: 100%;
         margin: 20px auto;
+        cursor: pointer;
         padding: 10px 40px 10px 40px;
-
+    border: 2px solid rgb(101, 118, 138);
         /* margin-left: 50px; */
         border-radius: 10px;
         font-family: "Bree Serif", serif;
