@@ -80,7 +80,8 @@
   padding: 3px 10px 3px 10px;
   border-radius: 7px;
   margin-top: 20px;
-  border: 0px solid blue;
+    border: 2px solid rgb(101, 118, 138);
+  /* border: 0px solid blue; */
   cursor: pointer;
   font-family: serif;
   margin-right: 100px;
@@ -274,7 +275,7 @@
       padding: 3px 10px 3px 10px;
       border-radius: 7px;
       /* margin-top: 20px; */
-      border: 0px solid rgb(255, 0, 230);
+      /* border: 2px solid rgb(255, 0, 230); */
       cursor: pointer;
       font-family: serif;
 

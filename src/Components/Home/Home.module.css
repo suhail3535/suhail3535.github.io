@@ -27,11 +27,11 @@ padding: 10px;
 }
 
 #myImg {
-  border-radius: 30px;
-  width: 80%;
+  border-radius: 10px 50px;
+  width: 50%;
   margin-right: 50px;
 
-  /* height: 450px; */
+  
 }
 
 /* <-----------loader--------------- */
@@ -152,7 +152,7 @@ color: (5, 5, 5, 1);
 
   #myImg {
     border-radius: 30px;
-    width: 50%;
+    width: 60%;
     /* height: 380px; */
     margin: auto;
   }
@@ -197,8 +197,8 @@ color: (5, 5, 5, 1);
   }
 
   #myImg {
-    border-radius: 30px;
-    /* width: 62%; */
+    border-radius: 10px;
+    width: 100%;
     /* height: 380px; */
     margin: auto;
     border: 0px solid red;

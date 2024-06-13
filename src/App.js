@@ -42,10 +42,10 @@ function App () {
         ) : (
           <>
             <Button size="lg" id="themeButton" onClick={toggleColorMode}>
-              {colorMode === "light" ? (
-                <FaMoon fontSize="20px" />
-              ) : (
+              {colorMode === "dark" ? (
                 <FaSun fontSize="20px" />
+              ) : (
+                <FaMoon fontSize="20px" />
               )}
             </Button>
             <Navbar colorMode={colorMode} />
