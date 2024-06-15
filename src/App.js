@@ -19,6 +19,7 @@ import WhatsApp from "./Components/Home/WhatsApp";
 import Experience from "./Components/Experience/Experience";
 import { ImageCom } from "./Components/Image";
 import Loader from "./Components/Home/Loader";
+import CaroselMain from "./Components/CaroselSlider/CarouselMain";
 
 function App () {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -59,10 +60,10 @@ function App () {
             <ImageCom />
             <Experience colorMode={colorMode} />
             <ImageCom />
-            <Project colorMode={colorMode} />
+            {/* <Project colorMode={colorMode} /> */}
+              <CaroselMain />
             <ImageCom />
             <Static colorMode={colorMode} />
-
               <ImageCom />
 
             <GitHub colorMode={colorMode} />

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+* {
+    font-family: "Bree Serif", serif;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.carousel-item {
+    padding: 10px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.main_slider_app {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(1, 4, 228, 0.938);
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow.disabled {
+    background-color: rgba(160, 155, 155, 0.904);
+    cursor: not-allowed;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.project_card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(15, 15, 15, 0.74);
+}
+
+.card_img {
+    width: 100%;
+    padding: 10px;
+}
+
+.details {
+    text-align: justify;
+    width: 100%;
+    padding: 10px;
+}
+
+.project-tech-stack {
+    display: flex;
+
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.project-tech-stack div {
+    padding: 5px 7px;
+    font-size: 13px;
+    background-color: rgba(10, 10, 10, 0.756);
+    color: white;
+    font-weight: 500;
+    margin: 5px 5px;
+    border-top-left-radius: .75rem;
+
+    border-bottom-right-radius: .75rem;
+    /* border-radius: 0.75rem; */
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-card-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card-btn button {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px dotted gray;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-card-btn button:hover {
+    background: linear-gradient(90deg, rgb(7, 7, 7) 0%, rgba(13, 13, 14, 0.815) 44%, rgba(27, 27, 27, 0.856) 99%);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .carousel-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 100%;
+    }
+}

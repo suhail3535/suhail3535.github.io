@@ -181,11 +181,8 @@
 #major_project_detailsDi_btnDiv {
     width: 50%;
     display: flex;
-    /* border-radius: 2px 50px; */
-        /* border-top-left-radius: .75rem; */
-            /* border-bottom-right-radius: .75rem; */
+
     justify-content: space-between;
-    /* border: 20px solid green; */
     font-family: "Bree Serif", serif;
 }
 
