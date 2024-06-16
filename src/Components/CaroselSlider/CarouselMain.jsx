@@ -19,7 +19,9 @@ import triphub from "../images/2.png";
 import toptrip from "../images/3.png";
 import todonew from "../images/todonew.png";
 import shop from "../images/shopper.png";
-function CaroselMain () {
+
+function CaroselMain ({ colorMode }) {
+    const borderStyle = colorMode === "light" ? "1px solid gray" : "1px dotted rgb(212, 152, 152)";
     const items = [
         {
             title: 'Fashion Frenzy',
@@ -27,79 +29,63 @@ function CaroselMain () {
             techStack: ['React', 'Redux', 'JavaScript', 'Node Js', 'Express Js', 'MongoDB', 'Chakra-UI'],
             githubLink: 'https://github.com/suhail3535/alive-run-138',
             liveLink: 'https://faishonfrenzyecom.vercel.app/',
-            imgSrc: fashion, // Path to the fashion image
+            imgSrc: fashion,
         },
         {
-            title: 'Raj Police Theft Vehicle Module(Demo)',
-            description: "Introducing CCTNS Raj Police Portal's 'E-FIR Vehicle Theft Module': an online platform enabling civilians to report vehicle thefts seamlessly. This responsive UI is currently under development, designed to streamline reporting for enhanced public safety.",
+            title: 'Raj Police Theft Vehicle Module (Demo)',
+            description: "Introducing CCTNS Raj Police Portal's 'E-FIR Vehicle Theft Module': an online platform enabling civilians to report vehicle thefts seamlessly. This user-friendly UI is under development, designed to improve public safety.",
             techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'React-toastify', 'Ant-Design', 'Chakra-UI'],
-            githubLink: 'https://github.com/your-repo-link', // Replace with the actual GitHub link
-            liveLink: 'https://your-live-link.com', // Replace with the actual live link
-            imgSrc: cctns, // Path to the police image
+            githubLink: 'https://github.com/suhail3535/Rajpolice_vehicle_theft_portal_CCTNS_module-UI-Demo',
+            liveLink: 'https://rajasthan-police-theftvehicle-module.netlify.app/',
+            imgSrc: cctns,
         },
         {
             title: 'Freelance Frontend Developer | Client: Bangladesh',
             description: 'Developed a responsive and user-friendly website UI using React.js and component libraries. Collaborated with the client to deliver a high-quality product, focusing on seamless navigation and an intuitive user experience.',
             techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'React-toastify', 'Ant-Design', 'Chakra-UI'],
-            githubLink: 'https://github.com/your-repo-link', // Replace with the actual GitHub link
-            liveLink: 'https://your-live-link.com', // Replace with the actual live link
-            imgSrc: zakat, // Path to the bangladesh image
+            githubLink: 'https://github.com/suhail3535/zakat-foundation-frontend-freelance-project',
+            liveLink: 'https://6603caeba4541d678c0ca82a--marvelous-churros-cf40d8.netlify.app/',
+            imgSrc: zakat,
         },
         {
             title: 'AeroWear',
             description: 'Aerowear is known for its trendy and affordable clothing, with a focus on casual wear such as t-shirts, hoodies, and jeans. The brand also offers a range of accessories such as bags.',
             techStack: ['React', 'Redux', 'Json Server', 'HTML', 'CSS', 'JavaScript', 'Chakra-UI'],
-            githubLink: 'https://github.com/your-repo-link', // Replace with the actual GitHub link
-            liveLink: 'https://your-live-link.com', // Replace with the actual live link
-            imgSrc: rctproject, // Path to the aerowear image
+            githubLink: 'https://github.com/suhail3535/thinkable-slope-4107/tree/main/thinkable-slope',
+            liveLink: 'https://aerowear-suhail3535s-projects.vercel.app/',
+            imgSrc: rctproject,
         },
         {
             title: 'Fitness World',
             description: 'Fitness World: Your ultimate destination for wellness. Explore tailored workout plans, nutrition tips, and community support. Achieve your fitness goals today!',
             techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Material-UI', 'Chakra-UI'],
-            githubLink: 'https://github.com/your-repo-link', // Replace with the actual GitHub link
-            liveLink: 'https://your-live-link.com', // Replace with the actual live link
-            imgSrc: zym, // Path to the fitness image
+            githubLink: 'https://github.com/suhail3535/FitnessWorldwebApp',
+            liveLink: 'https://fitness-worldweb-app.vercel.app/',
+            imgSrc: zym,
         },
         {
             title: 'Login Management System',
             description: "Masai School's student login management system allows students to access upcoming lectures, assignments, and the daily schedule.",
-            techStack: ['React', 'Redux', 'Json Server', 'HTML', 'CSS', 'JavaScript', 'Chakra-UI', 'Material-UI'],
-            githubLink: 'https://github.com/your-repo-link', // Replace with the actual GitHub link
-            liveLink: 'https://your-live-link.com', // Replace with the actual live link
-            imgSrc: final, // Path to the login management system image
+            techStack: ['React', 'Redux', 'Json Server', 'JavaScript', 'Chakra-UI', 'Material-UI'],
+            githubLink: 'https://github.com/suhail3535/MasaiLms',
+            liveLink: 'https://masaiapp-suhail3535.vercel.app/',
+            imgSrc: final,
         },
-        // Repeat the item structure for other items if needed
     ];
 
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = window.innerWidth < 480 ? 1 : window.innerWidth < 768 ? 2 : 3;
-    const isNextDisabled = currentIndex >= items.length - itemsPerPage;
-
-    const handleNext = () => {
-        if (!isNextDisabled) {
-            setCurrentIndex(currentIndex + itemsPerPage);
-        }
-    };
-
-    const handlePrev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - itemsPerPage);
-        }
-    };
-
-    const renderItems = items.slice(currentIndex, currentIndex + itemsPerPage).map((item, index) => (
-        <div className='project_card' key={index}>
+    const renderItems = items.map((item, index) => (
+        <div className='project_card' key={index}
+            style={{ border: borderStyle }}
+        >
             <div className='card_img'>
                 <img src={item.imgSrc} alt={item.title} />
             </div>
             <div className='details'>
-                <h2>{item.title}</h2>
+                <h2 className='title_project'>{item.title}</h2>
                 <h3>{item.description}</h3>
             </div>
             <div className='project-tech-stack'>
-                Tech Stack:
+                <strong>Tech Stack:</strong>
                 {item.techStack.map((tech, i) => (
                     <div key={i}>{tech}</div>
                 ))}
@@ -127,13 +113,7 @@ function CaroselMain () {
         <div className='main_slider_app'>
             <h1 className='heading'>Projects</h1>
             <div className='carousel-container'>
-                <div className='arrow prev' onClick={handlePrev} style={{ visibility: currentIndex > 0 ? 'visible' : 'hidden' }}>
-                    &lt;
-                </div>
                 <Carousel items={renderItems} />
-                <div className='arrow next' onClick={handleNext} style={{ visibility: isNextDisabled ? 'hidden' : 'visible' }}>
-                    &gt;
-                </div>
             </div>
         </div>
     );

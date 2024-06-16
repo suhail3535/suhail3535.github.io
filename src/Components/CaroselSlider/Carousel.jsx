@@ -13,13 +13,13 @@ const Carousel = ({ items }) => {
 
     useEffect(() => {
         setIsPrevDisabled(currentSlide === 0);
-        setIsNextDisabled(currentSlide >= items.length - 3); // Adjust this value if slidesToShow changes
+        setIsNextDisabled(currentSlide >= items.length - settings.slidesToShow);
     }, [currentSlide, items.length]);
 
     const settings = {
         dots: true,
         infinite: false,
-        speed: 900, // Speed of transition
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <NextArrow onClick={nextSlide} disabled={isNextDisabled} />,
@@ -29,21 +29,21 @@ const Carousel = ({ items }) => {
         },
         responsive: [
             {
-                breakpoint: 1024, // Laptop
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                 }
             },
             {
-                breakpoint: 768, // Tablet
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 480, // Mobile
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

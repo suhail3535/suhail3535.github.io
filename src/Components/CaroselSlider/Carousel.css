@@ -26,9 +26,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(1, 4, 228, 0.938);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(12, 12, 12, 0.938);
     color: white;
     border-radius: 50%;
     position: absolute;
@@ -38,7 +38,11 @@
     z-index: 2;
     transition: all 0.5s ease-in-out;
 }
-
+.title_project{
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
 .arrow.disabled {
     background-color: rgba(160, 155, 155, 0.904);
     cursor: not-allowed;
@@ -55,8 +59,10 @@
 .project_card {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    box-shadow: 10px 10px 10px rgba(15, 15, 15, 0.74);
+    padding: 10px 20px;
+    height: 550px;
+    /* border: 1px dotted rgb(212, 152, 152); */
+    box-shadow: 5px 5px 5px  rgba(56, 44, 44, 0.74);
 }
 
 .card_img {
@@ -72,24 +78,25 @@
 
 .project-tech-stack {
     display: flex;
-
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .project-tech-stack div {
-    padding: 5px 7px;
+    padding: 3px 5px;
     font-size: 13px;
     background-color: rgba(10, 10, 10, 0.756);
     color: white;
     font-weight: 500;
-    margin: 5px 5px;
+    margin: 2px 2px;
     border-top-left-radius: .75rem;
-
     border-bottom-right-radius: .75rem;
-    /* border-radius: 0.75rem; */
     transition: all 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.project-tech-stack div:hover{
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
 }
 
 .project-card-btn {
@@ -125,4 +132,12 @@
     .carousel-item {
         width: 100%;
     }
+        .project_card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            height: 600px;
+            /* border: 1px solid red; */
+            box-shadow: 10px 10px 10px rgba(56, 44, 44, 0.74);
+        }
 }

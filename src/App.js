@@ -61,7 +61,7 @@ function App () {
             <Experience colorMode={colorMode} />
             <ImageCom />
             {/* <Project colorMode={colorMode} /> */}
-              <CaroselMain />
+              <CaroselMain colorMode={colorMode} />
             <ImageCom />
             <Static colorMode={colorMode} />
               <ImageCom />
