@@ -19,7 +19,9 @@
 .main_slider_app {
     width: 90%;
     margin: auto;
+    /* border: 1px solid red; */
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .arrow {

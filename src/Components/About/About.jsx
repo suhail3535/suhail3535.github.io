@@ -65,9 +65,8 @@ export default function About ({ colorMode }) {
                         <div className="aboutMe" id="user-detail-intro">
                             <p className={style.namep}>
                                 A highly focused and reliable Front-End Developer with 1 year
-                                and 11 months of hands-on experience. My expertise includes
-                                HTML, CSS, Vanilla JavaScript,BootStrap,Tailwind CSS, React.js,
-                                Redux js,Redux Toolkit Node.js, Express.js, MongoDB, Mongoose,
+                                and 11 months of hands-on experience. My expertise include HTML,
+                                CSS,Vanilla JavaScript,BootStrap,Tailwind CSS, React.js,Redux js,Redux Toolkit Node.js, Express.js, MongoDB, Mongoose,
                                 and Git. Passionate about web development, I am eager to contribute to innovative projects and develop impactful solutions. My strong work ethic and ability to thrive in fast-paced environments make me a valuable team member. I look forward to collaborating on new ventures and pushing boundaries in the ever-evolving landscape of technology.
                             </p>
                         </div>
