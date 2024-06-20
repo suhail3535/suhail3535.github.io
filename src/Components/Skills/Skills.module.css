@@ -38,10 +38,12 @@ justify-content: center;
 .skill_in_div:nth-child(6) img,
 .skill_in_div:nth-child(8) img,
 .skill_in_div:nth-child(7) img,
+.skill_in_div:nth-child(15) img,
+.skill_in_div:nth-child(16) img,
 .skill_in_div:nth-child(11) img,
 .skill_in_div:nth-child(14) img{
   /* border: 2px solid red; */
-  height: 100px;
+  height: 90px;
 }
 
 
