@@ -14,8 +14,8 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   font-family: serif;
-  margin-bottom: 50px;
-  border: 0px solid green;
+  /* margin-bottom: 50px; */
+  /* border: 3px solid green; */
   place-items: center
 }
 
@@ -94,12 +94,6 @@ justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-.skill_in_div {
-
-
-  /* height: 150px; */
-/*  */
-}
   #SkillH3 {
     width: 100%;
     margin: auto;
@@ -113,11 +107,6 @@ justify-content: center;
     gap: 20px;
     padding-right: 10px;
   }
-.skill_in_div {
 
-
-  /* height: 140px; */
-
-}
 
 }
