@@ -7,6 +7,7 @@ import { FaGithub } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import zakat from "../images/zakat.png";
 import zym from "../images/zim.png";
+import brain1 from "../images/brain1.png";
 
 import cctns from "../images/cctns.png";
 
@@ -19,6 +20,14 @@ import final from "../images/final.png";
 function CaroselMain ({ colorMode }) {
     const borderStyle = colorMode === "light" ? "1px solid gray" : "1px dotted rgb(212, 152, 152)";
     const items = [
+        {
+            title: 'Brainwave - Modern UI/UX website',
+            description: 'Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard.',
+            techStack: ['React', 'tailwindcss', 'scroll-lock', 'JavaScript', 'react-just-parallax'],
+            githubLink: 'https://github.com/suhail3535/Brainwave_AI.git',
+            liveLink: 'https://brainwave-ai-phi.vercel.app/',
+            imgSrc: brain1,
+        },
         {
             title: 'Fashion Frenzy',
             description: 'Fashion Frenzy is an ECommerce Website & is a clone of Anthropologie. With a vast collection of fashion and clothing products, we offer a seamless shopping experience.',
