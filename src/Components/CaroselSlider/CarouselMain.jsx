@@ -7,18 +7,14 @@ import { FaGithub } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import zakat from "../images/zakat.png";
 import zym from "../images/zim.png";
-import dict from "../images/dictonary.png";
-import car from "../images/caradd.png";
+
 import cctns from "../images/cctns.png";
-import zeros from "../images/zeros.png";
-import dinesh from "../images/dn.png";
+
 import rctproject from "../images/rctproject.png";
-import todoapp from "../images/new111.jpg";
+
+
 import final from "../images/final.png";
-import triphub from "../images/2.png";
-import toptrip from "../images/3.png";
-import todonew from "../images/todonew.png";
-import shop from "../images/shopper.png";
+
 
 function CaroselMain ({ colorMode }) {
     const borderStyle = colorMode === "light" ? "1px solid gray" : "1px dotted rgb(212, 152, 152)";

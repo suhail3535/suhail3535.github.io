@@ -35,9 +35,7 @@
 }
 
 #major_projectDiv {
-
-
-    color: #4c3575;
+ color: #4c3575;
     width: 95%;
     cursor: pointer;
     font-family: "Bree Serif", serif;
@@ -46,8 +44,9 @@
     height: auto;
     transition: all 1s ease-in-out;
     display: flex;
-    border: 1px dotted black;
-    /* border: 3px solid green; */
+    /* border: 1px dotted black; */
+    border: 3px solid green;
+    background-color: red;
     justify-content: space-between;
     border-radius: 15px;
 }

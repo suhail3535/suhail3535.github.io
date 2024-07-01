@@ -62,14 +62,21 @@
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+  
+    background-image: linear-gradient(to bottom, rgba(228, 224, 224, 0.644), rgba(116, 112, 112, 0.76));
     height: 550px;
-    /* border: 1px dotted rgb(212, 152, 152); */
+   
+    border-radius: 5px;
     box-shadow: 5px 5px 5px  rgba(56, 44, 44, 0.74);
 }
 
 .card_img {
     width: 100%;
     padding: 10px;
+}
+.card_img img{
+ border-radius: 5px;   
+
 }
 
 .details {
