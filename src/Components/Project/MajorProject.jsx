@@ -20,8 +20,8 @@ import triphub from "../images/2.png";
 import toptrip from "../images/3.png";
 import todonew from "../images/todonew.png";
 import shop from "../images/shopper.png";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+
 AOS.init();
 
 export default function MajorProject ({ colorMode }) {
