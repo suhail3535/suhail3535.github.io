@@ -63,7 +63,7 @@
     flex-direction: column;
     padding: 10px 20px;
   
-    background-image: linear-gradient(to bottom, rgba(228, 224, 224, 0.644), rgba(116, 112, 112, 0.76));
+    background-image: linear-gradient(to bottom, white, rgba(9, 8, 8, 0.805));
     height: 550px;
    
     border-radius: 5px;
@@ -75,7 +75,9 @@
     padding: 10px;
 }
 .card_img img{
- border-radius: 5px;   
+ border-radius: 5px;
+ height: 200px;   
+ margin: auto;
 
 }
 

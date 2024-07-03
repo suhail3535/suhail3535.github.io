@@ -45,7 +45,7 @@ function CaroselMain ({ colorMode }) {
             imgSrc: cctns,
         },
         {
-            title: 'Freelance Frontend Developer | Client: Bangladesh',
+            title: 'Freelance Frontend Developer',
             description: 'Developed a responsive and user-friendly website UI using React.js and component libraries. Collaborated with the client to deliver a high-quality product, focusing on seamless navigation and an intuitive user experience.',
             techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'React-toastify', 'Ant-Design', 'Chakra-UI'],
             githubLink: 'https://github.com/suhail3535/zakat-foundation-frontend-freelance-project',
