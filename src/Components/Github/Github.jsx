@@ -9,7 +9,7 @@ import "../Home/animation.css";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
-const GitHub = ({ colorMode }) => {
+const GitHub = () => {
   return (
     <div
       className="background"
@@ -23,7 +23,6 @@ const GitHub = ({ colorMode }) => {
       <Heading
         textAlign="center"
         size={["2xl", "xl", "xl", "xl"]}
-        color={colorMode === "light" ? "white" : "white"}
         mb="50px"
         fontFamily="Bree Serif, serif"
       >
@@ -34,7 +33,7 @@ const GitHub = ({ colorMode }) => {
         <GitHubCalendar
           class="react-activity-calendar"
           fontFamily="Bree Serif, serif"
-          color={colorMode === "light" ? "black" : "white"}
+          
           style={{
             margin: "auto",
 

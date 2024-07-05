@@ -10,6 +10,7 @@
     justify-content: space-around;
     width: 90%;
     margin: auto;
+    color: white;
 
     cursor: pointer;
     margin-top: 40px;
@@ -48,7 +49,8 @@
     width: 90%;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #0a0a0a;
+    color: white;
+    border: 1px dotted #f774c5;
 }
 
 @media all and (min-width: 768px) and (max-width: 1280px) {
@@ -62,6 +64,8 @@
         display: block;
         gap: 40px;
         width: 90%;
+        color: white;
+
         border: 0px solid green;
     }
     #github {
@@ -69,12 +73,15 @@
         width: 92%;
         padding: 5px;
         font-size: 10px;
+        color: white;
+
         border-radius: 10px;
         border: 1px solid #6f5a93;
     }
     .one {
         width: 100%;
         border: 0px solid blue;
+        color: white;
 
         border-radius: 5px;
     }
@@ -83,11 +90,14 @@
         border: 0px solid blue;
         margin-top: 30px;
         border-radius: 5px;
+        color: white;
+
     }
     .three {
         width: 100%;
         border: 0px solid blue;
         background-color: #fffefe;
+        color: white;
         margin-top: 30px;
         border-radius: 5px;
     }

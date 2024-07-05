@@ -15,7 +15,7 @@ import rctproject from "../images/rctproject.png";
 
 import final from "../images/final.png";
 
-function CaroselMain({ colorMode }) {
+function CaroselMain() {
   const className1 = 'background';
   const className2 = 'main_slider_app';
 
