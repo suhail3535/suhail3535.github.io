@@ -25,6 +25,7 @@ const GitHub = () => {
         size={["2xl", "xl", "xl", "xl"]}
         mb="50px"
         fontFamily="Bree Serif, serif"
+        style={{color:"white"}}
       >
         Github Calender
       </Heading>
