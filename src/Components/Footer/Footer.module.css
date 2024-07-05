@@ -7,6 +7,7 @@
     width: 100%;
     height: 300px;
     background-color: black;
+    /* border: 2px solid red; */
  
 }
 
@@ -14,6 +15,9 @@
     text-align: center;
     width: 100%;
     height: 200px;
+    color: white;
+    /* border: 2px solid rgb(39, 130, 38); */
+
 
 }
 

@@ -27,7 +27,8 @@ export default function Footer({ colorMode }) {
             data-aos-duration="3000">
             <Box
                 id={style.footer_mainDiv1}
-                color={colorMode === "light" ? "black" : "white"}>
+                
+                >
                 <Heading fontFamily="Bree Serif, serif" id={style.footer_head}>
                     Get In Touch
                 </Heading>
