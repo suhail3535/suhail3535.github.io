@@ -16,8 +16,9 @@ import rctproject from "../images/rctproject.png";
 import final from "../images/final.png";
 
 function CaroselMain({ colorMode }) {
-  const borderStyle =
-    colorMode === "light" ? "1px solid gray" : "1px dotted rgb(212, 152, 152)";
+  const className1 = 'background';
+  const className2 = 'main_slider_app';
+
   const items = [
     {
       title: "Brainwave - Modern UI/UX website",
@@ -54,7 +55,7 @@ function CaroselMain({ colorMode }) {
     {
       title: "Raj Police Theft Vehicle Module (Demo)",
       description:
-        "Introducing CCTNS Raj Police Portal's 'E-FIR Vehicle Theft Module': an online platform enabling civilians to report vehicle thefts seamlessly. This user-friendly UI is under development, designed to improve public safety.",
+        "Introducing CCTNS Raj Police Portal's 'E-FIR Vehicle Theft Module': an online platform enabling civilians to report vehicle thefts seamlessly,designed to improve public safety.",
       techStack: [
         "HTML",
         "CSS",
@@ -72,7 +73,7 @@ function CaroselMain({ colorMode }) {
     {
       title: "Freelance Frontend Developer",
       description:
-        "Developed a responsive and user-friendly website UI using React.js and component libraries. Collaborated with the client to deliver a high-quality product, focusing on seamless navigation and an intuitive user experience.",
+        "Developed a responsive and user-friendly website UI using React.js and component libraries such as Ant Design,focusing on seamless user experience.",
       techStack: [
         "HTML",
         "CSS",
@@ -141,7 +142,7 @@ function CaroselMain({ colorMode }) {
   ];
 
   const renderItems = items.map((item, index) => (
-    <div className="project_card" key={index} style={{ border: borderStyle }}>
+    <div className="project_card" key={index} >
       <div className="card_img">
         <img src={item.imgSrc} alt={item.title} />
       </div>
@@ -175,7 +176,7 @@ function CaroselMain({ colorMode }) {
   ));
 
   return (
-    <div id="main_slider_app" className="background">
+    <div id="projects"  className={`${className1} ${className2}`}>
       <div id={"stars"} />
       <div id={"stars2"} />
       <div id={"stars3"} />
