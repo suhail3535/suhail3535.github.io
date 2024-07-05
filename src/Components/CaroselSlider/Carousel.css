@@ -47,6 +47,7 @@
     text-align: left;
     font-weight: bold;
     font-size: 20px;
+    color: black;
 }
 .arrow.disabled {
     background-color: rgba(160, 155, 155, 0.904);
@@ -89,6 +90,7 @@
     text-align: justify;
     width: 100%;
     padding: 10px;
+    color: black;
     font-weight: 500;
 }
 
