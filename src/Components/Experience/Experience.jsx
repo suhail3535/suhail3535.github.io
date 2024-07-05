@@ -7,6 +7,7 @@ import {
     AccordionIcon,
 } from '@chakra-ui/react'
 import "./Exp.css"
+import "../Home/animation.css"
 import { Box, Heading, Image, useDisclosure } from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,17 +15,21 @@ AOS.init();
 
 const Experience = ({ colorMode }) => {
     return (
-        <div id="experience" className='exp_container'
+        <div id="experience" className='background'
             data-aos-mirror="true"
             data-aos="fade-right"
-            data-aos-duration="3000" >
-
+            data-aos-duration="3000" 
+            
+             >
+<div id={"stars"} />
+      <div id={"stars2"} />
+      <div id={"stars3"} />
             <Heading
                 style={{marginBottom:"50px"}}
                 size={["xl", "xl", "xl", "xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
-                color={colorMode === "light" ? "black" : "white"}
+                color={colorMode === "light" ? "white" : "white"}
             >
                 Professional Experience
             </Heading>
@@ -37,8 +42,8 @@ const Experience = ({ colorMode }) => {
                 <Accordion allowToggle className='Accordian'>
                     <AccordionItem>
                         <h4>
-                            <AccordionButton _expanded={{ bg: 'black', color: 'white' }}>
-                                <Box as='span' flex='1' textAlign='left'>
+                            <AccordionButton  id='box'  _expanded={{ bg: 'black', color: 'white' }}>
+                                <Box  as='span' flex='1' textAlign='left'>
                                     <h4>Rajasthan police headquarters Jaipur (contract-based)</h4>
 
                                     <h4> Full-Stack Developer(MERN)</h4>

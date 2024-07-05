@@ -59,7 +59,7 @@
 .name {
   font-size: 25px;
   font-family: "Bree Serif", serif;
-  font-weight: bold;
+  font-weight: 500
   /* color:black; */
 }
 
@@ -142,7 +142,7 @@
   .name {
     font-size: 18px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500
   }
 
   #first {

@@ -7,11 +7,13 @@
 /* <--------Accordian--------> */
 .Accordian{
     border: 1px solid gainsboro;
+    margin-bottom: 20px;
 }
-.exp_container {
+
+#experience {
     width: 100%;
     /* border: 2px solid green; */
-    margin: 50px auto;
+    /* margin: 50px auto; */
 }
 
 .main_container_div {
@@ -33,12 +35,17 @@
 
 h4 {
     font-size: 15px;
-    /* color: black; */
-    font-weight: bold;
+    color:white;
+    font-weight: 500;
 }
 
 
-
+#box:hover{
+background-color: black;
+cursor: pointer;
+border: 2px solid yellow;
+/* transition: all 5s ease-in-out; */
+}
 
 
 .roles_div {
@@ -49,7 +56,9 @@ h4 {
 }
 
 .roles_div ul li {
-    font-size: 18px;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
 
 }
 
@@ -57,15 +66,15 @@ h4 {
     position: relative;
     width: 100%;
     transition: all 0.5s ease-in-out;
-    margin: 30px 0px;
+    margin:  0px;
     /* border: 2px solid red; */
     padding: 10px 0px 20px 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .title_pos1,.title_pos{
-    /* color: black; */
-    font-weight: bold;
+    color: white;
+    font-weight: 500;
 }
 .card_exp::before {
     content: "";
@@ -84,7 +93,7 @@ h4 {
 
 .card_exp:hover::before {
     opacity: 1;
-    border-left-color:black;
+    border-left-color:black
 }
 
 .card_exp:hover {
@@ -92,59 +101,63 @@ h4 {
 }
 
 @media screen and (min-width: 200px) and (max-width: 420px) {
-    .exp_container {
+    #experience {
         width: 100%;
         margin: auto;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    /* border: 2px solid yellow; */
     }
 
     .main_container_div {
         font-family: "Bree Serif", serif;
-        width: 95%;
+        width: 100%;
         border-radius: 10px;
-        margin: auto;
+        
     }
 
     .heading_cont_first {
         width: 100%;
         display: block;
+        flex-direction: column;
         /* border: 1px solid green; */
-        height: 160px;
+        /* height: 160px; */
         padding: 0px 10px;
     }
 
     .heading_cont_first div {
         line-height: 1.9;
         width: 100%;
-        margin-top: 20px;
-        height: 50px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        /* height: 50px; */
         /* border: 1px solid rgb(0, 13, 128); */
     }
 
     .title_pos1 {
-        color: #4c3575;
+        /* color: #4c3575/; */
         line-height: 1.2;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 15px;
+        font-weight: 500;
     }
 
     .title_pos {
-        color: #4c3575;
+        /* color: #4c3575; */
         line-height: 1.2;
-        font-size: 20px;
+        font-size: 15px;
         /* border: 2px solid red; */
-        font-weight: bold;
-        margin-bottom: 20px;
+        font-weight: 500;
+        /* margin-bottom: 20px; */
     }
 
     .roles_div {
         width: 100%;
-        margin-top: 0px;
+        margin-top: 40px;
         padding: 20px;
     }
 
     .roles_div ul li {
-        font-size: 20px;
+        font-size: 15px;
         text-align: justify;
         line-height: 1.5;
     }
@@ -153,16 +166,15 @@ h4 {
         position: relative;
         width: 100%;
         transition: all 0.5s ease-in-out;
-        margin: 30px 0px;
+        /* margin: 30px 0px; */
         /* border: 5px solid green; */
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-            rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        padding: 5px;
+        
     }
 }
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
-    .exp_container {
+    #experience {
         width: 90%;
         margin: auto;
     margin-bottom: 50px;
@@ -173,35 +185,40 @@ h4 {
         width: 100%;
         border-radius: 10px;
         margin: auto;
-        padding: 15px;
+        /* padding: 15px; */
     }
 
     .heading_cont_first {
         width: 100%;
-        display: flex;
-    flex-direction: column;
-        height: 90px;
-        padding: 10px;
+        display: block;
+        flex-direction: column;
+       padding: 10px;
     }
 
     .heading_cont_first div {
-        line-height: 1.4;
-        padding: 10px;
-        /* border: 1px solid rgb(100, 128, 0); */
+        line-height: 1.9;
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        /* height: 50px; */
+        /* border: 1px solid rgb(0, 13, 128); */
     }
 
     .title_pos1 {
-        color: #4c3575;
-        line-height: 1.4;
-        font-size: 22px;
-        font-weight: bold;
+        /* color: #4c3575/; */
+        line-height: 1.2;
+        font-size: 15px;
+        font-weight: 500;
     }
 
     .title_pos {
-        color: #4c3575;
-        line-height: 1.4;
-        font-size: 22px;
-        font-weight: bold;
+        /* color: #4c3575; */
+        line-height: 1.2;
+        font-size: 15px;
+        /* border: 2px solid red; */
+        font-weight: 500;
+        /* margin-bottom: 20px; */
     }
 
     h4 {
@@ -212,12 +229,12 @@ h4 {
         width: 100%;
         margin-top: 0px;
         padding: 10px;
-        margin-top: 70px;
+        margin-top: 50px;
         /* border: 2px solid green; */
     }
 
     .roles_div ul li {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.5;
     }
 }
