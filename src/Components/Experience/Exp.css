@@ -5,7 +5,7 @@
 }
 
 /* <--------Accordian--------> */
-.Accordian{
+.Accordian {
     border: 1px solid gainsboro;
     margin-bottom: 20px;
 }
@@ -35,16 +35,21 @@
 
 h4 {
     font-size: 15px;
-    color:white;
+    color: white;
     font-weight: 500;
 }
 
+#box {
+    background: linear-gradient(to right, #f5b700, #ff6f00, #ff3c57, #ff4ec9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-#box:hover{
-background-color: black;
-cursor: pointer;
-border: 2px solid yellow;
-/* transition: all 5s ease-in-out; */
+#box:hover {
+    background-color: black;
+    cursor: pointer;
+    border: 2px solid yellow;
+    /* transition: all 5s ease-in-out; */
 }
 
 
@@ -66,16 +71,19 @@ border: 2px solid yellow;
     position: relative;
     width: 100%;
     transition: all 0.5s ease-in-out;
-    margin:  0px;
+    margin: 0px;
     /* border: 2px solid red; */
     padding: 10px 0px 20px 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-.title_pos1,.title_pos{
+
+.title_pos1,
+.title_pos {
     color: white;
     font-weight: 500;
 }
+
 .card_exp::before {
     content: "";
     position: absolute;
@@ -93,7 +101,7 @@ border: 2px solid yellow;
 
 .card_exp:hover::before {
     opacity: 1;
-    border-left-color:black
+    border-left-color: black
 }
 
 .card_exp:hover {
@@ -104,15 +112,15 @@ border: 2px solid yellow;
     #experience {
         width: 100%;
         margin: auto;
-    /* margin-bottom: 50px; */
-    /* border: 2px solid yellow; */
+        /* margin-bottom: 50px; */
+        /* border: 2px solid yellow; */
     }
 
     .main_container_div {
         font-family: "Bree Serif", serif;
         width: 100%;
         border-radius: 10px;
-        
+
     }
 
     .heading_cont_first {
@@ -169,7 +177,7 @@ border: 2px solid yellow;
         /* margin: 30px 0px; */
         /* border: 5px solid green; */
         padding: 5px;
-        
+
     }
 }
 
@@ -177,7 +185,7 @@ border: 2px solid yellow;
     #experience {
         width: 90%;
         margin: auto;
-    margin-bottom: 50px;
+        margin-bottom: 50px;
     }
 
     .main_container_div {
@@ -192,7 +200,7 @@ border: 2px solid yellow;
         width: 100%;
         display: block;
         flex-direction: column;
-       padding: 10px;
+        padding: 10px;
     }
 
     .heading_cont_first div {

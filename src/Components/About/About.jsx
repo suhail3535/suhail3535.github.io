@@ -1,7 +1,7 @@
 import { Box, Heading, Image, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import style from "./About.module.css";
-import profilephoto from "../images/mycropimg.png";
+import profilephoto from "../images/AvatarImage.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -48,6 +48,7 @@ export default function About({ colorMode }) {
               // src="profile-modified.png"
               alt="Suhail Khan"
             />
+            
           </div>
 
           <Box

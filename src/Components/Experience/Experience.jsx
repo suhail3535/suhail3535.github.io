@@ -18,14 +18,14 @@ const Experience = ({ colorMode }) => {
         <div id="experience" className='background'
             data-aos-mirror="true"
             data-aos="fade-right"
-            data-aos-duration="3000" 
-            
-             >
-<div id={"stars"} />
-      <div id={"stars2"} />
-      <div id={"stars3"} />
+            data-aos-duration="3000"
+
+        >
+            <div id={"stars"} />
+            <div id={"stars2"} />
+            <div id={"stars3"} />
             <Heading
-                style={{marginBottom:"50px"}}
+                style={{ marginBottom: "50px" }}
                 size={["xl", "xl", "xl", "xl"]}
                 textAlign="center"
                 fontFamily="Bree Serif, serif"
@@ -34,51 +34,75 @@ const Experience = ({ colorMode }) => {
                 Professional Experience
             </Heading>
             <div className='main_container_div'>
-
-
-
-
-
                 <Accordion allowToggle className='Accordian'>
                     <AccordionItem>
                         <h4>
-                            <AccordionButton  id='box'  _expanded={{ bg: 'black', color: 'white' }}>
-                                <Box  as='span' flex='1' textAlign='left'>
-                                    <h4>Rajasthan police headquarters Jaipur (contract-based)</h4>
-
-                                    <h4> Full-Stack Developer(MERN)</h4>
+                            <AccordionButton id='box' _expanded={{ bg: 'black', color: 'white' }}>
+                                <Box as='span' flex='1' textAlign='left'>
+                                    <h4>Quintype Services India Pvt Ltd </h4>
+                                    <h4>Software Engineer</h4>
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
                         </h4>
                         <AccordionPanel pb={4}>
-                            <div className='card_exp' data-aos-mirror="true" data-aos="fade-right"
-                                data-aos-duration="3000" >
+                            <div className='card_exp' data-aos-mirror="true" data-aos="fade-right" data-aos-duration="3000">
                                 <div className='heading_cont_first'>
                                     <div>
-                                        <h2 className='title_pos'>Rajasthan police headquarters Jaipur(contract-based)
-                                        </h2>
-                                        <h4>Full-Stack Developer(MERN)</h4>
+                                        <h2 className='title_pos'>Quintype Technologies</h2>
+                                        <h4>Software Engineer (Full-Stack)</h4>
                                     </div>
                                     <div>
-                                        <h2 className='title_pos'>Jaipur,Rajasthan,India
-                                        </h2>
-                                        <h4> December 2023 -Present</h4>
+                                        <h2 className='title_pos'>Jaipur, Rajasthan, India</h2>
+                                        <h4>August 2024 - Present</h4>
                                     </div>
                                 </div>
                                 <div className='roles_div'>
                                     <ul>
-                                        <li>Developed and maintained a modern and responsive website for Rajasthan Police using React.js, Bootstrap 5, Sass, Tailwind CSS, and React Icons, focusing on delivering an intuitive user experience.</li>
-                                        <li>Ensured that the website is user-friendly, accessible, and optimized for performance across various devices and browsers, adhering to web standards and best practices.</li>
-                                        <li>Facilitated collaboration among team members by setting up branches, pull requests, and managing code reviews on GitHub, promoting efficient code development and review processes.</li>
-                                        <li>Optimized user experience through responsive design, accessibility features, and usability testing, ensuring seamless interaction and accessibility for all users.</li>
-                                        <li>Debugged and optimized application performance, identifying and resolving issues to enhance the website's speed, reliability, and overall performance.</li>
+                                        <li>Built scalable and responsive front-end solutions for media clients like Fortune India, ListenFirst Media, Khaleej Times, and Gulf News.</li>
+                                        <li>Independently developed a backend solution to automate print integration for Khaleej Times, converting JSON to XML and handling secure FTP uploads.</li>
+                                        <li>Integrated CircleCI for CI/CD automation, ensuring consistent deployment and testing workflows.</li>
+                                        <li>Collaborated with cross-functional teams, including U.S.-based stakeholders, ensuring project goals and timelines were met.</li>
+                                        <li>Focused on optimizing performance, accessibility, and cross-browser compatibility, while debugging critical production issues.</li>
                                     </ul>
-
                                 </div>
                             </div>
                         </AccordionPanel>
                     </AccordionItem>
+
+                    <AccordionItem>
+                        <h4>
+                            <AccordionButton id='box' _expanded={{ bg: 'black', color: 'white' }}>
+                                <Box as='span' flex='1' textAlign='left'>
+                                    <h4>Rajasthan Police Headquarters, Jaipur (contract-based)</h4>
+                                    <h4>Full-Stack Developer (MERN)</h4>
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                        </h4>
+                        <AccordionPanel pb={4}>
+                            <div className='card_exp' data-aos-mirror="true" data-aos="fade-right" data-aos-duration="3000">
+                                <div className='heading_cont_first'>
+                                    <div>
+                                        <h2 className='title_pos'>Rajasthan Police Headquarters, Jaipur (contract-based)</h2>
+                                        <h4>Full-Stack Developer (MERN)</h4>
+                                    </div>
+                                    <div>
+                                        <h2 className='title_pos'>Jaipur, Rajasthan, India</h2>
+                                        <h4>December 2023 - July 2024</h4>
+                                    </div>
+                                </div>
+                                <div className='roles_div'>
+                                    <ul>
+                                        <li>Developed and maintained a responsive web application using React.js, focused on delivering an intuitive and accessible user experience.</li>
+                                        <li>Ensured cross-device and cross-browser compatibility, adhering to web standards and performance best practices.</li>
+                                        <li>Debugged and optimized application performance by identifying and resolving issues to improve speed, reliability, and efficiency.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </AccordionPanel>
+                    </AccordionItem>
+
 
                     <AccordionItem style={{ marginTop: "10px" }}>
                         <h2>
@@ -122,7 +146,7 @@ const Experience = ({ colorMode }) => {
                         </AccordionPanel>
                     </AccordionItem>
 
-                    <AccordionItem style={{marginTop:"10px"}}>
+                    <AccordionItem style={{ marginTop: "10px" }}>
                         <h4>
                             <AccordionButton _expanded={{ bg: 'black', color: 'white' }}>
                                 <Box as='span' flex='1' textAlign='left'>
