@@ -30,7 +30,7 @@ export default function Footer({ colorMode }) {
                 
                 >
                 <Heading fontFamily="Bree Serif, serif" id={style.footer_head}>
-                    Get In Touch
+                  <span className={style.name}> Get In Touch</span>  
                 </Heading>
                 <Heading fontFamily="Bree Serif, serif" id={style.footer_head1}>
                     You can reach out to me at

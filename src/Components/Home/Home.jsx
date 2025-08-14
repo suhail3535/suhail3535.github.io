@@ -27,7 +27,7 @@ export default function Home ({ colorMode }) {
           />
           <div id={style.myDetailsDiv}>
             <h1 id={style.myName}>
-              <span>
+              <span id={style.info}>
                 Hey,
                 <img
                   style={{ width: "10%", display: "inline" }}
@@ -35,7 +35,7 @@ export default function Home ({ colorMode }) {
                   alt=""
                 />
               </span>
-              <br /> I am Suhail Khan
+              <br /> <span id={style.info}> I am Suhail Khan</span>
             </h1>
             <h3 id={style.title}>Full Stack Web Developer</h3>
           </div>

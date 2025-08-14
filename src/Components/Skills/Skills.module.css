@@ -5,7 +5,21 @@
   /* border: 2px solid red; */
   cursor: pointer;
 }
+.name {
+  font-size: 40px;
+  
+  font-family: "Bree Serif", serif;
+  font-weight: 500;
 
+  background: linear-gradient(to right, 
+  #f6cf65, #f4a100, #f69200, #f88715, 
+  #fa6523, #fa563c, #fa2d36, #fa496d, 
+  #f8326b, #f7347f, #f7338d
+);
+-webkit-background-clip: text;
+color: transparent;
+    
+}
 #skillDiv {
   width: 90%;
   margin: 20px auto;

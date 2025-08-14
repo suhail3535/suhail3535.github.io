@@ -20,8 +20,8 @@ const Carousel = ({ items }) => {
         dots: true,
         infinite: false,
         speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         nextArrow: <NextArrow onClick={nextSlide} disabled={isNextDisabled} />,
         prevArrow: <PrevArrow onClick={prevSlide} disabled={isPrevDisabled} />,
         beforeChange: (oldIndex, newIndex) => {
@@ -31,8 +31,8 @@ const Carousel = ({ items }) => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                 }
             },
             {

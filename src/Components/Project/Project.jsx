@@ -20,7 +20,7 @@ export default function Project({ colorMode }) {
              fontFamily= "Bree Serif, serif"
             color={colorMode === "light" ? "black" : "white"}
           >
-            Projects
+           <span className={style.name}>Projects</span> 
           </Heading>
           <MajorProject colorMode={colorMode} />
         </div>

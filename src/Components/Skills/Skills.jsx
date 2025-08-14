@@ -200,7 +200,7 @@ export default function Skills ({ colorMode }) {
                     textAlign="center"
                     color="#243D25"
                 >
-                    Frontend Skills
+                  <span className={style.name}> Frontend Skills</span>  
                 </Heading>
                 <div
                     className="skills-card"
@@ -224,7 +224,8 @@ export default function Skills ({ colorMode }) {
                     textAlign="center"
                     color="#243D25"
                 >
-                    Backend Skills And Tools
+                 <span className={style.name}>Backend Skills And Tools</span>  
+                    
                 </Heading>
                 <div
                     className="skills-card"
@@ -248,7 +249,8 @@ export default function Skills ({ colorMode }) {
                     textAlign="center"
                     color="#243D25"
                 >
-                    UI Libraries
+                   
+                  <span className={style.name}>UI Libraries</span>  
                 </Heading>
                 <div
                     className="skills-card"

@@ -64,7 +64,7 @@ export default function Contact({ colorMode }) {
                 fontFamily="Bree Serif, serif"
                 color={colorMode === "light" ? "white" : "white"}
                 mb="30px">
-                Contact Me
+              <span className={style.name}>Contact Me </span>  
             </Heading>
             <Box
                 id={style.contact_mainDiv}

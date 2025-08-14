@@ -1,11 +1,8 @@
 .App {
-  width: 100%;
-    overflow: hidden;
+  width: 90%;
   margin: auto;
-  position: absolute;
-  top: 0;
-/* background-color: red; */
-  border: 0px solid red;
+  overflow: hidden;
+
 }
 
 body {

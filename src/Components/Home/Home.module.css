@@ -93,10 +93,29 @@ color: (5, 5, 5, 1);
   white-space: nowrap;
 }
 
+#info{
+  font-size: 50px;
+  color: #fef5ed;
+  font-family: "Bree Serif", serif;
+  font-weight: 500;
+  background: linear-gradient(to right, 
+  #f6cf65, #f4a100, #f69200, #f88715, 
+  #e46c39, #dc5742, #d13b42, #e65572, 
+  #f8326b, #f7347f, #f7338d
+);
+-webkit-background-clip: text;
+color: transparent;
+}
 #title {
   margin-bottom: 30px;
-  font-size: 42px;
-
+  font-size: 30px;
+  background: linear-gradient(to right, 
+  #f6cf65, #f4a100, #f69200, #f88715, 
+  #fa6523, #fa563c, #fa2d36, #fa496d, 
+  #f8326b, #f7347f, #f7338d
+);
+-webkit-background-clip: text;
+color: transparent;
  animation: type 4s steps(35) infinite alternate;;
   overflow: hidden;
   animation-timing-function: linear;

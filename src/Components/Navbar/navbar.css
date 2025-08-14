@@ -1,6 +1,5 @@
 .navbar {
-  width: 100%;
-
+  width: 90%;
   background-color: black;
   backdrop-filter: blur(12px) saturate(180%);
   position: fixed;

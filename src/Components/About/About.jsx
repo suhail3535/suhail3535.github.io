@@ -15,14 +15,37 @@ export default function About({ colorMode }) {
     window.open(url);
   };
 
+
+  const buttonStyles = {
+    base: {
+      border: "none",
+      borderRadius: "20px",
+      padding: "6px 14px",
+      fontSize: "14px",
+      fontFamily: "Arial, sans-serif",
+      margin: "5px",
+      cursor: "pointer",
+      fontWeight: "bold",
+      boxShadow: "0 2px 5px rgba(0, 0, 0, 0.15)",
+    },
+    react: { backgroundColor: "#CFEAFE", color: "#0A4C8C" },
+    next: { backgroundColor: "#CDE4FF", color: "#0060C1" },
+    ts: { backgroundColor: "#EAD7FF", color: "#6B22C1" },
+    access: { backgroundColor: "#DFFAE4", color: "#087F23" },
+    perf: { backgroundColor: "#FFF6C7", color: "#9A5B00" },
+  };
+
+
+
+
   return (
     <div
       id="about"
-    //   className={style.background}
+      //   className={style.background}
       data-aos-mirror="true"
       data-aos="fade-up"
       data-aos-duration="3000"
-      className={"background"} 
+      className={"background"}
     >
       <div id={"stars"} />
       <div id={"stars2"} />
@@ -33,8 +56,9 @@ export default function About({ colorMode }) {
         textAlign="center"
         fontFamily="Bree Serif, serif"
         color={colorMode === "light" ? "white" : "white"}
+
       >
-        About Me
+        <span className={style.name}>  Professional Summary</span>
       </Heading>
       <div data-aos-mirror="true" data-aos="fade-up" data-aos-duration="3000">
         <div
@@ -48,38 +72,43 @@ export default function About({ colorMode }) {
               // src="profile-modified.png"
               alt="Suhail Khan"
             />
-            
+
           </div>
 
           <Box
             className={style.aboutDetails}
             color={colorMode === "light" ? "white" : "white"}
           >
-            <p
-              id="user-detail-name"
-              fontFamily="Bree Serif, serif"
-              className={style.name}
-              color={colorMode === "light" ? "black" : "gray"}
-            >
-              I am Suhail Khan
-            </p>
-            <p className={style.name}>Full Stack Web Developer</p>
-
-            <p className={style.name}>I live in Hardoi,Uttar Pradesh,India</p>
 
             <div className="aboutMe" id="user-detail-intro">
               <p className={style.namep}>
-                A highly focused and reliable Front-End Developer with 1 year
-                and 11 months of hands-on experience. My expertise include HTML,
-                CSS,Vanilla JavaScript,BootStrap,Tailwind CSS, React.js,Redux
-                js,Redux Toolkit Node.js, Express.js, MongoDB, Mongoose, and
-                Git. Passionate about web development, I am eager to contribute
-                to innovative projects and develop impactful solutions. My
-                strong work ethic and ability to thrive in fast-paced
-                environments make me a valuable team member. I look forward to
-                collaborating on new ventures and pushing boundaries in the
-                ever-evolving landscape of technology.
+                I'm a passionate fullstack developer with expertise in building modern, scalable web applications using Next.js and TypeScript.
+
+                My focus is on crafting performant, accessible, and visually appealing digital experiences. I thrive on solving complex problems, collaborating with teams, and delivering clean, maintainable code that delights users.
               </p>
+              <div style={{ display: "flex", flexWrap: "wrap",marginTop: "20px" }}>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.react }}>
+                  React.js
+                </button>
+                   <button style={{ ...buttonStyles.base, ...buttonStyles.perf }}>
+                  Node.js
+                </button>
+                 <button style={{ ...buttonStyles.base, ...buttonStyles.ts }}>
+                python
+                </button>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.next }}>
+                  Next.js
+                </button>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.ts }}>
+                  TypeScript
+                </button>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.access }}>
+                  Accessibility
+                </button>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.perf }}>
+                  Performance
+                </button>
+              </div>
             </div>
 
             <div

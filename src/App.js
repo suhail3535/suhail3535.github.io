@@ -20,6 +20,7 @@ import Experience from "./Components/Experience/Experience";
 import { ImageCom } from "./Components/Image";
 import Loader from "./Components/Home/Loader";
 import CaroselMain from "./Components/CaroselSlider/CarouselMain";
+import ExperienceNew from "./Components/ExperienceNew/ExperienceNew";
 
 function App () {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -52,9 +53,9 @@ function App () {
             <ImageCom />
             <Skills colorMode={colorMode} />
             <ImageCom />
-            <Experience colorMode={colorMode} />
+            {/* <Experience colorMode={colorMode} /> */}
+            <ExperienceNew colorMode={colorMode} />
             <ImageCom />
-            
               <CaroselMain colorMode={colorMode} />
             <ImageCom />
             <Static colorMode={colorMode} />

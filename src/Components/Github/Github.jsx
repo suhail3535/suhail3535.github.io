@@ -27,7 +27,7 @@ const GitHub = () => {
         fontFamily="Bree Serif, serif"
         style={{color:"white"}}
       >
-        Github Calender
+       <span className={style.name}>Github Calender</span> 
       </Heading>
 
       <Box w="100%" id={style.github}>

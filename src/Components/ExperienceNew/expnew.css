@@ -1,0 +1,16 @@
+.name {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Bree Serif", serif;
+  font-weight: 500;
+text-align: center;
+padding: 20px 20px;
+  background: linear-gradient(to right, 
+  #f6cf65, #f4a100, #f69200, #f88715, 
+  #fa6523, #fa563c, #fa2d36, #fa496d, 
+  #f8326b, #f7347f, #f7338d
+);
+-webkit-background-clip: text;
+color: transparent;
+    
+}
