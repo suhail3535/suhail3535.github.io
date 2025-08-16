@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { Button, useColorMode } from "@chakra-ui/react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import {useColorMode } from "@chakra-ui/react";
 
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Skills from "./Components/Skills/Skills";
-import Project from "./Components/Project/Project";
+
 import Static from "./Components/Static/Static";
 import GitHub from "./Components/Github/Github";
 
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import BackToTop from "./Components/Home/BacktoTop";
-import Anima from "./Components/Animation/Anima";
+
 import WhatsApp from "./Components/Home/WhatsApp";
-import Experience from "./Components/Experience/Experience";
+
 import { ImageCom } from "./Components/Image";
 import Loader from "./Components/Home/Loader";
 import CaroselMain from "./Components/CaroselSlider/CarouselMain";
-import ExperienceNew from "./Components/ExperienceNew/ExperienceNew";
 
-function App () {
+import Experience from "./Components/ExperienceNew/Experience";
+
+function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [showGif, setShowGif] = useState(true);
 
@@ -39,34 +39,34 @@ function App () {
     <>
       <div className="App">
         {showGif ? (
-      <Loader />
+          <Loader />
 
         ) : (
           <>
-            
+
             <Navbar colorMode={colorMode} />
             <Home colorMode={colorMode} />
 
-              <ImageCom />
+            <ImageCom />
 
             <About colorMode={colorMode} />
             <ImageCom />
             <Skills colorMode={colorMode} />
             <ImageCom />
-            {/* <Experience colorMode={colorMode} /> */}
-            <ExperienceNew colorMode={colorMode} />
+            
+            <Experience colorMode={colorMode} />
             <ImageCom />
-              <CaroselMain colorMode={colorMode} />
+            <CaroselMain colorMode={colorMode} />
             <ImageCom />
             <Static colorMode={colorMode} />
-              <ImageCom />
+            <ImageCom />
 
             <GitHub colorMode={colorMode} />
 
-              <ImageCom />
+            <ImageCom />
 
-              <Contact colorMode={colorMode} />
-              <ImageCom />
+            <Contact colorMode={colorMode} />
+            <ImageCom />
 
             <BackToTop />
             <WhatsApp />

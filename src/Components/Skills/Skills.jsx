@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import style from "./Skills.module.css";
 import "../Home/animation.css";
 import AOS from "aos";
-import tailwind from "../images/tailwindcss.png";
+import tailwind from "../images/tailwindlogo.png";
 import tool from "../images/toolkit.jpg";
 import express from "../images/expressjs.png";
 import antd from "../images/antd.png";
@@ -15,6 +15,9 @@ import jira from "../images/jira.png";
 import gitlab from "../images/gitlab.png";
 import prime from "../images/pr.png";
 import githab from "../images/git.png";
+import vercel from "../images/vercellogo.png";
+import python from "../images/python.png";
+import ruby from "../images/ruby.jpg";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
 AOS.init();
@@ -46,11 +49,7 @@ export default function Skills ({ colorMode }) {
             name: "Next js",
             logo: "https://www.datocms-assets.com/98835/1684410508-image-7.png",
         },
-        {
-            id: "6",
-            name: "Tailwind CSS",
-            logo: tailwind,
-        },
+    
         {
             id: "7",
             name: "BootStrap",
@@ -89,6 +88,16 @@ export default function Skills ({ colorMode }) {
             name: "Express JS",
             logo: express,
         },
+           {
+            id: "110",
+            name: "Python",
+            logo: python,
+        },
+        {
+            id: "120",
+            name: "Ruby on Rails",
+            logo: ruby,
+        },
         {
             id: "1",
             name: "Postman",
@@ -123,13 +132,8 @@ export default function Skills ({ colorMode }) {
         {
             id: "5",
             name: "Vercel",
-            logo: "https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png",
-        },
-        {
-            id: "6",
-            name: "Cyclic",
-            logo: cyclic,
-        },
+            logo: vercel,
+        }
     ];
 
     const uiLibraries = [
@@ -138,6 +142,11 @@ export default function Skills ({ colorMode }) {
             id: "17",
             name: "Material UI",
             logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqqONFG6eDHvqXzF2HtmKQ3qDErVWjLTsSUpIiJGCtA&s",
+        },
+            {
+            id: "6",
+            name: "Tailwind CSS",
+            logo: tailwind,
         },
         {
             id: "14",

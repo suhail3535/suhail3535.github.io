@@ -5,7 +5,7 @@ import { FaBriefcase, FaSchool, FaChevronUp, FaChevronDown, FaMapMarkerAlt, FaCh
 import "../Home/animation.css";
 import "./expnew.css"
 
-const ExperienceTimeline = () => {
+const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState(null); // Start with all cards closed
   const [isClosing, setIsClosing] = useState(false);
 
@@ -116,11 +116,12 @@ const ExperienceTimeline = () => {
   ];
 
   return (
-         <div style={{ 
+         <div id="experience" style={{ 
        overflow: "hidden",
        background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)",
      
-     }}>
+     }}
+     >
        <div id="stars" />
        <div id="stars2" />
        <div id="stars3" />
@@ -136,8 +137,8 @@ const ExperienceTimeline = () => {
              key={experience.id}
              className="vertical-timeline-element--work"
              date={experience.date}
-             iconStyle={{ background: "#fff", color: "#1a1a1a" }}
-             icon={<FaBriefcase />}
+             iconStyle={{ background: "#fa2d2da1", color: "#1a1a1a" }}
+             icon={<FaBriefcase style={{color:"white"}} />}
              contentStyle={{ 
                background: "transparent", 
                border: "1px solid rgba(255,255,255,0.3)",
@@ -302,4 +303,4 @@ const ExperienceTimeline = () => {
   );
 };
 
-export default ExperienceTimeline;
+export default Experience;

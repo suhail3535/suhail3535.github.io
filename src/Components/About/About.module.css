@@ -28,6 +28,7 @@
 
 #first {
  width: 40%;  
+ margin-top: -50px;
 }
 
 #first>img {

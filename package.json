@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://suhail3535.github.io",
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/react-env": "^3.1.0",
     "@colisweb/rescript-react-icons-fa": "^1.0.0",
