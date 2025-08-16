@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaBriefcase, FaSchool, FaChevronUp, FaChevronDown, FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
+import { FaBriefcase, FaChevronDown, FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
+
+import { CiCalendarDate } from "react-icons/ci";
 import "../Home/animation.css";
 import "./expnew.css"
 
@@ -24,149 +26,164 @@ const Experience = () => {
     }
   };
 
+
   const experienceData = [
     {
       id: 1,
       title: "Software Engineer",
       company: "Quintype Services India Pvt Ltd",
-      location: "",
+      location: "Jaipur, Rajasthan",
       date: "",
       isCurrent: true,
       achievements: [
         {
           title: "Software Development",
-          description: "Developed and maintained software applications using modern technologies"
+          description: "Contributed to the development of a media analytics platform using React and Ruby on Rails, implementing new features and resolving production-level bugs to enhance user experience and functionality."
         },
         {
           title: "Code Quality",
-          description: "Ensured high code quality through testing and code reviews"
+          description: "Maintained code quality and scalability while working within a large-scale React-based codebase."
         },
         {
           title: "Team Collaboration",
-          description: "Worked closely with cross-functional teams to deliver quality products"
+          description: "Collaborated with a U.S.-based cross-functional team, working in sync with U.S. time zones to meet client expectations."
         }
       ]
+
     },
     {
       id: 2,
       title: "Full-Stack Developer (MERN)",
       company: "Rajasthan Police Headquarters, Jaipur",
-      location: "Contract-based",
-      date: "",
+      location: "Jaipur, India",
+      date: "Dec 2023 - July 2024",
       isCurrent: false,
       achievements: [
         {
-          title: "MERN Stack Development",
-          description: "Built full-stack applications using MongoDB, Express.js, React.js, and Node.js"
-        },
-        {
-          title: "Database Management",
-          description: "Designed and implemented database schemas and API endpoints"
-        },
-        {
           title: "Frontend Development",
-          description: "Created responsive user interfaces with React.js and modern CSS"
+          description: "Developed and maintained a responsive web application for Rajasthan Police using React.js, ensuring an intuitive and accessible user experience across devices and browsers."
+        },
+        {
+          title: "Performance Optimization",
+          description: "Debugged and optimized application performance by identifying and resolving critical issues, improving speed, reliability, and efficiency."
+        },
+        {
+          title: "Best Practices",
+          description: "Ensured cross-device and cross-browser compatibility while adhering to web standards and performance best practices."
         }
       ]
     },
     {
       id: 3,
-      title: "React Js Developer",
-      company: "Vastu Housing Finance Corporation Pvt Ltd",
-      location: "Nashik Maharashtra",
-      date: "",
+      title: "React.js Developer",
+      company: "Vastu Housing Finance Corporation Pvt. Ltd.",
+      location: "Nashik, India",
+      date: "July 2023 - Dec 2023",
       isCurrent: false,
       achievements: [
         {
-          title: "React Development",
-          description: "Developed React.js applications with modern hooks and functional components"
+          title: "Loan Origination System (LOS)",
+          description: "Developed and implemented the admin interface of the Loan Origination System (LOS) to streamline loan process management."
         },
         {
-          title: "State Management",
-          description: "Implemented state management solutions using Redux or Context API"
+          title: "UI Development",
+          description: "Converted Figma designs into responsive web pages using React.js and Ant Design for consistent UI/UX."
         },
         {
-          title: "Component Architecture",
-          description: "Built reusable components and maintained component libraries"
+          title: "User Management",
+          description: "Integrated secure role-based access control to ensure proper user management and data integrity."
         }
       ]
     },
     {
       id: 4,
-      title: "Full Stack Web Development (Trainee)",
+      title: "Full-Stack Web Development Trainee",
       company: "Masai School",
       location: "Bengaluru, India (Remote)",
-      date: "",
+      date: "July 2022 - June 2023",
       isCurrent: false,
       achievements: [
         {
-          title: "Full Stack Learning",
-          description: "Comprehensive training in full-stack web development technologies"
+          title: "Full-Stack Training",
+          description: "Gained proficiency in HTML, CSS, JavaScript, React, Node.js, and MongoDB through hands-on learning."
         },
         {
-          title: "Project Development",
-          description: "Built multiple projects applying theoretical knowledge to practical scenarios"
+          title: "Responsive Web Applications",
+          description: "Built responsive and user-friendly web applications applying theoretical knowledge to practical projects."
         },
         {
-          title: "Problem Solving",
-          description: "Enhanced problem-solving skills through coding challenges and projects"
+          title: "Team Collaboration",
+          description: "Strengthened problem-solving and collaboration skills by working on team-based projects and coding challenges."
         }
       ]
     }
+
   ];
 
   return (
-         <div id="experience" style={{ 
-       overflow: "hidden",
-       background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)",
-     
-     }}
-     >
-       <div id="stars" />
-       <div id="stars2" />
-       <div id="stars3" />
-             {/* Heading */}
-       <h1 className="name">
-         Professional Experience
-       </h1>
+    <div id="experience" style={{
+      overflow: "hidden",
+      background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)",
 
-             {/* Timeline */}
-       <VerticalTimeline lineColor="rgba(255,255,255,0.3)">
+    }}
+    >
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
+      {/* Heading */}
+      <h1 className="name">
+        Professional Experience
+      </h1>
+
+      {/* Timeline */}
+      <VerticalTimeline lineColor="rgba(255,255,255,0.3)">
         {experienceData.map((experience, index) => (
-                     <VerticalTimelineElement
-             key={experience.id}
-             className="vertical-timeline-element--work"
-             date={experience.date}
-             iconStyle={{ background: "#fa2d2da1", color: "#1a1a1a" }}
-             icon={<FaBriefcase style={{color:"white"}} />}
-             contentStyle={{ 
-               background: "transparent", 
-               border: "1px solid rgba(255,255,255,0.3)",
-               borderRadius: "8px",
-               boxShadow: "none"
-             }}
-             contentArrowStyle={{ borderRight: "7px solid rgba(255,255,255,0.3)" }}
-           >
-            <div 
+          console.log(experience.date),
+          <VerticalTimelineElement
+            key={experience.id}
+            className="vertical-timeline-element--work"
+            date={experience.date}
+            iconStyle={{ background: "#fa2d2da1", color: "#1a1a1a" }}
+            icon={<FaBriefcase style={{ color: "white" }} />}
+            contentStyle={{
+              background: "transparent",
+              border: "1px solid rgba(255,255,255,0.3)",
+              borderRadius: "8px",
+              boxShadow: "none"
+            }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(86, 212, 8, 1)" }}
+          >
+            <div
               style={{ cursor: "pointer" }}
               onClick={() => toggleExpand(index)}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                                 <div style={{ flex: 1 }}>
-                   <h3 className="vertical-timeline-element-title" style={{ fontWeight: "bold", marginBottom: "8px", fontSize: "16px", color: "#fff" }}>
-                     {experience.company}
-                   </h3>
-                   <h4 className="vertical-timeline-element-subtitle" style={{ color: "#ccc", margin: 0, fontSize: "14px" }}>
-                     {experience.title}
-                   </h4>
-                   {experience.location && (
-                     <div style={{ display: "flex", alignItems: "center", gap: "5px", marginTop: "5px" }}>
-                       <FaMapMarkerAlt style={{ color: "#999", fontSize: "12px" }} />
-                       <span style={{ color: "#999", fontSize: "12px" }}>
-                         {experience.location}
-                       </span>
-                     </div>
-                   )}
+                <div style={{ flex: 1 }}>
+                  <h3 className="vertical-timeline-element-title">
+                    {experience.company}
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle" style={{ color: "#ccc", margin: 0, fontSize: "14px" }}>
+                    {experience.title}
+                  </h4>
+                  {experience.location && (
+                    <div style={{ display: "flex", alignItems: "center", gap: "15px", marginTop: "5px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                        <FaMapMarkerAlt style={{ color: "#eb0c0cff", fontSize: "12px" }} />
+                        <span style={{ color: "#999999ff", fontSize: "12px" }}>
+                          {experience.location}
+                        </span>
+                      </div>
+
+                      <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                        <CiCalendarDate style={{ color: "#6cdb38ff", fontSize: "16px" }} />
+                        <span style={{ color: "#999999ff", fontSize: "12px" }}>
+                          {experience.date || "Present"}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+
                   {experience.isCurrent && (
                     <span
                       style={{
@@ -175,7 +192,7 @@ const Experience = () => {
                         color: "#28a745",
                         padding: "3px 8px",
                         borderRadius: "5px",
-                        fontSize: "12px",
+                        fontSize: "14px",
                         fontWeight: "bold",
                         marginTop: "5px",
                       }}
@@ -184,68 +201,68 @@ const Experience = () => {
                     </span>
                   )}
                 </div>
-                                 <div style={{ marginLeft: "10px" }}>
-                   <div style={{ 
-                     transform: expandedIndex === index ? "rotate(180deg)" : "rotate(0deg)",
-                     transition: "transform 0.8s ease-in-out"
-                   }}>
-                                           <FaChevronDown style={{ color: "#fff", fontSize: "16px" }} />
-                   </div>
-                 </div>
+                <div style={{ marginLeft: "10px" }}>
+                  <div style={{
+                    transform: expandedIndex === index ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "transform 0.8s ease-in-out"
+                  }}>
+                    <FaChevronDown style={{ color: "#fff", fontSize: "16px" }} />
+                  </div>
+                </div>
               </div>
 
-                                            {/* Expandable Achievements Section */}
-                {(expandedIndex === index || (isClosing && expandedIndex === null)) && (
-                                     <div style={{ 
-                     marginTop: "20px", 
-                     paddingTop: "15px", 
-                     borderTop: "1px solid rgba(255,255,255,0.2)",
-                     animation: isClosing ? "slideUp 0.8s ease-in-out" : "slideDown 0.8s ease-in-out"
-                   }}>
-                   <div style={{ 
-                     display: "flex", 
-                     alignItems: "center", 
-                     gap: "8px", 
-                     marginBottom: "15px",
-                     color: "#fff",
-                     fontWeight: "600",
-                     fontSize: "14px"
-                   }}>
-                     <FaBriefcase style={{ color: "#fff" }} />
-                     Key Achievements & Responsibilities
-                   </div>
+
+              {(expandedIndex === index || (isClosing && expandedIndex === null)) && (
+                <div style={{
+                  marginTop: "20px",
+                  paddingTop: "15px",
+                  borderTop: "1px solid rgba(255,255,255,0.2)",
+                  animation: isClosing ? "slideUp 0.8s ease-in-out" : "slideDown 0.8s ease-in-out"
+                }}>
+                  <div className="key" style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    marginBottom: "15px",
+
+                    fontWeight: "600",
+                    fontSize: "14px"
+                  }}>
+                    <FaBriefcase style={{ color: "#fff" }} />
+                    Key Achievements & Responsibilities
+                  </div>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {experience.achievements.map((achievement, i) => (
-                      <li key={i} style={{ 
-                        display: "flex", 
-                        alignItems: "flex-start", 
-                        gap: "10px", 
+                      <li key={i} style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "10px",
                         marginBottom: "12px",
                         padding: "8px 0"
                       }}>
-                                                 <FaCheckCircle style={{ 
-                           color: "#fff", 
-                           fontSize: "16px", 
-                           marginTop: "2px",
-                           flexShrink: 0
-                         }} />
-                         <div>
-                           <div style={{ 
-                             fontWeight: "500", 
-                             color: "#fff", 
-                             fontSize: "14px",
-                             marginBottom: "4px"
-                           }}>
-                             {achievement.title}
-                           </div>
-                           <div style={{ 
-                             color: "#ccc", 
-                             fontSize: "13px", 
-                             lineHeight: "1.4"
-                           }}>
-                             {achievement.description}
-                           </div>
-                         </div>
+                        <FaCheckCircle style={{
+                          color: "#fff",
+                          fontSize: "16px",
+                          marginTop: "2px",
+                          flexShrink: 0
+                        }} />
+                        <div>
+                          <div style={{
+                            fontWeight: "500",
+                            color: "#fff",
+                            fontSize: "16px",
+                            marginBottom: "4px"
+                          }}>
+                            {achievement.title}
+                          </div>
+                          <div style={{
+                            color: "#ccc",
+                            fontSize: "15px",
+                            lineHeight: "1.4"
+                          }}>
+                            {achievement.description}
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -256,7 +273,7 @@ const Experience = () => {
         ))}
       </VerticalTimeline>
 
-                           <style jsx>{`
+      <style jsx>{`
           @keyframes slideDown {
             0% {
               opacity: 0;
