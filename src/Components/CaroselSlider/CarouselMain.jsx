@@ -31,7 +31,7 @@ function CaroselMain() {
       alt: "ListenFirst Media Analytics",
       description:
         "An enterprise-level media analytics platform delivering data-driven insights. Contributed to the development of dashboards, API-driven visualizations, and production support in close collaboration with a U.S.-based team.",
-      techStack: ["React", "Ruby", "Rails", "AWS", "Capistrano", , "PostgreSQL", "TypeScript", "Charts", "API Integration", "Data Visualization"],
+      techStack: ["React", "Ruby", "Rails", "AWS", "Capistrano", , "PostgreSQL", "TypeScript", "Data Visualization"],
 
       githubLink: "",
       liveLink: "https://listenfirstmedia.com",
