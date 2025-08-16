@@ -222,11 +222,7 @@ strong {
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-    .carousel-item {
-        width: 50%;
-    }
-}
+
 
 @media screen and (min-width:200px) and (max-width:500px) {
     .carousel-item {
@@ -237,13 +233,16 @@ strong {
         display: flex;
         flex-direction: column;
 
-        height: 580px;
+        height: 620px;
         padding-bottom: 20px;        /* border: 1px solid red; */
         box-shadow: 10px 10px 10px rgba(56, 44, 44, 0.74);
     }
+    .heading{
+        font-size: 25px;
+    }
 }
 
-@media screen and (min-width:50s1px) and (max-width:1023px) {
+@media screen and (min-width:501px) and (max-width:1023px) {
     .carousel-item {
         width: 100%;
     }
@@ -252,7 +251,7 @@ strong {
         display: flex;
         flex-direction: column;
        
-        height: 580px;
+        height: 750px;
         /* border: 1px solid red; */
         box-shadow: 10px 10px 10px rgba(56, 44, 44, 0.74);
     }

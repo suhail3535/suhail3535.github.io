@@ -116,4 +116,7 @@ color: transparent;
         margin-top: 30px;
         border-radius: 5px;
     }
+    .name {
+        font-size: 25px;
+    }
 }

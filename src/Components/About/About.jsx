@@ -82,19 +82,18 @@ export default function About({ colorMode }) {
 
             <div className="aboutMe" id="user-detail-intro">
               <p className={style.namep}>
-                I'm a passionate fullstack developer with expertise in building modern, scalable web applications using Next.js and TypeScript.
-
-                My focus is on crafting performant, accessible, and visually appealing digital experiences. I thrive on solving complex problems, collaborating with teams, and delivering clean, maintainable code that delights users.
+                Innovative Full Stack Developer with 3+ years of experience building scalable web applications using the MERN stack along with PostgreSQL, TypeScript, Next.js, FTP Server, and Kibana (Elasticsearch). 
+                Skilled in developing core services, integrating third-party APIs, and delivering seamless user experiences with a proven ability to lead projects and optimize performance.
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap",marginTop: "20px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", marginTop: "20px" }}>
                 <button style={{ ...buttonStyles.base, ...buttonStyles.react }}>
                   React.js
                 </button>
-                   <button style={{ ...buttonStyles.base, ...buttonStyles.perf }}>
+                <button style={{ ...buttonStyles.base, ...buttonStyles.perf }}>
                   Node.js
                 </button>
-                 <button style={{ ...buttonStyles.base, ...buttonStyles.ts }}>
-                python
+                <button style={{ ...buttonStyles.base, ...buttonStyles.ts }}>
+                  python
                 </button>
                 <button style={{ ...buttonStyles.base, ...buttonStyles.next }}>
                   Next.js

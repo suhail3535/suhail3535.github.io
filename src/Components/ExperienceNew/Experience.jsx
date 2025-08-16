@@ -138,7 +138,7 @@ const Experience = () => {
       {/* Timeline */}
       <VerticalTimeline lineColor="rgba(255,255,255,0.3)">
         {experienceData.map((experience, index) => (
-          console.log(experience.date),
+         
           <VerticalTimelineElement
             key={experience.id}
             className="vertical-timeline-element--work"
@@ -169,14 +169,14 @@ const Experience = () => {
                     <div style={{ display: "flex", alignItems: "center", gap: "15px", marginTop: "5px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <FaMapMarkerAlt style={{ color: "#eb0c0cff", fontSize: "12px" }} />
-                        <span style={{ color: "#999999ff", fontSize: "12px" }}>
+                        <span style={{ color: "#999999ff", fontSize: "10px" }}>
                           {experience.location}
                         </span>
                       </div>
 
                       <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <CiCalendarDate style={{ color: "#6cdb38ff", fontSize: "16px" }} />
-                        <span style={{ color: "#999999ff", fontSize: "12px" }}>
+                        <span style={{ color: "#999999ff", fontSize: "10px" }}>
                           {experience.date || "Present"}
                         </span>
                       </div>

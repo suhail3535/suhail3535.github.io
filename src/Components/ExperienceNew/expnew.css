@@ -40,3 +40,14 @@
     margin: 5px 0;
   }
 }
+@media only screen and (max-width: 600px) {
+  .vertical-timeline-element {
+    margin: 10px 0;
+  }
+  .vertical-timeline-element-content{
+    padding: 5px;
+  }
+  .name {
+    font-size: 25px;
+  }
+}

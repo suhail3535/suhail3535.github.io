@@ -57,6 +57,7 @@ color: transparent;
   font-size: 20px;
   padding-top: 20px;
   text-align: justify;
+  font-weight: 300;
   
 }
 
@@ -248,6 +249,7 @@ color: transparent;
 
   .namep {
     font-size: 25px;
+    font-weight: 300;
   }
 
 
