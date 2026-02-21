@@ -1,5 +1,5 @@
-import { Box, Heading, Image, useDisclosure } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { Box, Heading, Image } from "@chakra-ui/react";
+import React from "react";
 import style from "./About.module.css";
 import profilephoto from "../images/AvatarImage.webp";
 

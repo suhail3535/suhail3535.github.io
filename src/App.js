@@ -23,7 +23,7 @@ import CaroselMain from "./Components/CaroselSlider/CarouselMain";
 import Experience from "./Components/ExperienceNew/Experience";
 
 function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const [showGif, setShowGif] = useState(true);
 
   useEffect(() => {

@@ -3,7 +3,6 @@ import "./navbar.css";
 import logo from "./logo.png"
 import { Link } from "react-scroll";
 import { HiDownload } from "react-icons/hi";
-import { RxHamburgerMenu } from "react-icons/rx";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import {
   Drawer,

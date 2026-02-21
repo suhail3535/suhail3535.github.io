@@ -7,7 +7,6 @@ import {
     FaInstagram,
     FaLinkedin,
     FaPhone,
-    FaTwitter,
     FaGofore,
     FaWhatsappSquare,
 } from "react-icons/fa";

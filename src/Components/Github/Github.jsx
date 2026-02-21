@@ -1,4 +1,4 @@
-import { Box, color, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 // import ReactTooltip from "react-tooltip";

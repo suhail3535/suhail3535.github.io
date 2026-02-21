@@ -1,6 +1,6 @@
 
 import { Heading } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React from "react";
 import style from "./Skills.module.css";
 import "../Home/animation.css";
 import AOS from "aos";
@@ -10,7 +10,6 @@ import express from "../images/expressjs.png";
 import antd from "../images/antd.png";
 import node from "../images/node.jpg";
 import chakra from "../images/chakra.png";
-import cyclic from "../images/cyc.png";
 import jira from "../images/jira.png";
 import gitlab from "../images/gitlab.png";
 import prime from "../images/pr.png";

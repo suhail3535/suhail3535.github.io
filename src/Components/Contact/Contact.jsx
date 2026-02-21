@@ -1,4 +1,4 @@
-import { Box, Heading, Link, Toast, useToast } from "@chakra-ui/react";
+import { Box, Heading, Link,useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
 import style from "./Contact.module.css";
 import emailjs from "emailjs-com";

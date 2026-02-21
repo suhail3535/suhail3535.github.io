@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-import { AiOutlineArrowUp } from "react-icons/ai";
-import { AiOutlineArrowDown } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { Box, Button, Text } from "@chakra-ui/react";
 

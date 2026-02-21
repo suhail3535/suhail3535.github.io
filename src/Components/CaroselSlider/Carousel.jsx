@@ -10,18 +10,19 @@ const Carousel = ({ items }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isNextDisabled, setIsNextDisabled] = useState(false);
     const [isPrevDisabled, setIsPrevDisabled] = useState(true);
+    const SLIDES_TO_SHOW = 4;
 
     useEffect(() => {
         setIsPrevDisabled(currentSlide === 0);
-        setIsNextDisabled(currentSlide >= items.length - settings.slidesToShow);
+        setIsNextDisabled(currentSlide >= items.length - SLIDES_TO_SHOW);
     }, [currentSlide, items.length]);
 
     const settings = {
         dots: true,
         infinite: false,
         speed: 1000,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: SLIDES_TO_SHOW,
+        slidesToScroll: SLIDES_TO_SHOW,
         nextArrow: <NextArrow onClick={nextSlide} disabled={isNextDisabled} />,
         prevArrow: <PrevArrow onClick={prevSlide} disabled={isPrevDisabled} />,
         beforeChange: (oldIndex, newIndex) => {
@@ -52,13 +53,13 @@ const Carousel = ({ items }) => {
         ]
     };
 
-    function nextSlide () {
+    function nextSlide() {
         if (!isNextDisabled) {
             setCurrentSlide((prev) => prev + settings.slidesToScroll);
         }
     }
 
-    function prevSlide () {
+    function prevSlide() {
         if (!isPrevDisabled) {
             setCurrentSlide((prev) => prev - settings.slidesToScroll);
         }
