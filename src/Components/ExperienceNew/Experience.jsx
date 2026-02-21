@@ -30,7 +30,7 @@ const Experience = () => {
   const experienceData = [
     {
       id: 1,
-      title: "Software Engineer",
+      title: "Senior Software Engineer",
       company: "Quintype Services India Pvt Ltd",
       location: "Jaipur, Rajasthan",
       date: "",
