@@ -72,7 +72,7 @@ export default function Footer({ colorMode }) {
                         <FaFacebook />
                     </a>
                     <a
-                        href="https://www.linkedin.com/feed/"
+                        href="https://www.linkedin.com/in/suhail-khan-dev/"
                         target="_blank"
                         rel="noreferrer">
                         <FaLinkedin />
