@@ -177,7 +177,7 @@ const Experience = () => {
                       <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <CiCalendarDate style={{ color: "#6cdb38ff", fontSize: "16px" }} />
                         <span style={{ color: "#999999ff", fontSize: "10px" }}>
-                          {experience.date || "Present"}
+                          {experience.date || "Aug 2024 - Present"}
                         </span>
                       </div>
                     </div>
