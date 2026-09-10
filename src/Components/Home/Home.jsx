@@ -40,7 +40,12 @@ export default function Home() {
             <a href="#projects" className="btn btn-primary">
               View my work
             </a>
-            <a href={resumeDownload} target="_blank" rel="noreferrer" className="btn">
+            <a
+              href={resumeDownload}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
               Download resume <HiDownload />
             </a>
 

@@ -33,7 +33,7 @@
   padding: 20px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--tile-bg);
   color: var(--text-dim);
   font-size: 0.76rem;
   text-align: center;

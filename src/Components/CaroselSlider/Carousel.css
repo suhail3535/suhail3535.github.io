@@ -111,7 +111,7 @@
 
 .project__role {
   color: var(--accent);
-  border-color: rgba(94, 234, 212, 0.32);
+  border-color: var(--accent-line);
   background: var(--accent-soft);
 }
 

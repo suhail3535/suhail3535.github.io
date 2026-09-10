@@ -1,15 +1,22 @@
 /* ============================================================
    Design system — single source of truth for the whole site.
-   Imported once in index.js. Components use these tokens and
-   primitives instead of inline styles or per-file hardcoded colors.
+   Imported once in index.js.
+
+   Themes: dark is the default. An inline script in public/index.html
+   applies it (or the visitor's stored choice) to <html> before first
+   paint, so there is no flash. Every colour
+   below is a token; components must not hardcode colours, or they
+   will break in one of the two themes.
    ============================================================ */
 
-:root {
+:root,
+:root[data-theme="dark"] {
   /* surfaces */
   --bg: #08090d;
   --bg-elev: #101218;
   --surface: rgba(255, 255, 255, 0.026);
   --surface-hover: rgba(255, 255, 255, 0.055);
+  --tile-bg: rgba(255, 255, 255, 0.02);
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.18);
 
@@ -22,11 +29,71 @@
   --accent: #5eead4;
   --accent-deep: #14b8a6;
   --accent-soft: rgba(94, 234, 212, 0.12);
+  --accent-line: rgba(94, 234, 212, 0.32);
+  --accent-ink: #04211d;
+  --accent-hover: #7df0dd;
+  --accent-glow: rgba(94, 234, 212, 0.65);
   --violet: #a78bfa;
   --danger: #f87171;
 
-  /* type */
+  /* component-specific */
+  --nav-bg: rgba(8, 9, 13, 0.72);
+  --nav-bg-strong: rgba(8, 9, 13, 0.88);
+  --float-bg: rgba(16, 18, 24, 0.9);
+  --photo-veil: rgba(8, 9, 13, 0.55);
+  --selection-bg: rgba(94, 234, 212, 0.26);
+  --selection-fg: #fff;
+  --shadow: 0 18px 48px -24px rgba(0, 0, 0, 0.8);
+  --ambient:
+    radial-gradient(60rem 32rem at 15% -10%, rgba(20, 184, 166, 0.12), transparent 62%),
+    radial-gradient(48rem 28rem at 95% 2%, rgba(139, 92, 246, 0.1), transparent 60%),
+    radial-gradient(70rem 40rem at 50% 108%, rgba(20, 184, 166, 0.06), transparent 65%);
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7f9;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #eef0f4;
+  --tile-bg: #f6f7f9;
+  --line: rgba(16, 20, 28, 0.11);
+  --line-strong: rgba(16, 20, 28, 0.22);
+
+  --text: #12151c;
+  --text-dim: #4a5060;
+  --text-faint: #737a89;
+
+  /* Darker teal: #5eead4 fails contrast on a light background. */
+  --accent: #0d9488;
+  --accent-deep: #0f766e;
+  --accent-soft: rgba(13, 148, 136, 0.12);
+  --accent-line: rgba(13, 148, 136, 0.35);
+  --accent-ink: #ffffff;
+  --accent-hover: #0f766e;
+  --accent-glow: rgba(13, 148, 136, 0.4);
+  --violet: #7c3aed;
+  --danger: #dc2626;
+
+  --nav-bg: rgba(246, 247, 249, 0.75);
+  --nav-bg-strong: rgba(246, 247, 249, 0.92);
+  --float-bg: rgba(255, 255, 255, 0.92);
+  --photo-veil: rgba(16, 20, 28, 0.32);
+  --selection-bg: rgba(13, 148, 136, 0.2);
+  --selection-fg: #06251f;
+  --shadow: 0 18px 48px -24px rgba(16, 20, 28, 0.3);
+  --ambient:
+    radial-gradient(60rem 32rem at 15% -10%, rgba(13, 148, 136, 0.09), transparent 62%),
+    radial-gradient(48rem 28rem at 95% 2%, rgba(124, 58, 237, 0.07), transparent 60%),
+    radial-gradient(70rem 40rem at 50% 108%, rgba(13, 148, 136, 0.05), transparent 65%);
+}
+
+:root {
+  /* type
+     Inter carries body and UI text because it stays legible at small sizes.
+     Space Grotesk is display-only: it gives headings character without
+     costing readability in paragraphs. */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   /* geometry */
@@ -34,9 +101,6 @@
   --radius-sm: 9px;
   --maxw: 1120px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-
-  /* elevation */
-  --shadow: 0 18px 48px -24px rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -60,6 +124,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 
 /* One ambient background for the entire page, painted once.
@@ -70,14 +135,12 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background:
-    radial-gradient(60rem 32rem at 15% -10%, rgba(20, 184, 166, 0.12), transparent 62%),
-    radial-gradient(48rem 28rem at 95% 2%, rgba(139, 92, 246, 0.10), transparent 60%),
-    radial-gradient(70rem 40rem at 50% 108%, rgba(20, 184, 166, 0.06), transparent 65%);
+  background: var(--ambient);
 }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
+  font-family: var(--font-display);
   line-height: 1.15;
   letter-spacing: -0.03em;
   font-weight: 600;
@@ -100,8 +163,8 @@ button { font-family: inherit; }
 }
 
 ::selection {
-  background: rgba(94, 234, 212, 0.26);
-  color: #fff;
+  background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 /* ─── layout primitives ──────────────────────────────────── */
@@ -169,7 +232,7 @@ button { font-family: inherit; }
   padding: 4px 11px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--tile-bg);
   color: var(--text-dim);
   font-size: 0.78rem;
   line-height: 1.5;
@@ -208,14 +271,15 @@ button { font-family: inherit; }
 .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #04211d;
+  color: var(--accent-ink);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: #7df0dd;
-  border-color: #7df0dd;
-  box-shadow: 0 10px 28px -12px rgba(94, 234, 212, 0.65);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--accent-ink);
+  box-shadow: 0 10px 28px -12px var(--accent-glow);
 }
 
 .btn-sm {

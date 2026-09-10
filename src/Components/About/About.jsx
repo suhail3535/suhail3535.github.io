@@ -75,7 +75,7 @@ export default function About() {
               href={resumeDownload}
               target="_blank"
               rel="noreferrer"
-              className={`btn ${style.resume}`}
+              className={`btn btn-primary ${style.resume}`}
             >
               Download resume <HiDownload />
             </a>

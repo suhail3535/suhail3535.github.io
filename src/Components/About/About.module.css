@@ -17,7 +17,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(8, 9, 13, 0.55));
+  background: linear-gradient(180deg, transparent 55%, var(--photo-veil));
   pointer-events: none;
 }
 

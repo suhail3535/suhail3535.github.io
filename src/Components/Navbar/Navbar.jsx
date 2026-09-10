@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HiDownload } from "react-icons/hi";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiX, HiSun, HiMoon } from "react-icons/hi";
 import { resumeDownload } from "../../data/site";
+import useTheme from "../../hooks/useTheme";
 import "./navbar.css";
 
 const LINKS = [
@@ -13,6 +13,7 @@ const LINKS = [
 ];
 
 export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
   const [stuck, setStuck] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -69,26 +70,32 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={resumeDownload}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-primary btn-sm navbar__resume"
-          >
-            Resume <HiDownload />
-          </a>
         </nav>
 
-        <button
-          type="button"
-          className="navbar__toggle"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <HiX /> : <HiMenu />}
-        </button>
+        <div className="navbar__actions">
+          <button
+            type="button"
+            className="navbar__theme"
+            onClick={toggleTheme}
+            aria-label={
+              theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+            }
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            {theme === "dark" ? <HiSun /> : <HiMoon />}
+          </button>
+
+          <button
+            type="button"
+            className="navbar__toggle"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
       </div>
 
       <nav
