@@ -1,25 +1,22 @@
-.App {
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-
+/* Section dividers between blocks, so sections read as distinct
+   without needing a separate animated background in each one. */
+main > section + section {
+  border-top: 1px solid var(--line);
 }
 
-body {
-  font-family: "Exo", sans-serif;
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #04211d;
+  font-weight: 600;
+  transition: top 0.2s var(--ease);
 }
 
-#themeButton {
-  position: fixed;
-  top: 100px;
-  right: 10px;
-  z-index: 1;
-}
-@media screen and (max-width: 767px) and (min-width: 320) {
-  #themeButton {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    z-index: 1;
-  }
+.skip-link:focus {
+  top: 12px;
 }

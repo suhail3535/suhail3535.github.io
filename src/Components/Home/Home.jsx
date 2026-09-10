@@ -1,50 +1,75 @@
-import React from 'react'
-import style from "./Home.module.css"
-import "./animation.css"
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail, HiDownload } from "react-icons/hi";
+import { site, resumeDownload } from "../../data/site";
+import style from "./Home.module.css";
 
-export default function Home ({ colorMode }) {
+export default function Home() {
   return (
-    <div id="home"
+    <section id="home" className={style.hero}>
+      <div className="container">
+        <div className="reveal">
+          {site.available && (
+            <span className={style.badge}>
+              <span className={style.pulse} />
+              Open to opportunities
+            </span>
+          )}
 
-      className={"background"}   >
-      <div id={"stars"} />
-      <div id={"stars2"} />
-      <div id={"stars3"} />
-      <div
-        id={style.home}
-        style={{ color: colorMode === "light" ? "white" : "#e2e8f0" }}
-      >
-        <div className={style.img_txt_wrapper}
+          <p className={style.eyebrow}>Hi, my name is</p>
+          <h1 className={style.name}>{site.name}.</h1>
+          <h2 className={style.title}>I build things for the web.</h2>
 
-        >
-          <img
-            id={style.myImg}
-            // src="https://i.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.webp"
-            src="https://user-images.githubusercontent.com/74038190/212750672-2f3f2b50-c84f-4ed8-a60a-849ae69ff9df.gif"
-            alt="logo"
-          />
-          <div id={style.myDetailsDiv}>
-            <h1 id={style.myName}>
-              <span id={style.info}>
-                Hey,
-                <img
-                  style={{ width: "10%", display: "inline" }}
-                  src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
-                  alt=""
-                />
-              </span>
-              <br /> <span id={style.info}> I am Suhail Khan</span>
-            </h1>
-            <h3 id={style.title}>Full Stack Web Developer</h3>
+          <p className={style.blurb}>
+            {site.role} with 4+ years of experience building scalable web
+            applications in React, Next.js and Node — currently a Senior Software
+            Engineer at Quintype, and going deeper into AI and LLMs.
+          </p>
+
+          <div className={style.current}>
+            <span className={style.currentLabel}>Currently building</span>
+            <p>
+              <strong>ListenFirst</strong> — an enterprise media analytics
+              platform. I work across the React front end and Ruby on Rails
+              services: data-heavy dashboards, API-driven visualizations and
+              production reliability, in sync with a U.S.-based team.
+            </p>
+          </div>
+
+          <div className={style.actions}>
+            <a href="#projects" className="btn btn-primary">
+              View my work
+            </a>
+            <a href={resumeDownload} target="_blank" rel="noreferrer" className="btn">
+              Download resume <HiDownload />
+            </a>
+
+            <div className={style.socials}>
+              <a
+                href={site.github}
+                className="icon-btn"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href={site.linkedin}
+                className="icon-btn"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+              <a href={`mailto:${site.email}`} className="icon-btn" aria-label="Email">
+                <HiOutlineMail />
+              </a>
+            </div>
           </div>
         </div>
-        <div className={style.quote}>
-          <img
-            src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"
-            alt=""
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

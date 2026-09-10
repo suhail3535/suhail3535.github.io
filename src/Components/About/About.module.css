@@ -1,299 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
-
-* {
-  font-family: "Bree Serif", serif;
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: clamp(28px, 5vw, 56px);
+  align-items: start;
 }
 
-#about_head {
-  font-size: xl;
-  text-align: center;
-  border: 0px solid green;
+.photoWrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
-#aboutDiv {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  margin-top: 20px;
-  border-radius: 20px;
+.photoWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 9, 13, 0.55));
+  pointer-events: none;
 }
 
-.aboutDetails {
-
-  width: 80%;
-  
-  margin-bottom: 80px;
-
-}
-
-#first {
- width: 40%;  
- margin-top: -50px;
-}
-
-#first>img {
+.photo {
   width: 100%;
-  margin: auto;
-
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
 }
 
-.name {
-  font-size: 40px;
-  
-  font-family: "Bree Serif", serif;
-  font-weight: 500;
-
-  background: linear-gradient(to right, 
-  #f6cf65, #f4a100, #f69200, #f88715, 
-  #fa6523, #fa563c, #fa2d36, #fa496d, 
-  #f8326b, #f7347f, #f7338d
-);
--webkit-background-clip: text;
-color: transparent;
-    
+.lead {
+  font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+  color: var(--text);
+  margin-bottom: 16px;
+  max-width: 62ch;
 }
 
-.namep {
-  font-size: 20px;
-  padding-top: 20px;
-  text-align: justify;
-  font-weight: 300;
-  
+.body {
+  color: var(--text-dim);
+  max-width: 62ch;
+  margin-bottom: 24px;
 }
 
-#resumeDiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  color: #fef5ed;
-  width: 15%;
-  /* width: fit-content; */
- 
-  border-radius: 7px;
-  
-  border: 2px solid rgb(101, 118, 138);
-  /* border: 0px solid blue; */
-  cursor: pointer;
-  font-family: serif;
-  margin-right: 100px;
-  background-color: black;
-  margin-top: 40px;
+.chipRow {
+  margin-bottom: 28px;
 }
 
-#resumeDiv:hover {
-  /* background: rgb(121, 114, 232); */
-  background: linear-gradient(90deg,
-      rgb(44, 44, 44) 0%,
-      rgb(34, 34, 34) 44%,
-      rgb(13, 13, 14) 99%);
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin: 0 0 28px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.resumeButton {
-  /* font-size: 22px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  font-family: serif;
-  width: 100%;
-  cursor: pointer;
-  border: 0px solid red;
+.fact {
+  background: var(--bg-elev);
+  padding: 15px 18px;
 }
 
-.resumeDownloadLogo {
-  font-size: 22px;
+/* With an odd number of facts the last one would leave a dead cell,
+   so let it span the full row instead. */
+.fact:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
+.fact dt {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
 
-@media all and (min-width: 300px) and (max-width: 767px) {
-  #about_head {
-    font-size: 3xl;
-    text-align: center;
+.fact dd {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.resume {
+  margin-top: 4px;
+}
+
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-
-  #aboutDiv {
-    width: 90%;
-    flex-direction: column;
-    margin: auto;
-    /* height: 700px; */
-  }
-
-  #myImg {
-    width: 100%;
-    height: 50%;
-    border-radius: 50%;
-  }
-
-  .aboutDetails {
-    /* border: 2px solid green; */
-    margin-top: 20px;
-    margin-left: 5px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .name {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500
-  }
-
-  #first {
-    width: 90%;
-    margin: auto;
-  }
-
-  #first img {
-    width: 80%;
-    border: 0px solid green;
-    margin: auto;
-  }
-
-  .name:nth-child(1) {
-    font-size: 20px;
-  }
-
-  .namep {
-    /* color: #243D25; */
-    font-size: 16px;
-    /* text-align: left; */
-    /* text-align: justify; */
-  }
-
-
-  #resumeDiv {
-    display: flex;
-    width: 95%;
-    margin: auto;
-    margin-bottom: 20px;
-    align-items: center;
-    font-size: 15px;
-    color: #fef5ed;
-
-    padding: 3px 10px 3px 10px;
-    border-radius: 7px;
-    margin-top: 20px;
-    border: 0px solid rgb(255, 0, 230);
-    cursor: pointer;
-    font-family: serif;
-
-    /* background-color: #4c3575; */
-  }
-
-
-  .resumeButton {
-    font-size: 22px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    font-family: serif;
-    cursor: pointer;
-    border: 0px solid rgb(153, 255, 0);
-  }
-
-  .resumeDownloadLogo {
-    font-size: 16px;
+  .photoWrap {
+    max-width: 240px;
   }
 }
 
-#about section {
-  border: 0px solid red;
-
-
-}
-
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  #about_head {
-    font-size: 3xl;
-    text-align: center;
+@media (max-width: 520px) {
+  .facts {
+    grid-template-columns: 1fr;
   }
-
-  #first {
-    width: 100%;
-    margin: auto;
-  }
-
-  #first img {
-    width: 60%;
-    border: 0px solid green;
-    margin: auto;
-  }
-
-  #aboutDiv {
-
-    width: 90%;
-    display: block;
-    /* margin-top: 30px; */
-    border-radius: 30px;
-    align-items: center;
-  }
-
-
-
-  #myImg {
-    width: 48%;
-    height: 100%;
-  }
-
-  .aboutDetails {
-    width: 100%;
-    border: 0px solid red;
-  }
-
-  .name {
-    font-size: 30px;
-    text-align: center;
-  }
-
-  .namep {
-    font-size: 25px;
-    font-weight: 300;
-  }
-
-
-  #resumeButton {
-    font-size: 18px;
-  }
-
-  .resumeDownloadLogo {
-    font-size: 18px;
-  }
-
-  #resumeDiv {
-    display: flex;
-    width: 60%;
-    margin: 40px auto;
-    margin-bottom: 20px;
-    align-items: center;
-    font-size: 15px;
-    color: #fef5ed;
-
-    padding: 3px 10px 3px 10px;
-    border-radius: 7px;
-    /* margin-top: 20px; */
-    /* border: 2px solid rgb(255, 0, 230); */
-    cursor: pointer;
-    font-family: serif;
-
-    /* background-color: #4c3575; */
-  }
-
-
-  .resumeButton {
-    font-size: 22px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    font-family: serif;
-    cursor: pointer;
-    border: 0px solid rgb(153, 255, 0);
-  }
-
-  .resumeDownloadLogo {
-    font-size: 16px;
-  }
-
 }

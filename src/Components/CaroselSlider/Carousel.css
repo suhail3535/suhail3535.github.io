@@ -1,265 +1,160 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+/* Projects are now a responsive grid. The previous carousel
+   (react-alice-carousel) hid most of the work behind arrows. */
 
-* {
-    font-family: "Bree Serif", serif;
+.projects__lede {
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  max-width: 70ch;
 }
 
-.heading {
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    font-family: "Bree Serif", serif;
-    font-weight: 500;
-    margin-bottom: 20px;
-    background: linear-gradient(to right,
-            #f6cf65, #f4a100, #f69200, #f88715,
-            #fa6523, #fa563c, #fa2d36, #fa496d,
-            #f8326b, #f7347f, #f7338d);
-    -webkit-background-clip: text;
-    color: transparent;
-
-
+.projects__subhead {
+  margin: clamp(32px, 4.5vw, 48px) 0 18px;
+  font-size: 1.15rem;
+  color: var(--text);
 }
 
-.description {
-    text-align: auto;
-    color: white;
+.projects {
+  display: grid;
+  gap: 18px;
 }
 
-.carousel-item {
-    padding: 10px;
-    margin-bottom: 30px;
-
-    transition: all 0.5s ease-in-out;
+.projects--grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
-.main_slider_app {
-    width: 100%;
-    margin: auto;
-
-    padding: 10px;
-
+.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease);
 }
 
-strong {
-    background: linear-gradient(to right,
-            #f6cf65, #f4a100, #f69200, #f88715,
-            #fa6523, #fa563c, #fa2d36, #fa496d,
-            #f8326b, #f7347f, #f7338d);
-    -webkit-background-clip: text;
-    color: transparent;
+.project:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+  transform: translateY(-3px);
 }
 
-.live a:hover,
-.tech:hover {
-    background: linear-gradient(to right,
-            #f6cf65, #f4a100, #f69200, #f88715,
-            #fa6523, #fa563c, #fa2d36, #fa496d,
-            #f8326b, #f7347f, #f7338d);
-    -webkit-background-clip: text;
-    color: transparent;
-    cursor: pointer;
+/* Featured client work gets a wider, two-column card. */
+.projects--featured .project--featured {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) 1fr;
+  align-items: stretch;
 }
 
-.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(228, 82, 15, 0.938);
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
+.project__shot {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--line);
 }
 
-.arrow:hover {
-    background-color: rgba(239, 10, 10, 0.888);
+.projects--featured .project__shot {
+  border-bottom: none;
+  border-right: 1px solid var(--line);
 }
 
-.title_project {
-    text-align: left;
-    font-weight: bold;
-    font-size: 20px;
-
-
-    background: linear-gradient(to right,
-            #f6cf65, #f4a100, #f69200, #f88715,
-            #fa6523, #fa563c, #fa2d36, #fa496d,
-            #f8326b, #f7347f, #f7338d);
-    -webkit-background-clip: text;
-    color: transparent;
+.project__shot img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.88;
+  transition: opacity 0.3s, transform 0.5s var(--ease);
 }
 
-.arrow.disabled {
-    background-color: rgba(160, 155, 155, 0.904);
-    cursor: not-allowed;
+.project:hover .project__shot img {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
-.next {
-    right: 10px;
+.project__body {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  gap: 12px;
 }
 
-.prev {
-    left: 10px;
+.project__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.project_card {
-    display: flex;
-    flex-direction: column;
-
-    /* border: 2px solid greenyellow; */
-    /* background-image: linear-gradient(to bottom, white, rgba(9, 8, 8, 0.805)); */
-    height: 580px;
-
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(56, 44, 44, 0.74);
+.project__head h3 {
+  font-size: 1.12rem;
 }
 
-.card_img {
-    width: 100%;
-    padding: 10px;
+/* Role sits immediately left of the team badge on client-work cards. */
+.project__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.card_img img {
-    border-radius: 5px;
-    height: 200px;
-    width: 100%;
-    margin: auto;
-
+.project__role,
+.project__team {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
 }
 
-.details {
-    text-align: justify;
-    width: 100%;
-    padding: 10px;
-    color: black;
-    font-weight: 500;
+.project__role {
+  color: var(--accent);
+  border-color: rgba(94, 234, 212, 0.32);
+  background: var(--accent-soft);
 }
 
-.project-tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  
+.project__team {
+  color: var(--text-faint);
 }
 
-.project-tech-stack div {
-    position: relative;
-    padding: 3px 7px;
-    font-size: 12px;
-    color: white;
-    font-weight: 500;
-    margin: 2px 2px;
-    border-top-left-radius: .75rem;
-    border-bottom-right-radius: .75rem;
-    transition: all 0.3s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* ✅ Works fine */
-    background: #0d0d0d;
-    /* keep background dark (or transparent) */
+.project__desc {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  max-width: 68ch;
 }
 
-/* Gradient dotted border using pseudo-element */
-.project-tech-stack div::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    /* stretch full */
-    border: 1px dotted transparent;
-    border-radius: inherit;
-    background: linear-gradient(to right,
-            #f6cf65, #f4a100, #f69200, #f88715,
-            #fa6523, #fa563c, #e44850, #e0536f,
-            #f8326b, #f7347f, #df498f) border-box;
-    -webkit-mask:
-        linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    pointer-events: none;
+.project__tech {
+  margin-top: auto;
+  padding-top: 4px;
 }
 
-
-
-.project-tech-stack div:hover {
-    cursor: pointer;
-    background-color: rgb(32, 32, 32);
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
 }
 
-.project-card-btn {
-    display: flex;
-    width: 80%;
-    margin-top: 15px;
-    color: white;
-    justify-content: space-between;
+@media (max-width: 780px) {
+  .projects--featured .project--featured {
+    grid-template-columns: 1fr;
+  }
+  .projects--featured .project__shot {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .project__shot img {
+    max-height: 220px;
+  }
 }
 
-.project-card-btn button {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-
-   
-    cursor: pointer;
-   
-    margin: 2px 2px;
-    border-top-left-radius: 24.75rem;
-    border-bottom-right-radius: 24.75rem;
-    transition: all 0.3s ease-in-out;
-    padding: 15px 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.project-card-btn button:hover {
-    background: linear-gradient(90deg, rgb(7, 7, 7) 0%, rgba(13, 13, 14, 0.815) 44%, rgba(27, 27, 27, 0.856) 99%);
-    color: white;
-    cursor: pointer;
-}
-
-
-
-@media screen and (min-width:200px) and (max-width:500px) {
-    .carousel-item {
-        width: 100%;
-    }
-
-    .project_card {
-        display: flex;
-        flex-direction: column;
-
-        height: 620px;
-        padding-bottom: 20px;        /* border: 1px solid red; */
-        box-shadow: 10px 10px 10px rgba(56, 44, 44, 0.74);
-    }
-    .heading{
-        font-size: 25px;
-    }
-}
-
-@media screen and (min-width:501px) and (max-width:1023px) {
-    .carousel-item {
-        width: 100%;
-    }
-
-    .project_card {
-        display: flex;
-        flex-direction: column;
-       
-        height: 750px;
-        /* border: 1px solid red; */
-        box-shadow: 10px 10px 10px rgba(56, 44, 44, 0.74);
-    }
-    .project-card-btn {
-        width: 90%;
-    }
-    .project-card-btn button {
-        font-size: 12px;
-        /* padding: 10px 10px; */
-    }
+@media (max-width: 420px) {
+  .projects--grid {
+    grid-template-columns: 1fr;
+  }
+  .project__body {
+    padding: 18px;
+  }
 }

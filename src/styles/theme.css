@@ -1,0 +1,273 @@
+/* ============================================================
+   Design system — single source of truth for the whole site.
+   Imported once in index.js. Components use these tokens and
+   primitives instead of inline styles or per-file hardcoded colors.
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --bg: #08090d;
+  --bg-elev: #101218;
+  --surface: rgba(255, 255, 255, 0.026);
+  --surface-hover: rgba(255, 255, 255, 0.055);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  /* text */
+  --text: #eceef3;
+  --text-dim: #a2a7b5;
+  --text-faint: #6c7180;
+
+  /* accents */
+  --accent: #5eead4;
+  --accent-deep: #14b8a6;
+  --accent-soft: rgba(94, 234, 212, 0.12);
+  --violet: #a78bfa;
+  --danger: #f87171;
+
+  /* type */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* geometry */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --maxw: 1120px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* elevation */
+  --shadow: 0 18px 48px -24px rgba(0, 0, 0, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* One ambient background for the entire page, painted once.
+   Replaces the per-section starfield that ran in six components. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 32rem at 15% -10%, rgba(20, 184, 166, 0.12), transparent 62%),
+    radial-gradient(48rem 28rem at 95% 2%, rgba(139, 92, 246, 0.10), transparent 60%),
+    radial-gradient(70rem 40rem at 50% 108%, rgba(20, 184, 166, 0.06), transparent 65%);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+p { margin: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+img { max-width: 100%; display: block; }
+
+button { font-family: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.26);
+  color: #fff;
+}
+
+/* ─── layout primitives ──────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section {
+  padding-block: clamp(48px, 6vw, 78px);
+  scroll-margin-top: 80px;
+  position: relative;
+}
+
+/* Section heading: 01. Title ─────────── */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 3.6vw, 2.05rem);
+  white-space: nowrap;
+}
+
+.section-num {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  min-width: 20px;
+  background: linear-gradient(90deg, var(--line-strong), transparent);
+}
+
+/* ─── shared components ──────────────────────────────────── */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease);
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04211d;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #7df0dd;
+  border-color: #7df0dd;
+  box-shadow: 0 10px 28px -12px rgba(94, 234, 212, 0.65);
+}
+
+.btn-sm {
+  padding: 8px 15px;
+  font-size: 0.82rem;
+}
+
+/* icon-only circular link */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  transition: color 0.2s, border-color 0.2s, transform 0.2s var(--ease);
+}
+
+.icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ─── scroll reveal (replaces AOS) ───────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── accessibility ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@media (max-width: 420px) {
+  .container { padding-inline: 18px; }
+}

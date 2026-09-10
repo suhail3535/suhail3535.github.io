@@ -1,9 +1,6 @@
-
-import { Heading } from "@chakra-ui/react";
 import React from "react";
 import style from "./Skills.module.css";
-import "../Home/animation.css";
-import AOS from "aos";
+
 import tailwind from "../images/tailwindlogo.png";
 import tool from "../images/toolkit.jpg";
 import express from "../images/expressjs.png";
@@ -17,261 +14,102 @@ import githab from "../images/git.png";
 import vercel from "../images/vercellogo.png";
 import python from "../images/python.png";
 import ruby from "../images/ruby.jpg";
-import "aos/dist/aos.css"; // You can also use <link> for styles
 
-AOS.init();
+const GROUPS = [
+  {
+    title: "Frontend",
+    items: [
+      { name: "HTML", logo: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" },
+      { name: "CSS", logo: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" },
+      { name: "JavaScript", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
+      { name: "TypeScript", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" },
+      { name: "React.js", logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" },
+      { name: "Next.js", logo: "https://www.datocms-assets.com/98835/1684410508-image-7.png" },
+      { name: "Redux", logo: tool },
+      { name: "D3.js", logo: "https://www.vectorlogo.zone/logos/d3js/d3js-icon.svg" },
+      { name: "Tailwind CSS", logo: tailwind },
+    ],
+  },
+  {
+    title: "Backend & Data",
+    items: [
+      { name: "Node.js", logo: node },
+      { name: "Express", logo: express },
+      { name: "Ruby on Rails", logo: ruby },
+      { name: "Python", logo: python },
+      { name: "MongoDB", logo: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" },
+      { name: "PostgreSQL", logo: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" },
+      { name: "Elasticsearch", logo: "https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" },
+      { name: "REST APIs", logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    items: [
+      { name: "Git", logo: githab },
+      { name: "GitLab", logo: gitlab },
+      { name: "Docker", logo: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg" },
+      { name: "Vercel", logo: vercel },
+      { name: "Netlify", logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" },
+      { name: "Jira", logo: jira },
+      {
+        name: "VS Code",
+        logo: "https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg",
+      },
+      {
+        name: "New Relic",
+        logo: "https://www.vectorlogo.zone/logos/newrelic/newrelic-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "UI Libraries",
+    items: [
+      { name: "Material UI", logo: "https://www.vectorlogo.zone/logos/mui/mui-icon.svg" },
+      { name: "Chakra UI", logo: chakra },
+      { name: "Ant Design", logo: antd },
+      { name: "PrimeReact", logo: prime },
+    ],
+  },
+];
 
-export default function Skills ({ colorMode }) {
-    const frontendSkills = [
-        {
-            id: "1",
-            name: "HTML",
-            logo: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
-        },
-        {
-            id: "2",
-            name: "CSS",
-            logo: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
-        },
-        {
-            id: "3",
-            name: "JavaScript",
-            logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-        },
-        {
-            id: "4",
-            name: "React js",
-            logo: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
-        },
-        {
-            id: "5",
-            name: "Next js",
-            logo: "https://www.datocms-assets.com/98835/1684410508-image-7.png",
-        },
-    
-        {
-            id: "7",
-            name: "BootStrap",
-            logo: "https://cdn.dribbble.com/users/595/screenshots/14417863/bootstrap-new-logo_4x.png",
-        },
-        {
-            id: "13",
-            name: "Typescript",
-            logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-        },
-        {
-            id: "8",
-            name: "Redux",
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNe3NYVlI0lgrZLMto86XvqTSkxKEs6XRF9JmjFA-XSH5j0QtWclwj-5NwP7z4CbYlNMQ&usqp=CAU",
-        },
-        {
-            id: "9",
-            name: "Redux Toolkit",
-            logo: tool
-        },
-    ];
+/** Hide the icon rather than showing a broken-image glyph if a remote logo 404s. */
+const hideBrokenLogo = (event) => {
+  event.currentTarget.style.visibility = "hidden";
+};
 
-    const backendSkills = [
-        {
-            id: "10",
-            name: "MongoDB",
-            logo: "https://newrelic.com/sites/default/files/styles/800w/public/2021-10/mongo_logo.jpg?itok=Z1PabBZB",
-        },
-        {
-            id: "11",
-            name: "NodeJS",
-            logo: node,
-        },
-        {
-            id: "12",
-            name: "Express JS",
-            logo: express,
-        },
-           {
-            id: "110",
-            name: "Python",
-            logo: python,
-        },
-        {
-            id: "120",
-            name: "Ruby on Rails",
-            logo: ruby,
-        },
-        {
-            id: "1",
-            name: "Postman",
-            logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-        },
-        {
-            id: "2",
-            name: "Github",
-            logo: githab,
-        },
-        {
-            id: "3",
-            name: "Gitlab",
-            logo: gitlab,
-        },
-
-        {
-            id: "4",
-            name: "Jira Softwere",
-            logo: jira
-        },
-        {
-            id: "5",
-            name: "vsCode",
-            logo: "https://lh5.googleusercontent.com/5ES-Ty5oZV246Psq5ABbOGxOn3MN5piHduRfeQRlXNj3aAW32v7K9rHYaSqdvOjFFfQ=w2400",
-        },
-        {
-            id: "4",
-            name: "Netlify",
-            logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg",
-        },
-        {
-            id: "5",
-            name: "Vercel",
-            logo: vercel,
-        }
-    ];
-
-    const uiLibraries = [
-
-        {
-            id: "17",
-            name: "Material UI",
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqqONFG6eDHvqXzF2HtmKQ3qDErVWjLTsSUpIiJGCtA&s",
-        },
-            {
-            id: "6",
-            name: "Tailwind CSS",
-            logo: tailwind,
-        },
-        {
-            id: "14",
-            name: "Chakra UI",
-            logo: chakra,
-        },
-        {
-            id: "15",
-            name: "Aceternity UI",
-            logo: "https://ui.aceternity.com/banner.png",
-        },
-        {
-            id: "16",
-            name: "Ant Design UI",
-            logo: antd,
-        },
-        {
-            id: "16",
-            name: "Prime React",
-            logo: prime,
-        },
-
-    ];
-
-
-
-    const renderSkills = (skills) => {
-        return skills.map((skill) => (
-            <div key={skill.id} className={style.skill_in_div}>
-                <div className="skills-card-img">
-                    <img className={style.logo} src={skill.logo} alt={skill.name} />
-                </div>
-                <p
-                    className="skills-card-name"
-                    id={style.skillH3}
-                    style={{
-                        color: colorMode === "light" ? "white" : "white",
-                    }}
-                >
-                    {skill.name}
-                </p>
-            </div>
-        ));
-    };
-
-    return (
-        <div id="skills" className={"background"}>
-            <div id={"stars"} />
-            <div id={"stars2"} />
-            <div id={"stars3"} />
-
-            <div id="Skills" style={{ height: "20px" }}></div>
-            <div className="skills-card-name" id={style.skill}>
-                <Heading
-                    size={["xl", "xl", "xl", "xl"]}
-                    fontFamily="Bree Serif, serif"
-                    style={{
-                        color: colorMode === "light" ? "white" : "white",
-                    }}
-                    textAlign="center"
-                    color="#243D25"
-                >
-                  <span className={style.name}> Frontend Skills</span>  
-                </Heading>
-                <div
-                    className="skills-card"
-                    id={style.skillDiv}
-                    data-aos-mirror="true"
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                >
-                    {renderSkills(frontendSkills)}
-                </div>
-            </div>
-
-
-            <div className="skills-card-name" id={style.skill}>
-                <Heading
-                    size={["xl", "xl", "xl", "xl"]}
-                    fontFamily="Bree Serif, serif"
-                    style={{
-                        color: colorMode === "light" ? "white" : "white",
-                    }}
-                    textAlign="center"
-                    color="#243D25"
-                >
-                 <span className={style.name}>Backend Skills And Tools</span>  
-                    
-                </Heading>
-                <div
-                    className="skills-card"
-                    id={style.skillDiv}
-                    data-aos-mirror="true"
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                >
-                    {renderSkills(backendSkills)}
-                </div>
-            </div>
-
-
-            <div className="skills-card-name" id={style.skill}>
-                <Heading
-                    size={["xl", "xl", "xl", "xl"]}
-                    fontFamily="Bree Serif, serif"
-                    style={{
-                        color: colorMode === "light" ? "white" : "white",
-                    }}
-                    textAlign="center"
-                    color="#243D25"
-                >
-                   
-                  <span className={style.name}>UI Libraries</span>  
-                </Heading>
-                <div
-                    className="skills-card"
-                    id={style.skillDiv}
-                    data-aos-mirror="true"
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                >
-                    {renderSkills(uiLibraries)}
-                </div>
-            </div>
-
-
+export default function Skills() {
+  return (
+    <section id="skills" className="section">
+      <div className="container">
+        <div className="section-head">
+          <span className="section-num">02.</span>
+          <h2>What I work with</h2>
+          <span className="section-rule" />
         </div>
-    );
+
+        <div className={style.groups}>
+          {GROUPS.map((group) => (
+            <div className={`card ${style.group} reveal`} key={group.title}>
+              <h3 className={style.groupTitle}>{group.title}</h3>
+              <ul className={style.tiles}>
+                {group.items.map((item) => (
+                  <li className={style.tile} key={item.name}>
+                    <img
+                      className={style.logo}
+                      src={item.logo}
+                      alt=""
+                      loading="lazy"
+                      onError={hideBrokenLogo}
+                    />
+                    <span>{item.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

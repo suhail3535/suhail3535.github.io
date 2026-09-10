@@ -1,64 +1,29 @@
 import React, { useEffect, useState } from "react";
-// import { ArrowUpIcon } from "@chakra-ui/icons";
-// import { HiArrowSmDown } from "@chakra-ui/icons/hi";
-import { AiOutlineArrowUp } from 'react-icons/ai';
-import { AiOutlineArrowDown } from 'react-icons/ai';
-import { Box, Button, Text } from "@chakra-ui/react";
-import styles from "./Home.module.css";
+import { HiArrowUp } from "react-icons/hi";
+import style from "./Float.module.css";
 
-export default function BackToTop () {
-    const [isVisible, setIsVisible] = useState(false);
+export default function BackToTop() {
+  const [isVisible, setIsVisible] = useState(false);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
+  useEffect(() => {
+    const toggle = () => setIsVisible(window.scrollY > 500);
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+    return () => window.removeEventListener("scroll", toggle);
+  }, []);
 
-    const scrollToBottom = () => {
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-        });
-    };
-
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.pageYOffset > 500) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
-
-        window.addEventListener("scroll", toggleVisibility);
-
-        return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
-
-    return (
-        <Box
-            onClick={isVisible ? scrollToTop : scrollToBottom}
-            position="fixed"
-            bottom="20px"
-            right={["16px", "84px"]}
-            zIndex={3}>
-            <Button id={styles.icon}
-                size={"sm"}
-                bg={"black"}
-                variant="solid"
-                w={"50px"}
-                h={"50px"}
-                style={{ borderRadius: "50%" }}
-
-            >
-
-                <Text fontSize={"30px"} color={"#167a92"}>
-                    {isVisible ? <AiOutlineArrowUp style={{ fontSize: "30px", color: "white" }} /> : <AiOutlineArrowDown style={{ fontSize: "30px", color: "white" }} />}
-                </Text>
-            </Button>
-
-        </Box>
-    );
+  // Previously this button flipped to "scroll to bottom" when near the top,
+  // so the same control did two different things depending on scroll position.
+  // Now it simply hides until there is somewhere to scroll back to.
+  return (
+    <button
+      type="button"
+      className={`${style.float} ${style.top}${isVisible ? " " + style.shown : ""}`}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      aria-label="Back to top"
+      tabIndex={isVisible ? 0 : -1}
+    >
+      <HiArrowUp />
+    </button>
+  );
 }

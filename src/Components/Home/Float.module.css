@@ -1,0 +1,58 @@
+/* Shared styling for the two floating action buttons. */
+
+.float {
+  position: fixed;
+  right: 20px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(16, 18, 24, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-dim);
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease),
+    visibility 0.25s, color 0.2s, border-color 0.2s;
+}
+
+.float.shown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.float:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.top {
+  bottom: 20px;
+}
+
+.whatsapp {
+  bottom: 76px;
+  color: #25d366;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+  border-color: #25d366;
+}
+
+@media (max-width: 480px) {
+  .float {
+    right: 16px;
+  }
+}

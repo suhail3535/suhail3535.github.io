@@ -1,79 +1,47 @@
-import React, { useState, useEffect } from "react";
-import {useColorMode } from "@chakra-ui/react";
-
+import React from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import About from "./Components/About/About";
-import Home from "./Components/Home/Home";
-import Skills from "./Components/Skills/Skills";
 
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Skills from "./Components/Skills/Skills";
+import Experience from "./Components/ExperienceNew/Experience";
+import Projects from "./Components/CaroselSlider/CarouselMain";
 import Static from "./Components/Static/Static";
 import GitHub from "./Components/Github/Github";
-
-import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 import BackToTop from "./Components/Home/BacktoTop";
-
 import WhatsApp from "./Components/Home/WhatsApp";
 
-import { ImageCom } from "./Components/Image";
-import Loader from "./Components/Home/Loader";
-import CaroselMain from "./Components/CaroselSlider/CarouselMain";
-
-import Experience from "./Components/ExperienceNew/Experience";
+import useReveal from "./hooks/useReveal";
 
 function App() {
-  const { colorMode } = useColorMode();
-  const [showGif, setShowGif] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowGif(false);
-    }, 2500);
-
-
-    return () => clearTimeout(timer);
-  }, []);
+  // One IntersectionObserver for every .reveal element on the page.
+  useReveal();
 
   return (
     <>
-      <div className="App">
-        {showGif ? (
-          <Loader />
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
 
-        ) : (
-          <>
+      <Navbar />
 
-            <Navbar colorMode={colorMode} />
-            <Home colorMode={colorMode} />
+      <main id="main">
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Static />
+        <GitHub />
+        <Contact />
+      </main>
 
-            <ImageCom />
-
-            <About colorMode={colorMode} />
-            <ImageCom />
-            <Skills colorMode={colorMode} />
-            <ImageCom />
-            
-            <Experience colorMode={colorMode} />
-            <ImageCom />
-            <CaroselMain colorMode={colorMode} />
-            <ImageCom />
-            <Static colorMode={colorMode} />
-            <ImageCom />
-
-            <GitHub colorMode={colorMode} />
-
-            <ImageCom />
-
-            <Contact colorMode={colorMode} />
-            <ImageCom />
-
-            <BackToTop />
-            <WhatsApp />
-            <Footer colorMode={colorMode} />
-          </>
-        )}
-      </div>
+      <Footer />
+      <BackToTop />
+      <WhatsApp />
     </>
   );
 }
