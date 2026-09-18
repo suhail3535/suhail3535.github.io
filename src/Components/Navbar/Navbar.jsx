@@ -4,11 +4,15 @@ import { resumeDownload } from "../../data/site";
 import useTheme from "../../hooks/useTheme";
 import "./navbar.css";
 
+// Services leads, because that is what a prospective client is scanning for.
+// Order must match the order the sections appear in App.js, or the
+// scroll-spy highlight jumps backwards as you scroll.
 const LINKS = [
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
+  { id: "services", label: "Services" },
+  { id: "projects", label: "Work" },
+  { id: "process", label: "Process" },
   { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Stack" },
   { id: "contact", label: "Contact" },
 ];
 

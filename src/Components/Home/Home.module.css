@@ -77,6 +77,13 @@
   margin-bottom: 22px;
 }
 
+/* The client names are the credibility in this paragraph, so let them
+   sit brighter than the surrounding text. */
+.blurb strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* Highlights the product currently being worked on, so it reads as
    a thing being built rather than another line of the summary. */
 .current {

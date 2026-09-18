@@ -1,7 +1,19 @@
+/* Two fixed columns instead of auto-fit. With three columns the four groups
+   left UI Libraries orphaned on a row of its own, and `align-items: start`
+   keeps each card only as tall as its own contents — previously the grid
+   stretched every card in a row to match the tallest, leaving large empty
+   areas under the shorter groups. */
 .groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
 }
 
 .group {

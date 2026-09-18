@@ -1,9 +1,14 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail, HiDownload } from "react-icons/hi";
-import { site, resumeDownload } from "../../data/site";
+import { HiOutlineMail, HiOutlineCalendar } from "react-icons/hi";
+import { site, bookingLink } from "../../data/site";
 import style from "./Home.module.css";
 
+/**
+ * Written for a prospective client, not a recruiter. The headline names who
+ * the work is for, the proof names companies they can verify, and the primary
+ * action is booking a call rather than downloading a CV.
+ */
 export default function Home() {
   return (
     <section id="home" className={style.hero}>
@@ -12,18 +17,22 @@ export default function Home() {
           {site.available && (
             <span className={style.badge}>
               <span className={style.pulse} />
-              Open to opportunities
+              Available for freelance projects
             </span>
           )}
 
-          <p className={style.eyebrow}>Hi, my name is</p>
+          <p className={style.eyebrow}>Freelance full-stack developer · Jaipur, India</p>
           <h1 className={style.name}>{site.name}.</h1>
-          <h2 className={style.title}>I build things for the web.</h2>
+          <h2 className={style.title}>
+            I build fast, reliable web apps for media and finance teams.
+          </h2>
 
           <p className={style.blurb}>
-            {site.role} with 4+ years of experience building scalable web
-            applications in React, Next.js and Node — currently a Senior Software
-            Engineer at Quintype, and going deeper into AI and LLMs.
+            4+ years shipping production software — currently a Senior Software
+            Engineer at Quintype, where I build the platforms behind{" "}
+            <strong>Gulf News</strong>, <strong>Fortune India</strong> and{" "}
+            <strong>Khaleej Times</strong>. I take on freelance work in React,
+            Next.js and Node.
           </p>
 
           <div className={style.current}>
@@ -37,17 +46,13 @@ export default function Home() {
           </div>
 
           <div className={style.actions}>
-            <a href="#projects" className="btn btn-primary">
-              View my work
+            <a href={bookingLink} className="btn btn-primary">
+              Book a call <HiOutlineCalendar />
             </a>
-            <a
-              href={resumeDownload}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-            >
-              Download resume <HiDownload />
+            <a href="#projects" className="btn">
+              See my work
             </a>
+    
 
             <div className={style.socials}>
               <a

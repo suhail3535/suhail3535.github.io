@@ -22,8 +22,9 @@ export default function Github() {
     <section id="github" className="section">
       <div className="container">
         <div className="section-head">
-          <span className="section-num">05.</span>
-          <h2>Contribution activity</h2>
+          {/* Unnumbered: this is developer-audience detail, kept as a
+              supporting signal rather than a headline section. */}
+          <h2>Code activity</h2>
           <span className="section-rule" />
         </div>
 

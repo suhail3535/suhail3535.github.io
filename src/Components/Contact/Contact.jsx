@@ -1,13 +1,28 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
-import { site, whatsapp } from "../../data/site";
+import {
+  HiOutlineMail,
+  HiOutlinePhone,
+  HiOutlineLocationMarker,
+  HiOutlineBriefcase,
+  HiOutlineClock,
+} from "react-icons/hi";
+import { HiOutlineCalendar } from "react-icons/hi";
+import { site, whatsapp, bookingLink } from "../../data/site";
 import style from "./Contact.module.css";
 
+/**
+ * EmailJS config. The public key is meant to be in client code; the private
+ * key never is — it belongs only in server-side calls, and is not used here.
+ *
+ * The previous public key stopped working because the keys were refreshed in
+ * the EmailJS dashboard, which returns "Account not found" to the old one.
+ * If you hit Refresh Keys again, update PUBLIC_KEY here too.
+ */
 const SERVICE_ID = "service_x9ycsef";
 const TEMPLATE_ID = "template_z8igh3g";
-const PUBLIC_KEY = "E2IYLHqQiR80FBqk5";
+const PUBLIC_KEY = "le78hPvga2iLbsTzy";
 
 const EMPTY = { name: "", email: "", subject: "", message: "" };
 
@@ -37,12 +52,20 @@ export default function Contact() {
       <div className="container">
         <div className="section-head">
           <span className="section-num">06.</span>
-          <h2>Get in touch</h2>
+          <h2>Start a project</h2>
           <span className="section-rule" />
         </div>
 
         <div className={`${style.grid} reveal`}>
           <form className={style.form} onSubmit={sendMail}>
+            {/* The EmailJS template uses {{from_name}} in its subject line and
+                {{reply_to}} in Reply-To, but the visible fields are named
+                `name` and `email`. Without these two, every notification
+                arrives titled "New message from " with no reply address —
+                so you could read an enquiry but not reply to it. */}
+            <input type="hidden" name="from_name" value={form.name} readOnly />
+            <input type="hidden" name="reply_to" value={form.email} readOnly />
+
             <div className={style.field}>
               <label htmlFor="c-name">Your name</label>
               <input
@@ -117,6 +140,12 @@ export default function Contact() {
           </form>
 
           <aside className={style.aside}>
+            {/* A form is friction: the visitor has to decide what to write.
+                Offer the lower-effort path first. */}
+            <a href={bookingLink} className={`btn btn-primary ${style.book}`}>
+              Book a 15-min call <HiOutlineCalendar />
+            </a>
+
             <ul className={style.details}>
               <li>
                 <HiOutlineMail aria-hidden="true" />
@@ -129,6 +158,16 @@ export default function Contact() {
               <li>
                 <HiOutlineLocationMarker aria-hidden="true" />
                 <span>{site.location}</span>
+              </li>
+              {/* Carried over from the removed About section: availability and
+                  timezone are the two things a client checks before booking. */}
+              <li>
+                <HiOutlineBriefcase aria-hidden="true" />
+                <span>Freelance projects &amp; retainers</span>
+              </li>
+              <li>
+                <HiOutlineClock aria-hidden="true" />
+                <span>IST, overlapping US mornings</span>
               </li>
             </ul>
 

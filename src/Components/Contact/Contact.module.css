@@ -90,6 +90,10 @@
   background: var(--surface);
 }
 
+.book {
+  width: 100%;
+}
+
 .details {
   display: grid;
   gap: 14px;

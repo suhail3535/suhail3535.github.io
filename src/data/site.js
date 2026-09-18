@@ -18,7 +18,18 @@ export const site = {
   // Google Drive file id for the resume PDF.
   resumeId: "1FWTnJLjTaVO79zOIWm672pJZFiRyDQK5",
   available: true,
+
+  /**
+   * TODO: create a free Cal.com or Calendly link and paste it here.
+   * A booking link converts far better than a contact form — the client
+   * picks a slot instead of composing a message. Until this is set, the
+   * "Book a call" buttons fall back to email.
+   */
+  booking: null,
 };
+
+/** Where "Book a call" points: the calendar if set, otherwise email. */
+export const bookingLink = site.booking || `mailto:${site.email}?subject=Project%20enquiry`;
 
 export const whatsapp = `https://wa.me/${site.phoneRaw}`;
 

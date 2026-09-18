@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.quote {
+  margin: 0;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote blockquote {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.quote blockquote::before {
+  content: "“";
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 0;
+  margin-right: 2px;
+  vertical-align: -0.15em;
+}
+
+.quote figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: auto;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.title {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+}

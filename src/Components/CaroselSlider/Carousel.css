@@ -125,9 +125,58 @@
   max-width: 68ch;
 }
 
-.project__tech {
+/* The result of the work, when there is one to show. */
+.project__outcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 9px;
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.project__outcomeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+/* Stack row: a quiet label, then the technologies — the first three
+   emphasised so the row has a focal point instead of eight equal tags. */
+.project__stack {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 11px;
   margin-top: auto;
   padding-top: 4px;
+}
+
+.project__stackLabel {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--text-faint);
+}
+
+.chip--tech {
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  padding: 3px 10px;
+}
+
+.chip--key {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
 }
 
 .project__links {

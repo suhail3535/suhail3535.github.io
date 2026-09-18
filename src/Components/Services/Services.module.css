@@ -1,0 +1,34 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.service {
+  padding: 26px 24px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.service h3 {
+  font-size: 1.05rem;
+  margin-bottom: 9px;
+}
+
+.service p {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  max-width: 46ch;
+}

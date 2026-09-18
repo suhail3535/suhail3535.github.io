@@ -12,9 +12,18 @@ import brain1 from "../images/brain1.png";
 import fashion from "../images/fashion.png";
 import rctproject from "../images/rctproject.png";
 import zym from "../images/zim.png";
-import final from "../images/final.png";
+import interviewprep from "../images/interviewprep.jpg";
 
-/** Client work — shipped in a team, no public source. */
+/**
+ * Client work — shipped in a team, no public source.
+ *
+ * TODO: add an `outcome` to each of these — one sentence with a number in it.
+ * A description tells a client what the project was; an outcome tells them
+ * what they would get. Examples of the shape:
+ *   outcome: "Cut dashboard load time from 4.1s to 1.3s for 400+ daily users."
+ *   outcome: "Automated a print handoff that was taking 2 hours a day manually."
+ * Only claim numbers you can stand behind in a call.
+ */
 const FEATURED = [
   {
     title: "ListenFirst Media",
@@ -70,6 +79,22 @@ const FEATURED = [
 /** Personal and freelance builds, source available. */
 const PERSONAL = [
   {
+    title: "Interview Prep",
+    imgSrc: interviewprep,
+    description:
+      "A MERN app for technical interview revision: a topic-wise question bank covering HTML/CSS, JavaScript, React, Next.js, Node, Express, SQL and MongoDB, graded from beginner to advanced. Email and Google sign-in.",
+    techStack: [ "AI Assistance","React", "Node.js", "Express", "MongoDB", "Google OAuth"],
+    // NOTE: the screenshot has your email prefilled in the login form, which
+    // is publicly visible here. Retake it signed out (empty form) or with a
+    // placeholder address if you would rather not have it scraped.
+    // NOTE: this repo is currently PRIVATE — api.github.com returns 404 to
+    // anyone not signed in as you, so visitors clicking Source get GitHub's
+    // 404 page. Make it public (Settings > General > Change visibility)
+    // or remove this link.
+    githubLink: "https://github.com/suhail3535/mern-interview-preparation",
+    liveLink: "https://mern-interview-preparation.vercel.app/login",
+  },
+  {
     title: "Zakat Foundation (Freelance)",
     imgSrc: zakat,
     description:
@@ -113,24 +138,36 @@ const PERSONAL = [
     techStack: ["React", "Material UI", "Chakra UI", "JavaScript"],
     githubLink: "https://github.com/suhail3535/FitnessWorldwebApp",
     liveLink: "https://fitness-worldweb-app.vercel.app/",
-  },
-  {
-    title: "Login Management System",
-    imgSrc: final,
-    description:
-      "A student login system for Masai School, surfacing upcoming lectures, assignments and the daily schedule.",
-    techStack: ["React", "Redux", "JSON Server", "Material UI"],
-    githubLink: "https://github.com/suhail3535/MasaiLms",
-    liveLink: "https://masaiapp-suhail3535.vercel.app/",
-  },
+  }
 ];
 
+/**
+ * How many technologies to emphasise in the stack row.
+ *
+ * A fixed count breaks on short lists: Brainwave only lists three, so
+ * highlighting three highlighted everything and the hierarchy disappeared.
+ * The rule is therefore relative — never more than half the list, and never
+ * more than three, so the emphasis is always a minority.
+ *
+ *   3 items -> 1    5 items -> 2    8 items -> 3
+ *   4 items -> 2    6 items -> 3
+ */
+function keyTechCount(total) {
+  return Math.min(3, Math.floor(total / 2)) || 1;
+}
+
 function ProjectCard({ project, featured }) {
+  const keyCount = keyTechCount(project.techStack.length);
+
   return (
     <article className={`project reveal${featured ? " project--featured" : ""}`}>
-      <div className="project__shot">
-        <img src={project.imgSrc} alt={`${project.title} screenshot`} loading="lazy" />
-      </div>
+      {/* Rendered only when a screenshot exists, so a card without one is
+          a clean text card rather than an empty grey box. */}
+      {project.imgSrc && (
+        <div className="project__shot">
+          <img src={project.imgSrc} alt={`${project.title} screenshot`} loading="lazy" />
+        </div>
+      )}
 
       <div className="project__body">
         <div className="project__head">
@@ -143,12 +180,30 @@ function ProjectCard({ project, featured }) {
 
         <p className="project__desc">{project.description}</p>
 
-        <div className="chips project__tech">
-          {project.techStack.map((tech) => (
-            <span className="chip" key={tech}>
-              {tech}
-            </span>
-          ))}
+        {/* Renders only when an outcome exists, so cards without one look
+            intentional rather than unfinished. */}
+        {project.outcome && (
+          <p className="project__outcome">
+            <span className="project__outcomeLabel">Outcome</span>
+            {project.outcome}
+          </p>
+        )}
+
+        {/* The leading entries of techStack are the headline technologies and
+            get the accent treatment; the rest stay muted. Order each
+            techStack array most-important-first. */}
+        <div className="project__stack">
+          <span className="project__stackLabel">Stack</span>
+          <div className="chips">
+            {project.techStack.map((tech, i) => (
+              <span
+                className={`chip chip--tech${i < keyCount ? " chip--key" : ""}`}
+                key={tech}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="project__links">
@@ -183,7 +238,7 @@ export default function Projects() {
     <section id="projects" className="section">
       <div className="container">
         <div className="section-head">
-          <span className="section-num">04.</span>
+          <span className="section-num">02.</span>
           <h2>Selected work</h2>
           <span className="section-rule" />
         </div>

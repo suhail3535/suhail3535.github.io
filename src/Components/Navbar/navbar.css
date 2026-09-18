@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  font-weight: bold;
 }
 
 .navbar__brand {
@@ -45,7 +46,7 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 30px;
 }
 
 .navbar__links > a {
