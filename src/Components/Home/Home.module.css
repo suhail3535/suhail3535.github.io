@@ -3,7 +3,7 @@
    it restyled every element on the site. Fonts now come from theme.css. */
 
 .hero {
-  min-height: calc(100svh - 68px);
+  min-height: min(calc(100svh - 68px), 720px);
   display: flex;
   align-items: center;
   padding-block: 48px 72px;
