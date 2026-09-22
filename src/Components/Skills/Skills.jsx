@@ -83,7 +83,7 @@ export default function Skills() {
     <section id="skills" className="section">
       <div className="container">
         <div className="section-head">
-          <span className="section-num">05.</span>
+          <span className="section-num">06.</span>
           <h2>What I work with</h2>
           <span className="section-rule" />
         </div>

@@ -51,7 +51,7 @@ export default function Contact() {
     <section id="contact" className="section">
       <div className="container">
         <div className="section-head">
-          <span className="section-num">06.</span>
+          <span className="section-num">07.</span>
           <h2>Start a project</h2>
           <span className="section-rule" />
         </div>

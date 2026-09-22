@@ -9,6 +9,7 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import Process from "./Components/Process/Process";
 import Skills from "./Components/Skills/Skills";
 import Experience from "./Components/ExperienceNew/Experience";
+import Awards from "./Components/Awards/Awards";
 import Static from "./Components/Static/Static";
 import GitHub from "./Components/Github/Github";
 import Contact from "./Components/Contact/Contact";
@@ -42,6 +43,7 @@ function App() {
         <Testimonials />
         <Process />
         <Experience />
+        <Awards />
         <Skills />
         <Static />
         <GitHub />
