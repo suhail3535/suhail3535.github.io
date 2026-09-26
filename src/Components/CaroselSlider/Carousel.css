@@ -1,5 +1,5 @@
-/* Projects are now a responsive grid. The previous carousel
-   (react-alice-carousel) hid most of the work behind arrows. */
+/* Featured client work is a stacked list; personal projects sit in a
+   native scroll-snap carousel (see .carousel below). */
 
 .projects__lede {
   color: var(--text-dim);
@@ -184,6 +184,130 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 4px;
+}
+
+/* ─── personal projects carousel ─────────────────────────── */
+.carousel {
+  --slides: 3;
+  --gap: 18px;
+}
+
+.carousel__viewport {
+  position: relative;
+}
+
+.carousel__track {
+  position: relative; /* offsetLeft of slides is measured from here */
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  /* Room for the card hover lift, which overflow would otherwise clip. */
+  padding: 6px 0 4px;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__slide {
+  flex: 0 0 calc((100% - (var(--slides) - 1) * var(--gap)) / var(--slides));
+  scroll-snap-align: start;
+  display: flex;
+}
+
+.carousel__slide .project {
+  flex: 1;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  color: var(--accent);
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 6px 18px rgba(0, 0, 0, 0.45);
+  transform: translateY(-50%);
+  transition: opacity 0.25s, background 0.25s, color 0.25s, transform 0.25s;
+}
+
+.carousel__arrow:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel__arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel__arrow--prev {
+  left: -21px;
+}
+
+.carousel__arrow--next {
+  right: -21px;
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--line-strong);
+  cursor: pointer;
+  transition: width 0.3s var(--ease), background 0.3s;
+}
+
+.carousel__dot.is-active {
+  width: 22px;
+  background: var(--accent);
+}
+
+@media (max-width: 1000px) {
+  .carousel {
+    --slides: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Show a sliver of the next card so it reads as swipeable. */
+  .carousel {
+    --slides: 1.15;
+  }
+  /* Arrows move inside the edges on phones so they never cause sideways
+     page scroll, and sit over the screenshot rather than the text. */
+  .carousel__arrow {
+    top: 110px;
+    width: 38px;
+    height: 38px;
+  }
+  .carousel__arrow--prev {
+    left: 8px;
+  }
+  .carousel__arrow--next {
+    right: 8px;
+  }
 }
 
 @media (max-width: 780px) {

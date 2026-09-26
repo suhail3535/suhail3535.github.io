@@ -1,4 +1,4 @@
-/* Shared styling for the two floating action buttons. */
+/* Shared styling for the floating action buttons. */
 
 .float {
   position: fixed;
@@ -41,14 +41,40 @@
   bottom: 20px;
 }
 
-.whatsapp {
+/* Stacked 56px apart: 46px button + 10px gap. */
+.github {
   bottom: 76px;
+  color: var(--text);
+}
+
+.linkedin {
+  bottom: 132px;
+  color: #0a66c2;
+}
+
+.linkedin:hover {
+  color: #0a66c2;
+  border-color: #0a66c2;
+}
+
+.whatsapp {
+  bottom: 188px;
   color: #25d366;
 }
 
 .whatsapp:hover {
   color: #25d366;
   border-color: #25d366;
+}
+
+.instagram {
+  bottom: 244px;
+  color: #e1306c;
+}
+
+.instagram:hover {
+  color: #e1306c;
+  border-color: #e1306c;
 }
 
 @media (max-width: 480px) {

@@ -15,6 +15,7 @@ export const site = {
   github: "https://github.com/suhail3535",
   githubUser: "suhail3535",
   linkedin: "https://www.linkedin.com/in/suhail-khan-dev/",
+  instagram: "https://www.instagram.com/suhail5727/",
   // Google Drive file id for the resume PDF.
   resumeId: "1FWTnJLjTaVO79zOIWm672pJZFiRyDQK5",
   available: true,
