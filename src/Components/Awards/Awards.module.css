@@ -1,13 +1,8 @@
-.list {
-  display: grid;
-  gap: 18px;
-}
-
 .award {
   display: grid;
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
   gap: 28px;
-  align-items: center;
+  align-items: start;
   padding: 24px;
 }
 
@@ -15,7 +10,10 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
-.link {
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 20px;
 }
 

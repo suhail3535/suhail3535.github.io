@@ -3,13 +3,15 @@ import { FiExternalLink } from "react-icons/fi";
 import {
   HiOutlineAcademicCap,
   HiOutlineBadgeCheck,
-  HiOutlineHeart,
+  HiOutlineDocumentText,
   HiOutlineLightningBolt,
   HiOutlineTrendingUp,
   HiOutlineUserGroup,
 } from "react-icons/hi";
+import Carousel from "../Carousel/Carousel";
 import award from "../images/best-developer-award.jpg";
 import sureProEdAward from "../images/sure-proed-award.jpg";
+import sureProEdLetter from "../images/sure-proed-recommendation.jpg";
 import style from "./Awards.module.css";
 
 /**
@@ -45,22 +47,69 @@ const AWARDS = [
     image: sureProEdAward,
     imageAlt: "Rapid Innovation & Contribution Award presented to Suhail Khan by SURE ProEd",
     link: "https://www.linkedin.com/posts/suhail-khan-dev_grateful-givingback-mentorship-ugcPost-7414177902264676354-K9mP/",
+    letter: sureProEdLetter,
     points: [
       {
         icon: HiOutlineLightningBolt,
-        text: "Single-handedly designed and built a fully functional Quizzes Platform in two days, valued at over ₹6 lakh.",
+        text: "Single-handedly designed and built a fully functional Quizzes Platform in two days, valued at over ₹6 lakh — delivered free of cost, no charges.",
       },
       {
         icon: HiOutlineAcademicCap,
         text: "The platform now runs SURE ProEd's large-scale admission assessments, improving operational efficiency and the learning experience.",
       },
-      {
-        icon: HiOutlineHeart,
-        text: "Delivered pro bono, supporting their mission of free training and internships for students, and recognised for mentorship.",
-      },
     ],
   },
 ];
+
+// No `reveal` class: a card scrolled out of the carousel track is clipped and
+// would never intersect the observer, so it would stay invisible.
+function renderAward(item) {
+  return (
+    <article
+      className={`card ${style.award}${item.image ? "" : " " + style.textOnly}`}
+    >
+      {item.image && (
+        <figure className={style.shot}>
+          <img src={item.image} alt={item.imageAlt} loading="lazy" />
+        </figure>
+      )}
+
+      <div className={style.body}>
+        <span className={style.tag}>
+          <HiOutlineBadgeCheck aria-hidden="true" />
+          {item.tag}
+        </span>
+
+        <h3>{item.title}</h3>
+        <p className={style.issuer}>{item.issuer}</p>
+
+        <ul className={style.points}>
+          {item.points.map(({ icon: Icon, text }) => (
+            <li key={text}>
+              <Icon aria-hidden="true" />
+              <span>{text}</span>
+            </li>
+          ))}
+        </ul>
+
+        {(item.link || item.letter) && (
+          <div className={style.links}>
+            {item.link && (
+              <a href={item.link} className="btn btn-sm" target="_blank" rel="noreferrer">
+                <FiExternalLink /> View on LinkedIn
+              </a>
+            )}
+            {item.letter && (
+              <a href={item.letter} className="btn btn-sm" target="_blank" rel="noreferrer">
+                <HiOutlineDocumentText /> Recommendation letter
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </article>
+  );
+}
 
 export default function Awards() {
   return (
@@ -72,50 +121,16 @@ export default function Awards() {
           <span className="section-rule" />
         </div>
 
-        <div className={style.list}>
-          {AWARDS.map((item) => (
-            <article
-              className={`card ${style.award}${item.image ? "" : " " + style.textOnly} reveal`}
-              key={item.title}
-            >
-              {item.image && (
-                <figure className={style.shot}>
-                  <img src={item.image} alt={item.imageAlt} loading="lazy" />
-                </figure>
-              )}
-
-              <div className={style.body}>
-                <span className={style.tag}>
-                  <HiOutlineBadgeCheck aria-hidden="true" />
-                  {item.tag}
-                </span>
-
-                <h3>{item.title}</h3>
-                <p className={style.issuer}>{item.issuer}</p>
-
-                <ul className={style.points}>
-                  {item.points.map(({ icon: Icon, text }) => (
-                    <li key={text}>
-                      <Icon aria-hidden="true" />
-                      <span>{text}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {item.link && (
-                  <a
-                    href={item.link}
-                    className={`btn btn-sm ${style.link}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiExternalLink /> View on LinkedIn
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
+        <Carousel
+          items={AWARDS}
+          renderItem={renderAward}
+          getKey={(item) => item.title}
+          getLabel={(item) => item.title}
+          noun="award"
+          autoplayMs={7000}
+          slides={1}
+          fitHeight
+        />
       </div>
     </section>
   );

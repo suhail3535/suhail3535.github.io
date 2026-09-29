@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { FiChevronLeft, FiChevronRight, FiExternalLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
+import Carousel from "../Carousel/Carousel";
 import "./Carousel.css";
 
 import listenfirst from "../images/listenfirst.png";
@@ -249,120 +250,6 @@ function ProjectCard({ project, featured, reveal = true }) {
   );
 }
 
-const AUTOPLAY_MS = 2000;
-
-/**
- * Native scroll-snap carousel: swipe/trackpad scrolling works for free, and
- * the arrows and dots just drive scrollLeft. The reveal animation sits on the
- * wrapper rather than each card, because cards scrolled out of the track are
- * clipped and would never intersect the viewport-rooted observer.
- */
-function ProjectCarousel({ projects }) {
-  const trackRef = useRef(null);
-  const [active, setActive] = useState(0);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-
-  const update = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const cards = Array.from(track.children);
-    const left = track.scrollLeft;
-    let nearest = 0;
-    cards.forEach((card, i) => {
-      if (
-        Math.abs(card.offsetLeft - left) <
-        Math.abs(cards[nearest].offsetLeft - left)
-      ) {
-        nearest = i;
-      }
-    });
-    setActive(nearest);
-    setAtStart(left <= 2);
-    setAtEnd(left + track.clientWidth >= track.scrollWidth - 2);
-  }, []);
-
-  useEffect(() => {
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, [update]);
-
-  const goTo = (index) => {
-    const track = trackRef.current;
-    const card = track?.children[index];
-    if (card) track.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
-  };
-
-  // One step is one card, clamped so the last press lands on the end.
-  const step = (dir) => goTo(Math.max(0, Math.min(projects.length - 1, active + dir)));
-
-  // Autoplay: advance every AUTOPLAY_MS, wrapping to the first card once the
-  // end is visible. Paused while the pointer or keyboard focus is inside, so
-  // nobody has a card slide away mid-read. Re-arms after every slide change,
-  // so a manual click also restarts the full interval.
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) return undefined;
-    const id = setTimeout(() => goTo(atEnd ? 0 : active + 1), AUTOPLAY_MS);
-    return () => clearTimeout(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active, atEnd, paused]);
-
-  return (
-    <div
-      className="carousel reveal"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
-    >
-      <div className="carousel__viewport">
-        <div className="carousel__track" ref={trackRef} onScroll={update}>
-          {projects.map((project) => (
-            <div className="carousel__slide" key={project.title}>
-              <ProjectCard project={project} reveal={false} />
-            </div>
-          ))}
-        </div>
-
-        <button
-          type="button"
-          className="carousel__arrow carousel__arrow--prev"
-          onClick={() => step(-1)}
-          disabled={atStart}
-          aria-label="Previous project"
-        >
-          <FiChevronLeft />
-        </button>
-        <button
-          type="button"
-          className="carousel__arrow carousel__arrow--next"
-          onClick={() => step(1)}
-          disabled={atEnd}
-          aria-label="Next project"
-        >
-          <FiChevronRight />
-        </button>
-      </div>
-
-      <div className="carousel__dots">
-        {projects.map((project, i) => (
-          <button
-            type="button"
-            key={project.title}
-            className={`carousel__dot${i === active ? " is-active" : ""}`}
-            onClick={() => goTo(i)}
-            aria-label={`Go to ${project.title}`}
-            aria-current={i === active}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function Projects() {
   return (
     <section id="projects" className="section">
@@ -385,7 +272,13 @@ export default function Projects() {
 
         <h3 className="projects__subhead">Personal Projects</h3>
 
-        <ProjectCarousel projects={PERSONAL} />
+        <Carousel
+          items={PERSONAL}
+          renderItem={(project) => <ProjectCard project={project} reveal={false} />}
+          getKey={(project) => project.title}
+          getLabel={(project) => project.title}
+          noun="project"
+        />
       </div>
     </section>
   );
