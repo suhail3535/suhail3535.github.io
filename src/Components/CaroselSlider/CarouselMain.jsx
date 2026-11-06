@@ -107,7 +107,7 @@ const PERSONAL = [
     githubLink: "https://github.com/suhail3535/travel-website",
     // The git-main preview URL sits behind Vercel login; this is the public
     // production domain for the same project.
-    liveLink: "https://jaipur-auto-tour.vercel.app/",
+    liveLink: "https://travel-website-ten-rouge.vercel.app/",
   },
   {
     title: "Zakat Foundation (Freelance)",
